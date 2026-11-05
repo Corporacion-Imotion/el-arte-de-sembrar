@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El Arte de Sembrar · Guía metodológica</title>
+<style>
+
+
+  @page { size: letter; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: #3d2b1f;
+    background: #ffffff;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  
+
+  .page-pad { max-width: 100%; }
+
+  h1, h2, h3, .modelo-titulo, .indice-titulo {
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 5pt;
+    color: #3d2b1f;
+    page-break-after: avoid;
+  }
+  h4, h5 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    line-height: 1.28;
+    margin: 0 0 3pt;
+    page-break-after: avoid;
+  }
+  p, li, figcaption, summary, .lede, .entradilla, .lugar {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  p { margin: 0 0 6pt; orphans: 3; widows: 3; }
+  ul, ol { margin: 0 0 7pt; padding-left: 1.05rem; }
+  li { margin: 0 0 2pt; }
+  a { color: #2089a9; text-decoration: none; }
+
+  .indice {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4b6c4a;
+    margin: 0 0 4pt;
+  }
+  .marca-lockup {
+    display: grid;
+    gap: 1pt;
+    margin: 0 0 6pt;
+    font-size: 13pt;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .marca-kicker, .marca-medio, .marca-cierre {
+    display: block !important;
+    width: 100%;
+  }
+  .marca-kicker span, .marca-medio span, .marca-cierre span {
+    display: inline;
+    margin-right: 0.35rem;
+  }
+  .lugar { margin: 0 0 6pt; }
+  .premisa {
+    margin: 0 0 8pt;
+    padding: 5pt 8pt;
+    border-left: 3px solid #4b6c4a;
+    background: rgba(75,108,74,0.08);
+  }
+  .premisa p { margin: 0; font-style: italic; }
+  .estacion { margin: 0 0 10pt; }
+  img { max-width: 100%; height: auto; display: block; margin: 3pt 0 6pt; }
+  figure { margin: 0 0 8pt; }
+
+  .operaciones, .lista-verificacion, .principios, .acciones-grid,
+  .lineas-grid, .etica-grid, .glosario-grid, .contacto-lista, .flujo-glosa {
+    list-style: none; padding-left: 0; margin: 0 0 8pt;
+  }
+  .operaciones { display: grid; gap: 4pt; }
+  .operaciones li {
+    display: grid; grid-template-columns: auto 1fr; gap: 7pt; align-items: center;
+    margin: 0; padding: 5pt 7pt; border-radius: 5pt; color: #f1f0eb;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .operaciones li span:first-child {
+    font-family: Helvetica, Arial, sans-serif; font-size: 9pt; font-weight: 700;
+  }
+  .operaciones li.fondo-cafe { background: #8f5a3a; }
+  .operaciones li.fondo-verde { background: #4b6c4a; }
+  .operaciones li.fondo-turquesa { background: #2089a9; }
+  .operaciones li.fondo-morado { background: #6b4c7a; }
+
+  .principios { display: grid; gap: 4pt; }
+  .principios li, .lista-verificacion li, .etica-item, .linea-card,
+  .acciones-grid li, .flujo-principio, .flujo-glosa li {
+    margin: 0; padding: 5pt 7pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 5pt; background: #fbf7f0;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .lista-verificacion { display: grid; gap: 3pt; }
+  .lista-verificacion li { display: grid; grid-template-columns: 9pt 1fr; gap: 5pt; }
+  .lista-verificacion .marca::before { content: "•"; color: #4b6c4a; font-weight: 700; }
+
+  .indice-guia {
+    margin: 6pt 0 8pt; padding: 7pt 8pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 7pt; background: #fbf7f0;
+  }
+  .indice-guia h3 { margin-top: 6pt; }
+
+  .glosario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5pt; }
+  .flip {
+    border: 1px solid rgba(61,43,31,0.16); border-radius: 5pt; padding: 6pt 7pt;
+    background: #fbf7f0; break-inside: avoid; page-break-inside: avoid;
+  }
+  .face-front { display: none !important; }
+  .face-back { display: block !important; }
+  .flip h3 { margin: 0 0 2pt; font-size: 10.5pt; }
+  .flip p { margin: 0; }
+
+  .diagrama-codiseno, .diagrama-animacion, .diagrama-sembrar, .diagrama-acciones {
+    margin: 6pt 0; padding: 7pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 7pt; background: #fbf7f0;
+  }
+  .diagrama-codiseno > figcaption,
+  .diagrama-animacion > figcaption,
+  .diagrama-sembrar > figcaption,
+  .diagrama-acciones > figcaption { text-align: center; margin-bottom: 5pt; }
+
+  .diagrama-fases { display: grid; grid-template-columns: 1fr; gap: 5pt; }
+  .diagrama-fase {
+    padding: 6pt; border-radius: 5pt; color: #f1f0eb;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .fase-investiga { background: #4b6c4a; }
+  .fase-logistica { background: #8f5a3a; }
+  .fase-comunicacion { background: #2089a9; }
+  .diagrama-fase h5 { color: #f1f0eb; font-size: 9.5pt; }
+  .diagrama-fase h5 span {
+    display: inline-block; margin-bottom: 2pt; padding: 1pt 4pt; border-radius: 999px;
+    background: rgba(241,240,235,0.18); font-size: 7pt; text-transform: uppercase;
+  }
+  .diagrama-pasos { list-style: none; padding: 0; margin: 0; display: grid; gap: 3pt; }
+  .diagrama-pasos li {
+    padding: 3pt 4pt; border-radius: 4pt; background: rgba(241,240,235,0.14);
+    font-size: 8pt; color: #f1f0eb; line-height: 1.3;
+  }
+  .diagrama-icono { display: none; }
+  .diagrama-pie {
+    margin-top: 6pt; padding-top: 5pt; border-top: 1px dashed rgba(61,43,31,0.22);
+    display: grid; grid-template-columns: 1fr auto; gap: 5pt; align-items: center;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .diagrama-ruta {
+    display: flex; flex-wrap: wrap; gap: 3pt; align-items: center;
+    list-style: none; padding: 0; margin: 0;
+    font-family: Helvetica, Arial, sans-serif; font-size: 8pt; font-weight: 700;
+  }
+  .diagrama-ruta li:not(:last-child)::after { content: " → "; color: #4b6c4a; }
+  .diagrama-ruta strong {
+    display: inline-flex; padding: 2pt 5pt; border-radius: 999px;
+    background: rgba(75,108,74,0.12); border: 1px solid rgba(75,108,74,0.28);
+  }
+  .diagrama-lema {
+    margin: 0; max-width: 26ch; padding: 4pt 6pt; background: #3d2b1f;
+    color: #f1f0eb; border-radius: 4pt; font-size: 8pt;
+  }
+
+  .flujo-animacion { display: grid; grid-template-columns: 1fr; gap: 5pt; }
+  .flujo-icono { display: none; }
+  .acciones-grid { display: grid; grid-template-columns: 1fr; gap: 5pt; }
+  .lineas-grid { display: grid; gap: 5pt; }
+  .etica-grid { display: grid; grid-template-columns: 1fr; gap: 5pt; }
+  .linea-card h3, .etica-item h3 { font-size: 10.5pt; margin: 0 0 2pt; }
+  .linea-card p, .etica-item p { margin: 0; }
+
+  .bloque-con-foto {
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 8pt;
+    align-items: start; margin: 6pt 0;
+  }
+  .bloque-con-foto.es-imagen-antes { grid-template-columns: 0.85fr 1.15fr; }
+  .bloque-con-foto.es-suelto { grid-template-columns: 1fr auto; }
+  .bloque-con-foto-media { margin: 0; border-radius: 5pt; overflow: hidden; }
+  .bloque-con-foto-media img { width: 100%; max-height: 140pt; object-fit: cover; margin: 0; }
+  .bloque-con-foto-media.es-sin-borde { background: transparent; overflow: visible; }
+  .bloque-con-foto-media.es-sin-borde img {
+    max-height: 120pt; width: auto; max-width: 120pt; object-fit: contain;
+    margin-left: auto; filter: drop-shadow(0 3px 8px rgba(43,38,32,0.22));
+  }
+
+  .panel-semilla {
+    display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 8pt;
+    margin: 6pt 0; padding: 7pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 7pt; background: #fbf7f0;
+  }
+  .panel-semilla-media img {
+    max-height: 130pt; width: 100%; object-fit: cover; margin: 0; border-radius: 4pt;
+  }
+  .panel-semilla-media figcaption { margin-top: 3pt; font-size: 8pt; color: #4b6c4a; }
+  .foto-mandala img, .diagrama-sembrar img {
+    max-height: 160pt; width: 100%; object-fit: cover; border-radius: 5pt;
+  }
+
+  .fase-panel {
+    display: block !important; margin: 0 0 8pt; padding: 0 0 6pt;
+    border-bottom: 1px solid rgba(61,43,31,0.12);
+  }
+  .fases-nav, .ayuda, .petal, .mandala, .aureola, .core,
+  header, nav, .velo, .saltar, dialog, #repositorio-fichas,
+  .coloquio-vivo, .coloquio-play, .pata { display: none !important; }
+
+  .fuentes {
+    margin: 8pt 0; padding: 7pt 8pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 7pt; background: rgba(32,137,169,0.08);
+  }
+  .fuentes summary {
+    font-weight: 700; font-size: 12pt; margin-bottom: 5pt; list-style: none;
+  }
+  .fuentes summary::-webkit-details-marker { display: none; }
+  .fuentes ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4pt; }
+  .fuentes li {
+    padding-bottom: 5pt; border-bottom: 1px solid rgba(61,43,31,0.1);
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .fuentes li p { margin: 0 0 2pt; }
+
+  .contacto {
+    margin: 6pt 0 0; padding: 7pt 8pt; border: 1px solid rgba(61,43,31,0.16);
+    border-radius: 7pt; background: #fbf7f0;
+    break-inside: avoid; page-break-inside: avoid; page-break-before: avoid;
+  }
+  .contacto-lista { display: grid; gap: 5pt; margin: 0; }
+  .contacto-lista li { display: grid; gap: 1pt; }
+
+  .fondo-textura.fondo-cafe { background: rgba(143,90,58,0.12); }
+  .fondo-textura.fondo-verde { background: rgba(75,108,74,0.12); }
+  .fondo-textura.fondo-turquesa { background: rgba(32,137,169,0.12); }
+  .fondo-textura.fondo-morado { background: rgba(107,76,122,0.12); }
+  .bloque-concepto { margin: 6pt 0 9pt; }
+  .site-footer { margin-top: 8pt; padding-top: 2pt; }
+
+
+</style>
+</head>
+<body>
+<div class="page-pad">
+<main class="capa" id="contenido">
+    <section class="estacion" id="oikos">
+      <div>
+          <p class="indice">Apertura · Dispositivo vivo</p>
+          <h1 id="titulo-oikos" class="marca-lockup">
+            <span class="marca-kicker"><span>El</span><span>arte</span><span>de</span><span>sembrar</span></span>
+            <span class="marca-medio"><span>Intercambios</span><span>y</span><span>saberes</span><span>culturales</span></span>
+            <span class="marca-cierre"><span>Diálogos</span><span>con-sentidos</span></span>
+          </h1>
+          <p class="lugar">Finca El Yarumo, Vereda La Palma, San Cristóbal, Medellín · 20 de octubre de 2026</p>
+          <div class="premisa">
+            <p>Cultivar la vida es la forma más alta de hacer cultura.</p>
+          </div>
+          <h2 class="modelo-titulo">Modelo para la realización de coloquios interculturales situados en territorios vivos</h2>
+          <p class="entradilla">Esta guía metodológica es un dispositivo vivo, una cartografía performativa que sistematiza la experiencia del coloquio «El Arte de Sembrar» realizado en la Finca El Yarumo, Vereda La Palma, San Cristóbal, Medellín, el 20 de octubre de 2026. No es un manual rígido, sino un semillero de metodologías que puede germinar en otros territorios, con otros pueblos, otras semillas y otras memorias.</p>
+          <p class="entradilla">La guía responde a la premisa de que cultivar la vida es la forma más alta de hacer cultura, y que los eventos académicos pueden —y deben— salir del aula, del auditorio y del salón para encontrarse con el surco, el gesto, el canto y la palabra compartida.</p>
+        <h2 class="modelo-titulo">Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos»</h2>
+      <div class="indice-guia" id="indice">
+        <h2 class="modelo-titulo indice-titulo">Índice general de la guía</h2>
+        <p>A continuación, la lista completa de lo que debe llevar la guía metodológica:</p>
+        <h3>Parte I: Marco conceptual y ético</h3>
+        <ul>
+          <li>Fundamentación filosófica y política</li>
+          <li>Principios éticos del encuentro</li>
+          <li>Definiciones clave (glosario vivo)</li>
+          <li>Enfoque intercultural</li>
+          <li>La siembra como práctica artística y epistémica</li>
+        </ul>
+        <h3>Parte II: Fases metodológicas</h3>
+        <ul>
+          <li>Fase 1: Pre-evento (Gestión territorial y co-diseño)</li>
+          <li>Fase 2: Evento (Ejecución del coloquio)</li>
+          <li>Fase 3: Post-evento (Sistematización y circulación)</li>
+        </ul>
+
+        <figure class="diagrama-codiseno">
+          <figcaption>
+            <h4 id="titulo-diagrama-codiseno">Proceso de co-diseño y activación del mándala vivo</h4>
+            <p>Metodología integral: investigación, logística y comunicación</p>
+          </figcaption>
+          <div class="diagrama-fases">
+            <article class="diagrama-fase fase-investiga">
+              <h5><span>Fase 1</span> Investigación aplicada y co-diseño</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Entrevistas preliminares (semiestructuradas, con grabación autorizada).</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Identificación de especies botánicas, narrativas y símbolos a incluir en el mándala.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Co-diseño del mándala vivo con las sabedoras.</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="diagrama-fase fase-logistica">
+              <h5><span>Fase 2</span> Logística operativa y cuidados</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Alquiler de toldos, sillas accesibles, señalización bilingüe/multilingüe.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Estación de hidratación permanente.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Rutas de transporte compartido desde puntos urbanos.</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="diagrama-fase fase-comunicacion">
+              <h5><span>Fase 3</span> Activación comunicativa</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Lanzamiento de identidad visual.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Formulario de inscripciones con preguntas de contexto.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Difusión en redes comunitarias, WhatsApp, emisoras locales, escuelas.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono">
+                    
+                  </span>
+                  <span>Alianzas con universidades, colectivos agroecológicos, bibliotecas.</span>
+                </li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="diagrama-pie">
+            <ol class="diagrama-ruta">
+              <li><strong>Diagnóstico</strong></li>
+              <li><strong>Preparación</strong></li>
+              <li><strong>Expansión</strong></li>
+            </ol>
+            <p class="diagrama-lema">Hacia la sanación y el tejido comunitario a través de la naturaleza</p>
+          </div>
+        </figure>
+
+        <h3>Parte III: Herramientas y protocolos</h3>
+        <ul>
+          <li>Protocolos de cuidado y bienestar</li>
+          <li>Protocolos de consentimiento y compensación justa</li>
+          <li>Metodología del diálogo de saberes</li>
+          <li>Metodología del mándala vivo como cartografía performativa</li>
+          <li>Mediaciones pedagógicas para poblaciones específicas</li>
+          <li>Estrategias de comunicación comunitaria</li>
+        </ul>
+        <h3>Parte IV: Recursos didácticos y formatos</h3>
+        <ul>
+          <li>Recursos didácticos para el encuentro</li>
+          <li>Formatos y fichas técnicas</li>
+          <li>Instrumentos de evaluación y seguimiento</li>
+        </ul>
+        <h3>Parte V: Memoria y replicabilidad</h3>
+        <ul>
+          <li>Estrategias de circulación de memorias</li>
+          <li>Indicadores de alcance</li>
+          <li>Guía de adaptación territorial</li>
+          <li>Anexos</li>
+          <li>Referencias bibliográficas</li>
+          <li>Filmografía y material audiovisual</li>
+          <li>Glosario ampliado</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="estacion" id="marco">
+      <p class="indice">Parte I · Marco conceptual y ético</p>
+      <h2 id="titulo-marco">1. Fundamentación filosófica y política</h2>
+      <p class="lede">La siembra como acto epistémico:</p>
+      <p class="entradilla">El evento no es una conferencia ni un seminario tradicional. Es un coloquio situado donde la siembra opera como:</p>
+      <ol class="operaciones">
+        <li class="fondo-textura fondo-cafe"><span>01</span> Archivo vivo de resistencia biocultural</li>
+        <li class="fondo-textura fondo-verde"><span>02</span> Canal de enunciación cultural</li>
+        <li class="fondo-textura fondo-turquesa"><span>03</span> Dispositivo de memoria</li>
+        <li class="fondo-textura fondo-morado"><span>04</span> Práctica artística (<em>Land Art</em> / Arte Tierra)</li>
+        <li class="fondo-textura fondo-cafe"><span>05</span> Gesto pedagógico intercultural</li>
+      </ol>
+
+      <h2 class="modelo-titulo">Principios inspiradores</h2>
+      <ul class="principios">
+        <li><strong>Stefano Mancuso — <cite>La nación de las plantas</cite></strong> Inteligencia distribuida, cooperación subterránea, cuidado como forma superior de inteligencia.</li>
+        <li><strong>Henry David Thoreau — Caminar</strong> Caminar como peregrinación hacia lo sagrado, perder la cabeza para encontrarla en los bosques.</li>
+        <li><strong>Paulo Freire — Animación sociocultural</strong> Animación sociocultural como acto político de dar aliento de vida.</li>
+        <li><strong>Cosmovisiones andinas, mesoamericanas y amazónicas</strong> <em>Uywaña</em> (crianza mutua), Milpa (polisistema simbiótico), Chagra (espacio de sanación).</li>
+      </ul>
+    </section>
+
+    <section class="estacion" id="glosario">
+      <p class="indice">Parte I · Definiciones clave</p>
+      <h2 id="titulo-glosario">Glosario vivo de saberes</h2>
+      <p class="lede">Definiciones clave (glosario vivo).</p>
+      <div class="glosario-grid">
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-animacion">
+              <h3>Animación sociocultural</h3>
+              <p>Acto político y poético de dar aliento de vida (del latín <em>animare</em>).</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-caminante">
+              <h3>Caminante</h3>
+              <p>Aquel que peregrina hacia lo sagrado del territorio.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-chagra">
+              <h3>Chagra</h3>
+              <p>Espacio de claros dinámicos donde las mujeres guardan la agrobiodiversidad.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-dialogo">
+              <h3>Diálogo de saberes</h3>
+              <p>Conversación horizontal entre epistemologías distintas sin jerarquías.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-grafias">
+              <h3>Grafías del territorio</h3>
+              <p>Escrituras de la tierra (surcos, simetrías, trazados).</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-mandala">
+              <h3>Mándala vivo</h3>
+              <p>Cartografía performativa de 3 × 4 m construida colectivamente con tierras de colores y material vegetal.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-memoria">
+              <h3>Memoria biocultural</h3>
+              <p>Saberes que viven en semillas, gestos y cantos.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-milpa">
+              <h3>Milpa</h3>
+              <p>Polisistema simbiótico maíz-frijol-calabaza-quelites.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-paisaje">
+              <h3>Paisaje cultural</h3>
+              <p>Territorio leído como obra colectiva.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-puente">
+              <h3>Puente metodológico</h3>
+              <p>Metáfora que conecta multiversos sin devorarlos.</p>
+              
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-back" id="def-uywana">
+              <h3>Uywaña</h3>
+              <p>Crianza mutua entre semilla y comunidad.</p>
+              
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <figure class="diagrama-animacion">
+        <figcaption>
+          <h3 id="titulo-diagrama-animacion">Animación sociocultural y cosmovisiones vivas</h3>
+          <p>Inteligencia distribuida, diálogo de saberes y crianza mutua</p>
+        </figcaption>
+
+        <div class="flujo-animacion">
+          <div class="flujo-col">
+            <h4>Principios inspiradores</h4>
+            <article class="flujo-principio">
+              <span class="flujo-icono">
+                
+              </span>
+              <div>
+                <strong>Stefano Mancuso — <cite>La nación de las plantas</cite></strong>
+                <p>Inteligencia distribuida, cooperación subterránea, cuidado como forma superior de inteligencia.</p>
+              </div>
+            </article>
+            <article class="flujo-principio">
+              <span class="flujo-icono">
+                
+              </span>
+              <div>
+                <strong>Henry David Thoreau — Caminar</strong>
+                <p>Caminar como peregrinación hacia lo sagrado, perder la cabeza para encontrarla en los bosques.</p>
+              </div>
+            </article>
+            <article class="flujo-principio">
+              <span class="flujo-icono">
+                
+              </span>
+              <div>
+                <strong>Paulo Freire — Animación sociocultural</strong>
+                <p>Animación sociocultural como acto político de dar aliento de vida.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="flujo-conexion">→</div>
+
+          <div class="flujo-mandala">
+            <h4>Mándala vivo</h4>
+            <div class="flujo-nucleo"><span>Semilla</span></div>
+            <p>Cartografía performativa donde convergen multiversos sin que uno devore a los otros.</p>
+            <div class="flujo-cosmos">
+              <article>
+                <span class="flujo-icono">
+                  
+                </span>
+                <div>
+                  <strong>Uywaña (andino)</strong>
+                  <p>Crianza mutua entre semilla y comunidad.</p>
+                </div>
+              </article>
+              <article>
+                <span class="flujo-icono">
+                  
+                </span>
+                <div>
+                  <strong>Milpa (mesoamericano)</strong>
+                  <p>Polisistema simbiótico maíz-frijol-calabaza-quelites.</p>
+                </div>
+              </article>
+              <article>
+                <span class="flujo-icono">
+                  
+                </span>
+                <div>
+                  <strong>Chagra (amazónico)</strong>
+                  <p>Espacio de sanación y claros dinámicos de agrobiodiversidad.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="flujo-conexion">→</div>
+
+          <div class="flujo-col">
+            <h4>Síntesis del glosario vivo</h4>
+            <ul class="flujo-glosa">
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Animación sociocultural</strong><span>Acto político y poético de dar aliento de vida.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Diálogo de saberes</strong><span>Conversación horizontal entre epistemologías distintas sin jerarquías.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Mándala vivo</strong><span>Cartografía performativa construida colectivamente con tierras de colores y material vegetal.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Grafías del territorio</strong><span>Escrituras de la tierra (surcos, simetrías, trazados).</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Memoria biocultural</strong><span>Saberes que viven en semillas, gestos y cantos.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Puente metodológico</strong><span>Metáfora que conecta multiversos sin devorarlos.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Paisaje cultural</strong><span>Territorio leído como obra colectiva.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <div><strong>Caminante</strong><span>Aquel que peregrina hacia lo sagrado del territorio.</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+
+    <section class="estacion" id="fases">
+      <p class="indice">Parte II · Fases metodológicas</p>
+      <h2 id="titulo-fases">Fases metodológicas</h2>
+      <p class="lede">Fase 1: Pre-evento (Gestión territorial y co-diseño). Fase 2: Evento (Ejecución del coloquio). Fase 3: Post-evento (Sistematización y circulación).</p>
+      <p class="ayuda">Elige una fase. Con el teclado, las flechas cambian de etapa.</p>
+      <div class="fases-nav">
+        
+        
+        
+      </div>
+
+      <div class="fase-panel" id="panel-pre">
+        <p class="fase-resumen">Gestión territorial y co-diseño. Acciones estratégicas para tejer confianza antes del encuentro.</p>
+        <div class="fase-grupo">
+          <h3>Gestión territorial y acuerdos comunitarios</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Visita de reconocimiento al espacio (finca, maloca, escuela, casa cultural).</span></li>
+            <li><span class="marca"></span><span>Firma de carta de autorización de uso de suelo con la familia o comunidad anfitriona.</span></li>
+            <li><span class="marca"></span><span>Reunión con JAL, junta de acción comunal, cabildos o consejos comunitarios.</span></li>
+            <li><span class="marca"></span><span>Identificación de guardianes territoriales del saber.</span></li>
+          </ul>
+
+          <figure class="diagrama-acciones">
+            <figcaption>
+              <h4 id="titulo-acciones-territoriales">Acciones estratégicas</h4>
+              <p>A. Gestión territorial y acuerdos comunitarios</p>
+            </figcaption>
+            <ol class="acciones-grid">
+              <li>
+                <span class="accion-icono">
+                  
+                </span>
+                <p>Visita de reconocimiento al espacio (finca, maloca, escuela, casa cultural).</p>
+              </li>
+              <li>
+                <span class="accion-icono">
+                  
+                </span>
+                <p>Firma de carta de autorización de uso de suelo con la familia o comunidad anfitriona.</p>
+              </li>
+              <li>
+                <span class="accion-icono">
+                  
+                </span>
+                <p>Reunión con JAL, junta de acción comunal, cabildos o consejos comunitarios.</p>
+              </li>
+              <li>
+                <span class="accion-icono">
+                  
+                </span>
+                <p>Identificación de guardianes territoriales del saber.</p>
+              </li>
+            </ol>
+          </figure>
+        </div>
+        <div class="fase-grupo">
+          <h3>Convocatoria y formalización de invitados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Mapeo de sabedoras/es por línea cultural (indígena, campesina, afro, académica, juvenil).</span></li>
+            <li><span class="marca"></span><span>Recomendación: mínimo 5 mujeres sabedoras + 4 ponentes académicos/artistas + 1 moderador intercultural.</span></li>
+            <li><span class="marca"></span><span>Envío de invitaciones oficiales con lenguaje claro y accesible.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Investigación aplicada y co-diseño</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Entrevistas preliminares (semiestructuradas, con grabación autorizada).</span></li>
+            <li><span class="marca"></span><span>Identificación de especies botánicas, narrativas y símbolos a incluir en el mándala.</span></li>
+            <li><span class="marca"></span><span>Co-diseño del mándala vivo con las sabedoras.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Logística operativa y cuidados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Alquiler de toldos, sillas accesibles, señalización bilingüe/multilingüe.</span></li>
+            <li><span class="marca"></span><span>Estación de hidratación permanente.</span></li>
+            <li><span class="marca"></span><span>Rutas de transporte compartido desde puntos urbanos.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Activación comunicativa</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Lanzamiento de identidad visual.</span></li>
+            <li><span class="marca"></span><span>Formulario de inscripciones con preguntas de contexto.</span></li>
+            <li><span class="marca"></span><span>Difusión en redes comunitarias, WhatsApp, emisoras locales, escuelas.</span></li>
+            <li><span class="marca"></span><span>Alianzas con universidades, colectivos agroecológicos, bibliotecas.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Estrategias clave</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Mapeo de saberes previos: identificar qué se siembra, qué se come, qué se canta en el territorio.</span></li>
+            <li><span class="marca"></span><span>Avanzadas etnográficas: 2 o 3 visitas previas para tejer confianza.</span></li>
+            <li><span class="marca"></span><span>Círculos de palabra preparatorios: reuniones pequeñas con sabedoras para validar agenda.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fase-panel" id="panel-evento">
+        <p class="fase-resumen">Contextualización territorial, siembra viva y diálogo de saberes.</p>
+        <div class="fase-grupo">
+          <h3>Contextualización territorial</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Presentar la contextualización territorial al inicio del evento: se convierte en la brújula que orientará las ponencias, los debates y las posteriores conclusiones.</span></li>
+            <li><span class="marca"></span><span>Definir con claridad los actores y los roles: funciones, temporalidad y el desarrollo de la agenda.</span></li>
+            <li><span class="marca"></span><span>Todos los actores deben conocer con antelación la agenda y los horarios en los que participarán en las actividades.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Siembra viva y diálogo</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Entregar una semilla o una fruta, verdura para intencionar los sentidos y la memoria.</span></li>
+            <li><span class="marca"></span><span>Activar la escucha con sonidos de tambores y ocarinas.</span></li>
+            <li><span class="marca"></span><span>Sembrar el mándala con las mujeres invitadas y el público asistente.</span></li>
+            <li><span class="marca"></span><span>Abrir un espacio con los participantes teniendo como estrategia didáctica las palabras: CULTIVAR, TEJER, CUIDAR.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fase-panel" id="panel-post">
+        <p class="fase-resumen">Productos esperados, cuidado del mándala y circulación de memorias.</p>
+        <div class="fase-grupo">
+          <h3>Productos esperados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Afiche oficial (digital e impreso biodegradable).</span></li>
+            <li><span class="marca"></span><span>Teaser audiovisual (1 min).</span></li>
+            <li><span class="marca"></span><span>Cápsulas de saberes (3 piezas de 30 seg).</span></li>
+            <li><span class="marca"></span><span>Relatoría ilustrada (PDF interactivo).</span></li>
+            <li><span class="marca"></span><span>Video documental corto (5-7 min).</span></li>
+            <li><span class="marca"></span><span>Guía de réplica metodológica (este documento).</span></li>
+            <li><span class="marca"></span><span>Repositorio digital abierto (audios, textos, fotos).</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Cuidado y seguimiento del mándala</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Monitoreo mensual del crecimiento.</span></li>
+            <li><span class="marca"></span><span>Riego comunitario coordinado con la familia anfitriona.</span></li>
+            <li><span class="marca"></span><span>Registro fotográfico evolutivo (mensual durante 6 meses).</span></li>
+          </ul>
+          <figure class="foto-mandala">
+            <img src="fotomandala.png" width="722" height="404" alt="Registro fotográfico del mándala vivo en proceso de crecimiento.">
+          </figure>
+        </div>
+        <div class="fase-grupo">
+          <h3>Circulación de memorias</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca"></span><span>Presentación en escuelas rurales del corregimiento.</span></li>
+            <li><span class="marca"></span><span>Encuentro con redes agroecológicas departamentales.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="estacion" id="territorio">
+      <p class="indice">Introducción · Territorio situado</p>
+      <h2 id="titulo-territorio">Introducción: El Territorio como Cuerpo, Palabra y Semilla</h2>
+      <p class="entradilla">No es solo un grano, ni un simple dato estadístico, ni una metáfora vacía. La semilla es un archivo vivo, un documento antropológico material que contiene la historia de nuestras manos, nuestros climas y nuestras luchas más profundas. En la vereda La Palma, en el corregimiento de San Cristóbal (Medellín), el territorio no puede ser entendido como un recurso explotable, un mapa abstracto o un escenario pasivo para el desarrollo rural y urbano. El territorio es, ante todo, un <em>Oikos</em>: la casa común donde se entrelazan inseparablemente la ecología, la economía doméstica, el cuidado mutuo y la arquitectura del paisaje y todas las intervenciones que sobre este realizan, hombres y mujeres en sus prácticas de siembra, de pastoreo, de pintar con sus flores y plantas el territorio. Este documento, titulado Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos» no busca establecer una sola ruta para el desarrollo de eventos o encuentros de este tipo, su objetivo, busca establecer una serie de acciones y gestiones de tipo cultural para identificar que elementos de contexto, sirven, que actores vienen haciendo visible su trabajo y liderazgo y los que quizás precisen mostrar lo que hacen.</p>
+      <p class="entradilla">Sembrar no es solo colocar una semilla en la tierra. Sembrar es, ante todo, un verbo total que atraviesa el cuerpo, la palabra, el tejido, la organización, la memoria y el paisaje. El acto de sembrar se despliega en múltiples dimensiones: se siembra maíz y uchuva, sí, pero también se siembra cultura, se siembran tejidos comunitarios, se siembran organizaciones como Mujeres Siempre Vivas, se siembran caminos entre lo urbano y lo rural, se siembra memoria biocultural en los cuerpos de las mujeres Nasa, afrodescendientes y campesinas, se siembran diálogos interculturales, se siembran multiversos que conviven sin perderse.</p>
+      <p class="entradilla">«El Arte de Sembrar», no reduce la siembra a una técnica agrícola. La entiende como una práctica artística, epistémica, política y poética que atraviesa todas las dimensiones de la vida comunitaria. La siembra es un archivo vivo que guarda rituales, gestos, cantos, recetas, organizaciones, luchas y esperanzas. Es un canal de enunciación cultural que permite a los pueblos nombrarse, reconocerse y defenderse frente a la homogeneización del mundo.</p>
+
+      <aside class="panel-semilla">
+        <figure class="panel-semilla-media">
+          <img src="semilla.jpeg" width="2752" height="1536" alt="Ilustración de una semilla germinando sobre un territorio cartografiado, con raíces y hojas bajo un halo orbital.">
+          <figcaption>Imagen generada por inteligencia artificial.</figcaption>
+        </figure>
+        <div class="panel-semilla-texto">
+          <h3 id="titulo-panel-semilla">Introducción: El Territorio como Cuerpo, Palabra y <em>Semilla</em></h3>
+          <p>No es solo un grano, ni un simple dato estadístico, ni una metáfora vacía. La semilla es un archivo vivo, un documento antropológico material que contiene la historia de nuestras manos, nuestros climas y nuestras luchas más profundas.</p>
+          <p>En la vereda La Palma, en el corregimiento de San Cristóbal (Medellín), el territorio no puede ser entendido como un recurso explotable, un mapa abstracto o un escenario pasivo para el desarrollo rural y urbano.</p>
+          <p>El territorio es, ante todo, un <em>Oikos</em>: la casa común donde se entrelazan inseparablemente la ecología, la economía doméstica, el cuidado mutuo y la arquitectura del paisaje y todas las intervenciones que sobre este realizaron, hombres y mujeres en sus prácticas de siembra, de pastoreo, de pintar con sus flores y plantas el territorio.</p>
+          <p>Este documento, titulado Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos» no busca establecer una sola ruta para el desarrollo de eventos o encuentros de este tipo, su objetivo, busca establecer una serie de acciones y gestiones de tipo cultural para identificar que elementos de contexto, sirven, que actores vienen haciendo visible su trabajo y liderazgo y los que quizás precisan mostrar lo que hacen.</p>
+        </div>
+      </aside>
+
+      <p class="entradilla">Frente a un modelo civilizatorio que ha separado el cuerpo de la tierra, la academia del territorio, la cultura de la agricultura y la memoria del presente, este coloquio propone volver a tejer los hilos. Proponemos un marco interdisciplinario donde el cuerpo —primer territorio de la siembra—, el sabor —forma de conocimiento—, el caminar —método etnográfico—, el tejido —práctica organizativa— y la memoria —archivo vivo— se entrelazan en una sola trama. A través de las lentes de David Le Breton, quien ha explorado la materialidad del cuerpo y los sentidos, de Henry David Thoreau, quien elevó el caminar a peregrinación hacia lo sagrado, de Stefano Mancuso, quien reveló la inteligencia vegetal de las plantas, y de Iván Illich, quien soñó una sociedad desescolarizada, este documento articula los saberes ancestrales de Nicxa Tatiana Estupiñán, la gobernanza ambiental de Iván Mauricio Aristizábal, la pedagogía agroecológica de Nelly Bedoya, Jhon Ríos y Enerieth Hernández, el cuerpo en movimiento de Juan Fernando Vahos, y la gestión cultural de Juan Fernando Sánchez Vásquez.</p>
+      <p class="entradilla">Sembrar cultura es cultivar vida. Sembrar con el apoyo de las organizaciones es tejer comunidad. Sembrar caminos es abrir senderos de pervivencia. Sembrar memoria es defender los multiversos. Este documento es un mapa para habitar ese acto total, donde cada concepto, cada línea metodológica y cada ficha interactiva es una semilla que germina en el territorio. Dentro de los propósitos también esta evidenciar, con rigor y poesía, la lucha tangible de quienes siembran, caminan y habitan.</p>
+      <p class="entradilla">A través de las lentes de pensadores como David Le Breton, quien ha explorado la materialidad del cuerpo y los sentidos, y Henry David Thoreau, quien elevó el caminar a peregrinación hacia lo sagrado, y de la sabiduría ancestral de quienes habitan estas montañas —las mujeres Nasa, afrodescendientes y campesinas de San Cristóbal—, este documento busca ofrecer un lenguaje sencillo pero profundo. Es un recurso diseñado para el coloquio que se realizó en la Finca El Yarumo, vereda La Palma donde actores y lideresas como Nelly Bedoya y el colectivo Mujeres Siempre Vivas, articulando a actores como Nicxa Tatiana Estupiñán, Iván Mauricio Aristizábal, Juan Fernando Vahos, Eneriet Hernández y Estefanía Velásquez entre otros que en los intermedios de cada intervención, apoyaron la reescritura como sustrato, como tierra fértil de la cultura entendida como cultivo, tejido vivo y defensa de los multiversos.</p>
+
+      <div class="bloque-concepto">
+        <h2>La siembra como práctica artística, epistémica y cultural</h2>
+        <p class="entradilla">En este estimulo, la siembra va más allá de su función agrícola para convertirse en un acto de creación estética, producción de conocimiento y cultivo de cultura: quien siembra diseña, anticipa, simboliza, narra y escribe sobre la tierra viva, pero también sobre el cuerpo, la organización, la memoria y el tejido comunitario. Este concepto sostiene el objetivo general del evento, porque reconocer la siembra como arte y saber legítimo habilita un diálogo intercultural con la academia en igualdad de condiciones y también abre el horizonte epistémico del coloquio.</p>
+
+        <figure class="diagrama-sembrar">
+          <figcaption>
+            <h3 id="titulo-mapa-siembra">Sembrar cultura es cultivar vida</h3>
+            <p>Un mapa para habitar el acto total, donde cada concepto, cada línea metodológica y cada ficha interactiva es una semilla que germina en el territorio.</p>
+          </figcaption>
+
+          <div class="mapa-siembra">
+            <div class="mapa-ejes">
+              <article class="mapa-eje">
+                <span class="flujo-icono"></span>
+                <div>
+                  <strong>Sembrar cultura</strong>
+                  <p>Cultivar vida: la cultura como raíz que nutre la identidad y da frutos de diversidad.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono"></span>
+                <div>
+                  <strong>Tejer comunidad</strong>
+                  <p>Sembrar con el apoyo de las organizaciones es tejer lazos solidarios que fortalecen el territorio.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono"></span>
+                <div>
+                  <strong>Abrir senderos</strong>
+                  <p>Sembrar caminos es abrir senderos de pervivencia entre lo urbano y lo rural.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono"></span>
+                <div>
+                  <strong>Defender multiversos</strong>
+                  <p>Sembrar memoria es proteger narrativas plurales: pasado, presente, futuro y ancestral.</p>
+                </div>
+              </article>
+            </div>
+
+            <p class="mapa-bloque-titulo">Fichas interactivas</p>
+            <ul class="mapa-fichas">
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Ficha 01 · Saberes ancestrales</strong>
+                <p>Transmisión oral y prácticas agrícolas tradicionales.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Ficha 02 · Tejido social</strong>
+                <p>Cooperación y trabajo colectivo en la cosecha y la organización.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Ficha 03 · Memoria viva</strong>
+                <p>Archivos comunitarios y narrativas orales preservadas.</p>
+              </li>
+            </ul>
+
+            <p class="mapa-bloque-titulo">Rostros del territorio</p>
+            <ul class="mapa-rostros">
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Guardián de las semillas</strong>
+                <p>Quien cuida la agrobiodiversidad y la transmite.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Tejedora de caminos</strong>
+                <p>Quien abre senderos entre mundos y organizaciones.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Voz de la memoria</strong>
+                <p>Quien nombra, canta y defiende los multiversos.</p>
+              </li>
+            </ul>
+            <p class="mapa-cierre es-tierra">Evidenciar, con rigor y poesía, la lucha tangible de quienes siembran, caminan y habitan.</p>
+
+            <p class="mapa-bloque-titulo">Línea metodológica</p>
+            <ul class="mapa-metodo">
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Ruta</strong>
+                <p>Diagnóstico participativo.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Herramienta</strong>
+                <p>Observación etnográfica.</p>
+              </li>
+              <li>
+                <span class="flujo-icono"></span>
+                <strong>Resultado</strong>
+                <p>Acción transformadora.</p>
+              </li>
+            </ul>
+
+            <p class="mapa-bloque-titulo">Propósitos del mapa</p>
+            <ol class="mapa-propósitos">
+              <li><span>01</span><p>Mapear el acto total de siembra y habitabilidad.</p></li>
+              <li><span>02</span><p>Visibilizar la lucha y la poesía del territorio.</p></li>
+              <li><span>03</span><p>Activar fichas interactivas para la acción local.</p></li>
+              <li><span>04</span><p>Defender los multiversos de la memoria colectiva.</p></li>
+            </ol>
+
+            <p class="mapa-cierre">El territorio germinado: cada línea, cada ficha, cada rastro, es una semilla que germina en el territorio.</p>
+          </div>
+        </figure>
+
+        <p class="entradilla">La siembra es un archivo vivo que guarda rituales, gestos y memorias, y funciona como canal de enunciación cultural para fortalecer diálogos pluriétnicos y rurales. San Cristóbal, con su vocación campesina y agrícola, es un escenario posible para este reconocimiento. Pero también es un escenario para sembrar cultura: cuando las mujeres del colectivo Mujeres Siempre Vivas tejen sus redes de economía solidaria, están sembrando organización. Cuando Nicxa Tatiana Estupiñán abre caminos en la escuela Dxij Phade para la primera infancia Nasa en la ciudad, está sembrando pervivencia cultural. Cuando Juan Fernando Vahos activa los cuerpos con el ritmo «Chumbalaca» y «Alma africana», está sembrando memoria afrodescendiente en el presente.</p>
+        <figure class="foto-mandala">
+          <img src="participantes.png" width="750" height="422" alt="Participantes del coloquio El Arte de Sembrar: intercambios de saberes y diálogos con-sentidos.">
+        </figure>
+        <p class="entradilla">Desde la perspectiva de David Le Breton en <cite>Antropología del cuerpo y modernidad</cite>, el cuerpo del campesino, del indígena, del afrodescendiente que siembra no es una máquina biológica aislada, sino una realidad social y material profundamente inscrita en el territorio. Cuando las manos de Nelly Bedoya tocan la tierra, están leyendo un texto vivo que la academia formal rara vez reconoce. La siembra, entonces, se convierte en una epistemología encarnada: el saber no está en los libros, está en los callos, en la postura del cuerpo al agacharse, en el ritmo de la pala, en el tejido de las redes comunitarias.</p>
+        <p class="entradilla">Este concepto sirve para abrir es una manera de aprestamiento para conccentar la atención de todos los asistentes, se sugiere entregar una semilla o una fruta, verdura para intencionar los sentidos y la memoria.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Arte Tierra / Land Art: El territorio como lienzo vivo</h2>
+        <div class="bloque-con-foto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">El arte tierra, o land art, es una corriente artística que usa el suelo, los materiales vegetales y minerales y el paisaje como lienzo y obra, convirtiendo el territorio en escena estética viva y política. En el evento, el mándala vivo de 3x4 metros es su pieza central: no es decoración, es una obra performativa, cartografía viva y siembra colectiva hecha con materiales propios del territorio. Su montaje busca dialogar con la tierra, al estilo de los artistas plásticos de Primiti Colors, quienes en una de sus exposiciones proponen el color sin teoría como parte de un laboratorio de creación.</p>
+            <p class="entradilla">El mándala vivo propone un trabajo colectivo donde la creación y siembra se convierten en un gesto y acto estético autónomo y legítimo. Pero este arte tierra no solo siembra plantas: siembra símbolos, siembra memorias, siembra encuentros. Cada brazo del mándala representa un multiverso: el mundo Nasa, el mundo afrodescendiente, el mundo campesino, el mundo académico. Cada tierra es una grafía territorial, una escritura del paisaje que la comunidad reconoce como propia.</p>
+            <p class="entradilla">En lo metodológico, la consulta con los actores frente a las semillas, el símbolo, debe aparecer de manera vinculante, el paso a paso del montaje y el registro fotográfico evolutivo que muestre la obra viva creciendo. Esta propuesta se alinea con lo que Thoreau describe en <cite>Caminar</cite>: el caminante no busca llegar a un destino, sino sumergirse en el paisaje, observar los detalles, seguir los rastros de la naturaleza. El land art en El Yarumo es esa inmersión hecha materia: el cuerpo del artista, del campesino, del indígena, del afrodescendiente se funden con la tierra, y el resultado no es un objeto para ser contemplado desde afuera, sino un territorio para ser habitado, sembrado y defendido.</p>
+          </div>
+          <figure class="bloque-con-foto-media">
+            <img src="landart.png" width="322" height="481" alt="Land art del mándala vivo: obra performativa de tierras de color y material vegetal en el territorio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Agroecología como base, suelo y tejido organizativo</h2>
+        <p class="entradilla">La agroecología es una ciencia, una práctica y un movimiento que integra ecología, agricultura y justicia social; aquí es el suelo literal y el suelo conceptual que recoge a los actores invitados y la serie de conceptos y preguntas orientadoras de todo el evento. La finca del Yarumo es un sistema agroecológico vivo que sostendrá el coloquio y la fuerza de los diálogos de saberes. Sin la agroecología no habría marco ético, ni marco productivo, ni un territorio de aprendizaje para el diálogo de saberes. Aporta además los conceptos clave del evento: dignidad del trabajo campesino, soberanía alimentaria y defensa de la biodiversidad local.</p>
+        <figure class="foto-mandala">
+          <img src="manos.png" width="764" height="537" alt="Manos que siembran y cuidan el territorio agroecológico.">
+        </figure>
+        <p class="entradilla">Pero la agroecología también es un tejido organizativo. El colectivo Mujeres Siempre Vivas, del cual hace parte Nelly Bedoya, es una organización que nació de la necesidad de defender el territorio frente a los agroquímicos en los años 90. Sembrar agroecología es sembrar organización, es tejer redes de economía solidaria, es construir mercados campesinos que dignifiquen el trabajo rural. La Corporación «Una Planta a la Vez», con su proyecto agroecológico Martha Guerra, es otro ejemplo de cómo la siembra se convierte en organización juvenil que territorializa la agroecología en San Cristóbal.</p>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Desde la perspectiva de Le Breton en <cite>El sabor del mundo</cite>, el sabor de una uchuva cosechada en El Yarumo no puede ser replicado en un laboratorio. Ese sabor contiene la información del suelo, de las lluvias de montaña, del cuidado libre de pesticidas y del tiempo de maduración respetado. Al comer esta uchuva, el cuerpo no solo se nutre; está «probando» el territorio, estableciendo un vínculo material directo con el paisaje y con el agricultor que la cultivó. La agroecología, entonces, es una soberanía sensorial y organizativa: defender los sabores nativos es defender la economía local, la dignidad del trabajo y los tejidos comunitarios que los sostienen.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="uchuva.png" width="323" height="224" alt="Uchuva cosechada en El Yarumo, ilustración con fondo transparente.">
+          </figure>
+        </div>
+        <p class="entradilla">En lo metodológico se sugiere tener dentro de las actividades una cromatografía que revele la salud del territorio y de las organizaciones que lo habita. Imágenes que permitan al público ver la interacción de diferentes pueblos y paisajes de sus paisajes y siembras.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Diálogo de saberes e interculturalidad: sembrar encuentros sin jerarquías</h2>
+        <p class="entradilla">El diálogo de saberes es aquí el marco en el que saberes ancestrales, campesinos, indígenas, afrodescendientes y académicos conversan sin jerarquías epistémicas: nadie lo sabe todo, nadie lo ignora todo. Esta línea define el formato de coloquio-conversatorio, la moderación intercultural, los turnos flexibles y las preguntas sembradas desde el público, garantizando que la palabra circule como semilla en una siembra comunitaria. La interculturalidad no es un tema sino una condición del encuentro: pluriétnica de invitados, de públicos y de estéticas que se tejerán en el mándala vivo de la finca.</p>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Pero el diálogo de saberes también es sembrar encuentros, sembrar puentes, sembrar caminos entre mundos que usualmente no se hablan. Como se evidenció en la ejecución del evento, la animación comunitaria operó como un puente simbólico que une los multiversos que conviven sin devorarse: el mundo Nasa representado por Nicxa Tatiana, la memoria afrodescendiente y corporal de Juan Fernando Vahos, la sabiduría campesina y agroecológica de Nelly Bedoya y Jhon Ríos, y la academia de Iván Mauricio. El puente es la condición de posibilidad para que la <em>nasayuwe</em>, el canto afro, la palabra campesina y el texto académico transiten en horizontalidad.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="rostros.png" width="2440" height="1728" alt="Rostros de los participantes del coloquio en diálogo de saberes.">
+          </figure>
+        </div>
+        <p class="entradilla">Este enfoque se alinea con lo que Iván Illich plantea en <cite>La sociedad desescolarizada</cite>: «la mayor parte del aprendizaje no es la consecuencia de una instrucción. Es más bien el resultado de una participación no estorbada en un entorno significativo». Sacar el saber del aula y llevarlo al territorio no es una carencia de rigor, sino la materialización de una «trama de aprendizaje convivencial». La comunidad se moviliza como protagonista de su propio desarrollo cognitivo y cultural, rompiendo el monopolio de la enseñanza formal y reafirmando que el territorio mismo es el dispositivo pedagógico más potente.</p>
+        <p class="entradilla">En lo metodológico se proponen esta serie de enlaces que nos permiten reconocer esa mixtura étnica, esos paisajes culturales, esos rostros y cantos que celebran la siembra, el surco, la chagra.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Paisaje cultural: sembrar territorios, sembrar caminos</h2>
+        <p class="entradilla">El paisaje cultural es el territorio leído como obra colectiva: surcos, colores, trazados y ritmos de la palabra y del gesto agrícola inscritos en la montaña durante generaciones. San Cristóbal, y sus veredas, no son escenarios pasivo: es actor, espacio educativo y lugar productivo de la agroecología que acoge el coloquio. En él convergen memorias de la siembra, el agua y las semillas nativas en el contexto urbano-rural de la Comuna 60.</p>
+        <p class="entradilla">Pero el paisaje cultural también es sembrar caminos, sembrar rutas de transporte compartido desde puntos urbanos, sembrar senderos que conectan las 7 veredas del corregimiento: El Llano, Travesías, La Loma, Pajarito, La Palma, El Patio y San José de la Montaña. Caminar las laderas de San Cristóbal, desde el Parque Biblioteca Fernando Botero hasta las veredas de La Palma o Pajarito, es un método etnográfico y arquitectónico de primer orden. Como Thoreau afirma, el caminante se convierte en un cartógrafo sensible, mapeando el <em>Oikos</em> con los pies.</p>
+        <p class="entradilla">Le Breton, en <cite>Elogio del caminar</cite>, complementa esta visión al destacar cómo la marcha permite al individuo reapropiarse de su cuerpo y de su tiempo frente a las exigencias alienantes de la modernidad. Caminar es un acto de resistencia rítmica. En el contexto de nuestros talleres con jóvenes y comunidades rurales, proponer una «caminata etnográfica» es una herramienta pedagógica poderosa. No se trata de caminar para hacer ejercicio, sino de caminar para observar, preguntar y sentir. Al caminar juntos, se rompen las jerarquías. El sociólogo, el arquitecto, el campesino, el estudiante, en el adulto mayor, el niño comparte diferentes ritmos, y miradas diversas sobre el paisaje que los junta en la construcción colectiva del mándala.</p>
+        <p class="entradilla">En lo metodológico se sugiere tener un mapa del territorio para mostrar y que los participantes se identifiquen y ubiquen en él.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Memoria biocultural y resistencia: sembrar el pasado en el presente</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">La memoria biocultural no vive solo en relatos: también vive en semillas, plantas, gestos, recetas, cantos y rituales que pasan de mano en mano y de cuerpo en cuerpo. Resistir es seguir sembrando, seguir danzando, trazando y tejiendo con cada una de las formas propias de nombrar, sembrar y cultivar la vida. Este concepto conecta a mujeres campesinas, indígenas y afrodescendientes, con sus ritos y sus maternidades.</p>
+            <p class="entradilla">Pero la memoria biocultural también es sembrar organizaciones que defienden la pervivencia cultural. La escuela Dxij Phade («abriendo caminos» en <em>nasayuwe</em>), coordinada por Nicxa Tatiana Estupiñán en el barrio Mirador de Tocaima en Bogotá, es un ejemplo de cómo la memoria se siembra en contextos urbanos donde los niños indígenas no tienen acceso a su territorio de origen. Sembrar memoria es sembrar casas de pensamiento intercultural, es sembrar juntas de acción comunal que acogen pueblos indígenas, afros, campesinos, víctimas del conflicto armado y firmantes de paz.</p>
+            <p class="entradilla">Desde la cosmovisión Nasa, la semilla es un miembro de la familia que requiere afecto, conversación y agradecimiento. La agrobiodiversidad no responde a la lógica de la productividad uniforme, sino a la gestión del riesgo ecológico y a la conservación de un diálogo afectivo entre la comunidad humana (<em>Runa</em>) y el mundo sagrado (<em>Sallqa</em> y <em>Pacha</em>). La resistencia biocultural es, entonces, una maternidad expandida: el útero espiral donde se gesta la pervivencia cultural frente al querer homogenizar todo.</p>
+            <p class="entradilla">Se propone de manera metodológica una espiritual que a su vez identifique la figura del útero como elemento simbólico de la fuerza de la memoria y la siembra.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="mazorca.png" width="148" height="400" alt="Mazorca como símbolo de memoria biocultural, siembra y pervivencia.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Grafías del territorio: sembrar escrituras en el paisaje</h2>
+        <p class="entradilla">Las grafías del territorio son las escrituras de la tierra: surcos, simetrías, colores y trazados que funcionan como texto legible y estética viva inscrita en el paisaje cultural. Son el ritmo de la palabra y del gesto agrícola; son la huella que la siembra deja en la montaña, en la vereda, en el camino, en la chagra y que la lectura comunitaria de las comunidades y pueblos reconoce como propia.</p>
+        <p class="entradilla">Pero las grafías del territorio también son sembrar escrituras organizativas, sembrar trazados de redes comunitarias, sembrar simetrías entre lo urbano y lo rural. El mándala vivo es una grafía performativa: cada surco es una línea, cada brazo es una página, cada semilla es una letra. La siembra es una escritura intercultural donde cada actor deja su huella.</p>
+        <p class="entradilla">Como afirma la cosmovisión andina, la tierra no se concibe como un objeto inerte o suelo agrícola, sino como <em>Pachamama</em>, una entidad viva dotada de sensibilidad, memoria y voluntad. Las semillas nativas son tratadas como miembros de la familia, y los surcos que las acogen son caricias al territorio, no heridas. En la Amazonía, la chagra es un espacio de claros dinámicos en el bosque donde las mujeres son las depositarias y creadoras principales de la agrobiodiversidad. Ellas no solo cultivan, sino que dialogan con los espíritus guardianes de las plantas.</p>
+        <p class="entradilla">Sembrar como escrituras en el paisaje, alimenta las preguntas del público e invita metodológicamente a ver el video sobre las semillas y su importancia para los pueblos y saberes.</p>
+      </div>
+    </section>
+
+    <section class="estacion" id="mandala">
+      <p class="indice">Cartografía performativa</p>
+      <h2 id="titulo-mandala">Él mándala vivo como cartografía performativa: sembrar mapas que actúan</h2>
+      <p class="lede">El mándala vivo es un mapa que no representa el territorio: lo actúa, lo siembra y lo hace crecer; por eso lo llamamos cartografía performativa y dispositivo vivo. Es el dispositivo metodológico central que cierra el conversatorio: lo que revelan las entrevistas previas, especies, símbolos y grafías, se siembra allí por manos de las mujeres invitadas y del público asistente. Su tamaño de 3 × 4 metros, su figura circular de semillas y plantas, representan un trenzado, una escritura intercultural donde cada actor se involucra en la construcción colectiva.</p>
+      <p class="lede">Cada brazo del mándala representa un multiverso: el mundo Nasa, el mundo afrodescendiente, el mundo campesino, el mundo académico. Su montaje busca dialogar con la tierra, al estilo de los artistas plásticos de Primiti Colors, quienes proponen el color sin teoría como parte de un laboratorio de creación.</p>
+      <p class="entradilla">Metodológicamente se requiere un conversatorio previo con los actores invitados para de manera conjuntas identificar las formas, las plantas y sus beneficios. En lo logístico, se debe dejar trazado con 4 días de anterioridad, dejando además los insumos necesarios y las plantas, para que la intención pedagógica de la siembra, alcance su realización y los participantes puedan dialogar y conversar sobre lo que significa, sembrar juntos.</p>
+      <p class="ayuda" id="mandala-ayuda">Activa un cuadrante con el cursor, el dedo o el teclado. Cada mundo abre su ficha.</p>
+
+      </section>
+
+
+    <section class="estacion" id="ruta">
+      <p class="indice">Cultura · Cuerpo · Ruta operativa</p>
+      <h2 id="titulo-ruta">Cultura, co-creación, multiversos y elementos de ruta</h2>
+
+      <div class="bloque-concepto">
+        <h2>Cultura como cultivo, tejido y cuidado: sembrar en todas las dimensiones</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Cultura como cultivo: cultivar cultura es cultivar vida; la etimología une ambas palabras y la propuesta las vuelve método: lo que se siembra se cuida; lo que se cuida se cultiva. Cultura como tejido: tejer comunidad es tejer biodiversidad; el borde trenzado del mándala y la escuela Dxij Phade muestran que la cultura se teje entre generaciones y pueblos. Cultura como cuidado: la ética del cuidado del colectivo Mujeres Siempre Vivas sostiene todo el evento.</p>
+            <p class="entradilla">Pero cultura como cultivo, tejido y cuidado también es sembrar organizaciones, sembrar caminos, sembrar memoria, sembrar diálogos. Cuando el colectivo Life energía en movimiento, dirigido por Juan Fernando Vahos, activa los cuerpos con el ritmo afro-latino, está cultivando memoria corporal. Cuando las mujeres del colectivo Mujeres Siempre Vivas tejen sus redes de economía solidaria, están tejiendo organización. Cuando Nelly Bedoya cuida el suelo de su finca, está cuidando el territorio y la comunidad que lo habita.</p>
+            <p class="entradilla">Desde la perspectiva de Stefano Mancuso en <cite>La nación de las plantas</cite>, «las plantas no son objetos inertes ni meros decorados del paisaje; son la nación más antigua, poderosa y sabia del planeta. Ellas inventaron la vida en la tierra, tejen redes subterráneas de cooperación inquebrantable y nos enseñan que la verdadera inteligencia no es la conquista, sino el cuidado». La ética del cuidado es, entonces, la forma más alta de inteligencia vegetal y humana.</p>
+            <p class="entradilla">En lo metodológico se sugiere abrir un espacio con los participantes teniendo como estrategia didáctica las palabras: CULTIVAR, TEJER, CUIDAR.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="campesinos.png" width="366" height="366" alt="Campesinos en el cultivo, tejido y cuidado del territorio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Co-creación horizontal: sembrar autorías colectivas</h2>
+        <p class="entradilla">La co-creación horizontal es la producción conjunta entre academia, comunidad y gestores culturales: el mándala no lo diseña una sola persona, se hace con todos, se traza con lo que revelan entrevistas y talleres. La relatoría en vivo, la moderación intercultural y los acuerdos comunitarios muestran que todo el evento se teje entre muchas manos diversas y que su autoría es colectiva, circular y compartida.</p>
+        <p class="entradilla">Pero la co-creación horizontal también es sembrar organizaciones colectivas, sembrar tejidos sin jerarquías, sembrar caminos compartidos, sembrar memorias plurales. Este principio se alinea con la pedagogía de la Madre Tierra: las preguntas de investigación se tratan como «semillas» y el cuerpo, el ritmo y la palabra se convierten en herramientas legítimas de producción de conocimiento. La co-creación horizontal es también la condición de posibilidad para que la <em>nasayuwe</em>, el canto afro, la palabra campesina y el texto académico transiten en horizontalidad, bajo la premisa de que «nadie lo sabe todo, nadie lo ignora todo».</p>
+        <p class="entradilla">En la ejecución del evento, la co-creación horizontal se evidenció en la conformación del equipo: una educadora Nasa, un sociólogo experto en desarrollo rural, un técnico agroecológico, una líder campesina local, un director creativo afrodescendiente y un gestor cultural con raíces en la comuna 60. Esta convergencia garantiza que el evento no sea una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+        <p class="entradilla">Se propone la imagen de unas manos tejiendo al fondo una montaña en movimiento.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Multiversos y pluriétnicidad: sembrar mundos que conviven</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Los multiversos son la convivencia de muchos mundos: Nasa, afro, campesino, académico, urbano y rural, sin que uno devore a los otros; la propuesta del coloquio los defiende como condición epistémica, estética y política. La pluriétnicidad define la composición de invitados y públicos: mujeres indígenas, campesinas y afrodescendientes; académicos; técnicos; gestores; estudiantes; productores y toda la comunidad general de San Cristóbal. Cada mundo trae su lengua, su ritmo y su estética propias: <em>nasayuwe</em>, canto afro, palabra campesina y texto académico; el coloquio los acoge a todos sin forzar una traducción única o uniforme.</p>
+            <p class="entradilla">Pero los multiversos también son sembrar organizaciones plurales, sembrar tejidos interculturales, sembrar caminos que conectan mundos, sembrar memorias diversas. En la cosmovisión andina, la tierra es <em>Pachamama</em>, una entidad viva dotada de sensibilidad, memoria y voluntad. Los multiversos son las múltiples formas en que esta entidad se manifiesta y es nombrada. No hay una sola manera de habitar el territorio; hay tantas como pueblos lo han hecho a lo largo de la historia.</p>
+            <p class="entradilla">En la ejecución del evento, los multiversos se evidenciaron en la participación de habitantes de 7 veredas del corregimiento, en la convergencia de organizaciones como Aethernum Green, Mujeres Siempre Vivas, Una Planta a la Vez, I Motion, Productores de Acab, grupos de adultos mayores, jóvenes, estudiantes de la Universidad Nacional y gestores culturales del Parque Biblioteca Fernando Botero. Esta diversidad pluriétnica y pluriterritorial es la condición de posibilidad para que el coloquio sea un verdadero diálogo de saberes.</p>
+          </div>
+          <figure class="bloque-con-foto-media">
+            <img src="manos2.jpeg" width="1792" height="2400" alt="Manos en la construcción colectiva de los multiversos del coloquio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>El cuerpo como primer territorio de la siembra: sembrar en la carne</h2>
+        <p class="entradilla">La experiencia sensible y creativa que, desde la raíz negra y afro, reconoce el cuerpo como nuestro territorio primero: un espacio de memoria, percepción, expresión y transformación, cuyo cultivo es fundamental para ampliar nuestra consciencia y nuestra manera de habitar. A través del ritmo, el canto, las onomatopeyas y la percusión corporal, se explora la relación entre cuerpo, memoria y tierra, tomando como referente las tradiciones musicales africanas en las que el ritmo acompaña las labores agrícolas y fortalece los vínculos comunitarios. Inspirados en ritmos como el <em>Kassa</em> y el <em>Konkoba</em>, que propician un encuentro entre el movimiento, la escucha y la creación colectiva, donde cada gesto pueda convertirse en una forma de recordar, comunicar y sembrar. Entendemos el gesto plástico como una acción creadora que transforma nuestra relación con el cuerpo y el entorno. Sembrar es, entonces, mucho más que depositar una semilla en la tierra: será cultivar la atención, reconocer nuestras raíces, despertar la memoria y establecer relaciones conscientes con los otros y con la naturaleza.</p>
+        <p class="entradilla">El cuerpo como primer territorio invita a comprender que, así como la tierra requiere cuidado para germinar, el cuerpo necesita ser cultivado mediante el movimiento, la sensibilidad, el encuentro y la expresión. De esta manera, el ritmo se convierte en un lenguaje compartido y la siembra en un acto simbólico y colectivo que nos permite reconocer la vida como una creación permanente. Sembrar un gesto, cultivar el cuerpo, despertar la memoria y transformar nuestra manera de habitar la tierra.</p>
+        <p class="entradilla">Se propone metodológicamente activar la escucha con sonidos de tambores y ocarinas.</p>
+      </div>
+
+      <div class="bloque-concepto" id="lineas">
+        <h2>Líneas metodológicas que se proponen en el arte de sembrar</h2>
+        <p class="entradilla">A continuación, presentamos 5 líneas de trabajo que posibilitan unas rutas para entender y comprender el trabajo del coloquio en sus diferentes conceptos y estrategias y elementos didácticos.</p>
+        <div class="lineas-grid">
+          <article class="linea-card fondo-textura fondo-cafe">
+            <h3>Línea 1: Investigación-Acción Participativa (IAP)</h3>
+            <p>La IAP es la metodología que garantiza que el conocimiento no se extraiga del territorio, sino que se co-construya con él. Incluye entrevistas previas con las mujeres sabedoras, co-diseño del mándala con los actores territoriales, construcción colectiva de preguntas y respuestas durante el coloquio, y sistematización participativa de los saberes emergentes. Esta línea asegura que el evento no sea una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-verde">
+            <h3>Línea 2: Diálogo intercultural y pluriétnico</h3>
+            <p>El encuentro entre conocimientos indígena Nasa, afrodescendiente, campesino y académico se realiza bajo una moderación intercultural con turnos flexibles, reconocimiento de protocolos propios de cada pueblo y traducción entre lenguajes técnicos, ancestrales y artísticos. Esta línea garantiza que la palabra circule como semilla en una siembra comunitaria, sin jerarquías epistémicas.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-turquesa">
+            <h3>Línea 3: Creación colectiva y Land Art</h3>
+            <p>El diseño participativo del mándala de 3x4 metros, la siembra performativa como acto artístico simultáneo al diálogo, el uso de tierras de colores y material vegetal (estética Primiti Colors) y el registro etnográfico del proceso creativo en tiempo real componen esta línea. El land art aquí no es una intervención sobre el paisaje, sino una conversación con él.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-morado">
+            <h3>Línea 4: Registro y sistematización</h3>
+            <p>El documental corto etnográfico (5-7 minutos), metodología, las cápsulas audiovisuales de saberes y el repositorio digital abierto como archivo vivo garantizan que el conocimiento producido no se quede encerrado en la vereda, sino que circule como semilla en otros territorios.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-cafe">
+            <h3>Línea 5: Pedagogía territorial y agroecológica</h3>
+            <p>El recorrido sensorial por la finca, la lectura colectiva del paisaje y los trazados de cultivo, el intercambio simbólico de semillas y la guía de réplica metodológica para otros territorios componen esta línea. La pedagogía aquí no es unidireccional: la academia aprende del territorio (sobre los ciclos lunares, la siembra en espiral, el cuidado del agua y la memoria del cuerpo), y el territorio se ve reflejado y dignificado en los marcos conceptuales que la academia aporta para defender sus prácticas.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Elementos a trabajar para establecer en la ruta y contexto para los actores y el desarrollo del coloquio</h2>
+        <h3 class="modelo-titulo">Línea. Estímulo a la realización de eventos académicos</h3>
+        <p class="entradilla">Promover la realización de eventos académicos de arte y cultura mediante el otorgamiento de estímulos a los habitantes de las comunas y corregimientos de Medellín, con los recursos priorizados por la comunidad en el marco del Programa de Planeación del Desarrollo Local y Presupuesto Participativo.</p>
+        <h3 class="modelo-titulo">Descripción del estímulo</h3>
+        <p class="entradilla">Los encuentros académicos constituyen espacios fundamentales para la construcción de conocimiento, el fortalecimiento del pensamiento crítico y la circulación de investigaciones y experiencias en el campo cultural o artístico. A través de foros, seminarios, simposios, coloquios, congresos, encuentros investigativos o jornadas académicas, se propicia el diálogo entre expertos, artistas, investigadores, gestores y comunidad. Este estímulo está orientado a la realización de un evento académico que promueva el encuentro, la reflexión crítica y el intercambio de saberes en torno a las artes, la cultura, el patrimonio, la gestión cultural o procesos investigativos. El estímulo pretende fomentar la producción y socialización de pensamiento crítico y la Visibilización de procesos culturales que aporten al desarrollo cultural de Medellín. Asimismo, se busca que el evento tenga un impacto real en la comunidad, promoviendo la participación, la apropiación social del conocimiento y la proyección de nuevas iniciativas culturales y académicas.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Contextualización territorial</h2>
+        <p class="entradilla">Antes de disponerse a la realización de un coloquio, resulta absolutamente imperativo que los actores, líderes y profesionales invitados comprendan a profundidad el contexto territorial donde van a interactuar. Esta contextualización territorial no es un mero trámite, sino el cimiento sobre el cual se construirá todo el diálogo. Conocer las dinámicas sociales, las tensiones históricas, las riquezas culturales y las necesidades específicas de la comunidad permite a los participantes evitar suposiciones erróneas y enfoques descontextualizados que podrían resultar irrelevantes o incluso ofensivos. Por lo tanto, este proceso de inmersión y análisis previo debe materializarse como la introducción formal al coloquio con los asistentes. Al presentar esta contextualización al inicio del evento, se establece un lenguaje común, se legitima la voz de la comunidad y se alinea a todos los participantes hacia una misma frecuencia de respeto y empatía. Los asistentes, al recibir esta información estructurada, comprenden que el espacio que ocupan está cargado de significados que exigen una escucha activa y una participación responsable. Así, la contextualización territorial trasciende la función de un simple prólogo; se convierte en la brújula que orientará las ponencias, los debates y las posteriores conclusiones. Sin este anclaje geográfico y social, el coloquio correría el riesgo de convertirse en un ejercicio académico aislado, ciego ante las realidades que pretende transformar o comprender. En definitiva, asumir el territorio como el punto de partida garantiza que las intervenciones de los líderes y profesionales no sean discursos vacíos, sino respuestas pertinentes, situadas y genuinamente comprometidas con el entorno que los acoge, transformando el encuentro en una verdadera oportunidad de construcción colectiva y transformación social significativa para todos los sectores involucrados en esta importante y necesaria jornada de reflexión compartida que busca generar un impacto real y duradero en la vida cotidiana de las personas.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Actores y roles</h2>
+        <p class="entradilla">Es muy importante desde el principio definir muy bien los actores y los roles. Con esto se logra identificar que elementos y estrategias se deben seguir para que en el momento de la puesta en marcha del evento académico todos y todas estén enterados de las funciones, temporalidad y el desarrollo de la agenda.</p>
+        <h3 class="modelo-titulo">Objetivos operativos por fase</h3>
+        <p class="entradilla">Definir con claridad los objetivos de la fase de avanzada, las entrevistas, los recursos a priorizar y la locación, debe estar en la primera fase. Esto garantiza varias cosas.</p>
+        <ul class="lista-verificacion">
+          <li><span class="marca"></span><span>Identificar en la locación, disponibilidad de energía, señal para el streming, cobertura de internet.</span></li>
+          <li><span class="marca"></span><span>Servicios básicos sanitarios para no tener inconvenientes en la disponibilidad.</span></li>
+          <li><span class="marca"></span><span>Capacidad de carga de la finca, salón o locación elegida.</span></li>
+          <li><span class="marca"></span><span>Rutas y frecuencias de transporte y costos asociados a estas.</span></li>
+          <li><span class="marca"></span><span>Identificación de temas de salud en los participantes inscritos. Se debe dejar claro en el formulario de inscripción.</span></li>
+          <li><span class="marca"></span><span>Preferencias en la alimentación.</span></li>
+          <li><span class="marca"></span><span>Protocolo de visita según el ecosistema y las posibilidades vulnerabilidades asociadas a este, frio, insectos, fauna, flora, Nivel de dificultad en caso tal que sea necesario caminar.</span></li>
+        </ul>
+        <h3 class="modelo-titulo">Secuencia metodológica paso a paso. Agenda del coloquio</h3>
+        <p class="entradilla">Todos los actores deben conocer con antelación, la agenda y los horarios en los que participarán en las actividades, esto garantiza cumplimiento en los horarios.</p>
+        <h3 class="modelo-titulo">Recursos materiales</h3>
+        <p class="entradilla">Es importante identificar cuáles serán los insumos, materiales de cada uno de los actores para buscar que la presentación y la línea en la que participan en el coloquio, cuenta con las ayudas audiovisuales, de papelería, entre otros equipos necesarios en las estrategias didácticas de cada actor.</p>
+        <h3 class="modelo-titulo">Productos esperados</h3>
+        <p class="entradilla">Dentro de los productos esperados, debe quedar muy claro para los actores, que se desea de cada uno. Esto con el fin de recoger:</p>
+        <ul class="lista-verificacion">
+          <li><span class="marca"></span><span>Registros audiovisuales</span></li>
+          <li><span class="marca"></span><span>Memorias</span></li>
+          <li><span class="marca"></span><span>Evaluaciones</span></li>
+          <li><span class="marca"></span><span>Entrevistas</span></li>
+        </ul>
+        <p class="entradilla">Este elemento es fundamental, para aprovechar los escenarios de encuentros con los actores, dado algunos pueden estar moviéndose por asuntos laborales en otros lugares y la información se puede dilatar al punto de retardar los procesos de sistematización de la información y con esto las entregas de informes.</p>
+        <h3 class="modelo-titulo">Indicadores de logro</h3>
+        <p class="entradilla">Tener presentes los indicadores y los resultados esperados, permite diseñar estrategias e instrumentos que permitan medir las percepciones e identificar mejoras y acciones de transformación necesarias en todas las metodologías.</p>
+      </div>
+    </section>
+  </main><footer class="site-footer capa" id="etica">
+    <div class="footer-inner">
+      <p class="indice">Protocolos · Memoria y referencias</p>
+      <h2>Protocolos éticos</h2>
+      <p class="lede">Consentimientos informados, compensación justa por saber, acuerdos de uso de imagen y voz, respeto a protocolos indígenas, campesinos y afrodescendientes.</p>
+      <div class="etica-grid">
+        <article class="etica-item fondo-textura fondo-verde">
+          <h3>Consentimientos informados</h3>
+          <p>Acuerdos de uso de imagen y voz. Respeto a protocolos indígenas, campesinos y afrodescendientes.</p>
+        </article>
+        <article class="etica-item fondo-textura fondo-cafe">
+          <h3>Compensación justa por saber</h3>
+          <p>El evento no es una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+        </article>
+        <article class="etica-item fondo-textura fondo-morado">
+          <h3>Co-creación horizontal</h3>
+          <p>Producción conjunta entre academia, comunidad y gestores culturales: el mándala no lo diseña una sola persona, se hace con todos, se traza con lo que revelan entrevistas y talleres. La relatoría en vivo, la moderación intercultural y los acuerdos comunitarios muestran que todo el evento se teje entre muchas manos diversas y que su autoría es colectiva, circular y compartida.</p>
+        </article>
+      </div>
+
+      <details class="fuentes" open>
+        <summary>Bibliografía comentada y referencias conceptuales</summary>
+        <ul>
+          <li>
+            <p>Le Breton, David. (2002). <cite>Antropología del cuerpo y modernidad</cite>. Buenos Aires: Nueva Visión.</p>
+            <p>Texto esencial para desmontar la idea del cuerpo como una máquina biológica aislada. Permite entender cómo las estructuras sociales, económicas y tecnológicas se inscriben materialmente en la carne. En el contexto de San Cristóbal, es una herramienta clave para analizar cómo la exposición a agroquímicos y la precariedad laboral afectan el cuerpo del campesino, y cómo la agroecología actúa como una práctica de recuperación de la integridad corporal y la soberanía sobre el propio territorio.</p>
+          </li>
+          <li>
+            <p>Le Breton, David. (2007). <cite>El sabor del mundo: Una antropología de los sentidos</cite>. Buenos Aires: Nueva Visión.</p>
+            <p>Esta obra desplaza el análisis desde lo puramente visual o racional hacia lo sensorial. Le Breton argumenta que el gusto es una forma de conocimiento y de relación con el mundo. Para nuestros talleres, este libro fundamenta la importancia de rescatar los sabores nativos (como la uchuva y el maíz) no solo como nutrientes, sino como actos de resistencia cultural contra la homogeneización y el empobrecimiento sensorial que impone la industria alimentaria global.</p>
+          </li>
+          <li>
+            <p>Le Breton, David. (2012). <cite>Elogio del caminar</cite>. Madrid: Siruela.</p>
+            <p>Un texto que reivindica la marcha como una práctica de libertad, de reapropiación del tiempo y de conexión con el entorno. En nuestra metodología, el «caminar» se convierte en una herramienta etnográfica y pedagógica. Este libro aporta el marco teórico para justificar las caminatas de reconocimiento territorial como un acto válido y necesario de investigación comunitaria y de construcción de ciudadanía, alejándose de la lógica de la eficiencia y el transporte utilitario.</p>
+          </li>
+          <li>
+            <p>Thoreau, Henry David. (2016). <cite>Caminar</cite>. Madrid: Errata Naturae.</p>
+            <p>El clásico ensayo de Thoreau complementa la visión de Le Breton desde una perspectiva más poética y filosófica. Su idea de que caminar es una forma de peregrinación hacia la «tierra santa» local resuena profundamente con la necesidad de revalorizar el paisaje rural de Medellín. Thoreau nos enseña a mirar el territorio con asombro y atención plena, una actitud indispensable para fomentar el cuidado ambiental y la justicia ecológica en las nuevas generaciones.</p>
+          </li>
+          <li>
+            <p>Mancuso, Stefano. (2019). <cite>La nación de las plantas</cite>. Madrid: Galaxia Gutenberg.</p>
+            <p>Texto fundamental para comprender la inteligencia vegetal y las redes subterráneas de cooperación que sostienen la vida en el planeta. Mancuso nos enseña que la verdadera inteligencia no es la conquista, sino el cuidado. En el contexto del evento, este libro aporta el marco conceptual para entender la siembra como un diálogo con una nación sabia y antigua, y para cuestionar los modelos agroindustriales que tratan a las plantas como meros recursos.</p>
+          </li>
+          <li>
+            <p>Illich, Iván. (1973). <cite>La sociedad desescolarizada</cite>. Barcelona: Barral Editores.</p>
+            <p>Obra clásica que cuestiona el monopolio de la enseñanza formal y propone «tramas de aprendizaje convivenciales». En el contexto del evento, este libro valida la metodología de sacar el saber del aula y llevarlo al territorio, demostrando que la comunidad se moviliza como protagonista de su propio desarrollo cognitivo y cultural.</p>
+          </li>
+          <li>
+            <p>Referencia institucional: Alcaldía de Medellín. (2026). Convocatoria de Fomento y Estímulos para el Arte y la Cultura. PP Cultura 2026. Línea: Estímulo a la realización de eventos académicos.</p>
+            <p>Documento marco que da origen al evento y que establece los parámetros de ejecución, sistematización y evaluación. Proporciona el contexto institucional y los compromisos éticos que el evento asume frente a la ciudad y el corregimiento de San Cristóbal.</p>
+          </li>
+        </ul>
+      </details>
+
+      <aside class="contacto">
+        <h3 id="titulo-contacto">Contáctanos</h3>
+        <ul class="contacto-lista">
+          <li>
+            <strong>CasaCanto</strong>
+            <a href="mailto:juancasacanto12@gmail.com">juancasacanto12@gmail.com</a>
+            <a href="https://www.instagram.com/arte_savia/" target="_blank" rel="noopener noreferrer">Instagram @arte_savia</a>
+          </li>
+          <li>
+            <strong>I Motion</strong>
+            <a href="mailto:imotioncorporacion@gmail.com">imotioncorporacion@gmail.com</a>
+            <a href="https://www.instagram.com/imotioncorporacion/" target="_blank" rel="noopener noreferrer">Instagram @imotioncorporacion</a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="pata">
+        <p class="pata-leyenda">Proyecto beneficiado con recursos del programa de Planeación del Desarrollo Local y Presupuesto Participativo de Cultura.</p>
+        <figure class="pata-logos">
+          <img src="logos.png" width="451" height="200" alt="Organiza: CasaCanto. Apoya: Alcaldía de Medellín, Distrito de Ciencia, Tecnología e Innovación.">
+        </figure>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

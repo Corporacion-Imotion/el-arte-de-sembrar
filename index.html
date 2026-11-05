@@ -1,0 +1,4294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f1f0eb">
+  <meta name="description" content="Infografía metodológica de El Arte de Sembrar: Diálogos Con-Sentidos. Coloquio intercultural en la Finca El Yarumo, vereda La Palma, San Cristóbal, Medellín.">
+  <title>El Arte de Sembrar · Diálogos con-sentidos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/oin1qod.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#3d2b1f",
+            parchment: "#f1f0eb",
+            cyan: "#2089a9",
+            olive: "#4b6c4a",
+            clay: "#3d2b1f"
+          },
+          fontFamily: {
+            display: ["Kefa III", "Palatino", "serif"],
+            sans: ["Lato", "Segoe UI", "sans-serif"],
+            marca: ["social-gothic", "Arial Narrow", "sans-serif"]
+          },
+          boxShadow: {
+            card: "0 16px 40px rgb(36 28 21 / 0.08)"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: "Kefa III";
+      src: url("assets/fonts/kefa-regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Kefa III";
+      src: url("assets/fonts/kefa-bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Kefa III";
+      src: url("assets/fonts/kefa-italic.ttf") format("truetype");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Kefa III";
+      src: url("assets/fonts/kefa-bold-italic.ttf") format("truetype");
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    :root {
+      --parchment: #f1f0eb;
+      --parchment-raised: #f7f6f2;
+      --ink: #3d2b1f;
+      --ink-soft: #4b6c4a;
+      --earth: #3d2b1f;
+      --clay: #3d2b1f;
+      --ochre: #4b6c4a;
+      --olive: #4b6c4a;
+      --sage: #4b6c4a;
+      --terracotta: #2089a9;
+      --terracotta-deep: #3d2b1f;
+      --teal: #2089a9;
+      --teal-mid: #2089a9;
+      --wash-nasa: #f4f1ea;
+      --wash-afro: #e7f3f6;
+      --wash-campesino: #e7eee4;
+      --wash-academia: #e5f1f4;
+      --line: rgba(61, 43, 31, 0.16);
+      --shadow: 0 16px 40px rgb(61 43 31 / 0.08);
+      --font-text: "Kefa III", Palatino, "Palatino Linotype", serif;
+      --font-ui: "Lato", "Avenir Next", "Segoe UI", sans-serif;
+      --font-marca: "social-gothic", "Arial Narrow", sans-serif;
+      --font-display: var(--font-text);
+      --font-sans: var(--font-ui);
+      --foco: 3px solid #2089a9;
+      --header: clamp(11rem, 34vw, 18rem);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: var(--font-text);
+      font-weight: 400;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      background-color: #f1f0eb;
+      background-image: url("assets/textura-fondo.jpg");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-size: 1400px 1400px;
+    }
+
+    .velo {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: rgba(241, 240, 235, 0.8);
+    }
+
+    .capa {
+      position: relative;
+      z-index: 1;
+    }
+
+    body.hay-dialogo {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: #d5eaf1;
+      color: var(--ink);
+    }
+
+    em {
+      font-family: var(--font-text);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    :focus-visible {
+      outline: var(--foco);
+      outline-offset: 3px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .saltar {
+      position: absolute;
+      left: 0.75rem;
+      top: -4rem;
+      z-index: 80;
+      padding: 0.75rem 1rem;
+      min-height: 44px;
+      background: #3d2b1f;
+      color: #f1f0eb;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+    }
+
+    .saltar:focus {
+      position: fixed;
+      top: 0.75rem;
+    }
+
+    body :is(h1, h2, h3, h4) {
+      font-family: var(--font-text);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .indice,
+    .estaciones,
+    .step-kicker,
+    .origen,
+    .ficha-kicker,
+    .ficha h4,
+    .barra-ficha,
+    .afiche figcaption,
+    .accion,
+    .fuentes summary,
+    .ayuda,
+    .petal-num,
+    .step-num,
+    body button {
+      font-family: var(--font-ui);
+      font-style: normal;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
+    a {
+      color: #4b6c4a;
+    }
+
+    body button {
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .petal strong,
+    .petal small,
+    .step-name {
+      font-family: var(--font-text);
+    }
+
+    .petal strong,
+    .step-name {
+      font-weight: 700;
+    }
+
+    .sprite {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(241, 240, 235, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .banner {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .banner-inner {
+      width: min(72rem, calc(100% - 2rem));
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem 1.5rem;
+      padding: 0.55rem 0 0.45rem;
+    }
+
+    .banner-marca {
+      display: block;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: min(46rem, 78%);
+      line-height: 0;
+    }
+
+    .banner-marca img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .banner-sello {
+      display: block;
+      flex: none;
+      width: auto;
+      height: var(--sello-alto, 7.5rem);
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+
+    .header-nav {
+      width: min(72rem, calc(100% - 2rem));
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      padding-block: 0.15rem 0.25rem;
+    }
+
+    .estaciones {
+      display: flex;
+      gap: 0.15rem;
+      margin: 0;
+      padding: 0.15rem 0;
+      list-style: none;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .estaciones a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.35rem 0.55rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .estaciones a:hover {
+      background: rgba(142, 56, 40, 0.08);
+    }
+
+    .estaciones a[aria-current="true"] {
+      color: var(--terracotta-deep);
+      box-shadow: inset 0 -2px 0 var(--terracotta);
+    }
+
+    main {
+      width: min(72rem, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    main:focus-visible {
+      outline-offset: 6px;
+    }
+
+    .estacion {
+      padding-block: 4.25rem 1rem;
+      scroll-margin-top: calc(var(--header) + 0.75rem);
+    }
+
+    .indice {
+      margin: 0 0 0.55rem;
+      color: var(--terracotta-deep);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .marca-lockup {
+      display: grid;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0;
+      font-size: inherit;
+      font-weight: 700;
+      color: #2089a9;
+    }
+
+    .marca-kicker,
+    .marca-medio,
+    .marca-cierre {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.2em;
+      font-family: var(--font-marca);
+      font-style: normal;
+      line-height: 1.2;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .marca-kicker,
+    .marca-cierre {
+      color: #2089a9;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .marca-kicker {
+      font-size: clamp(1.55rem, 3.5vw, 2.35rem);
+    }
+
+    .marca-medio {
+      margin-top: 0.28rem;
+      color: #3d2b1f;
+      font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+    }
+
+    .marca-cierre {
+      margin-top: 0.18rem;
+      font-size: clamp(2.2rem, 5.4vw, 3.85rem);
+      letter-spacing: 0.01em;
+    }
+
+    .lugar {
+      margin: 1rem 0 0;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    .premisa {
+      margin: 1.35rem 0 0;
+      padding: 1rem 1.1rem 1rem 1.15rem;
+      background: var(--parchment-raised);
+      border-left: 4px solid var(--terracotta);
+      box-shadow: var(--shadow);
+    }
+
+    .premisa p {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    body h2.modelo-titulo {
+      margin: 1.35rem 0 0;
+      max-width: 34ch;
+      font-family: var(--font-text);
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #3d2b1f;
+    }
+
+    .entradilla {
+      margin: 1.15rem 0 0;
+      max-width: 42rem;
+      color: var(--ink);
+    }
+
+    .afiche {
+      margin: 0;
+      padding: 0.55rem;
+      background: var(--parchment-raised);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .afiche img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .afiche figcaption {
+      padding: 0.7rem 0.35rem 0.25rem;
+      color: var(--ink-soft);
+      font-size: 0.875rem;
+      line-height: 1.45;
+    }
+
+    .coloquio-vivo {
+      align-self: start;
+      margin: 0;
+      padding: 1.05rem 1.15rem 1.15rem;
+      background: rgba(251, 247, 240, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .coloquio-vivo p {
+      margin: 0;
+      color: #2b2620;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .coloquio-vivo-link {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .coloquio-vivo-link:focus-visible {
+      outline: var(--foco);
+      outline-offset: 3px;
+      border-radius: 0.55rem;
+    }
+
+    .coloquio-mini {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 0.55rem;
+      background: #2b2620;
+      aspect-ratio: 16 / 9;
+    }
+
+    .coloquio-mini img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .coloquio-play {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      display: grid;
+      place-items: center;
+      width: 3rem;
+      height: 3rem;
+      margin: -1.5rem 0 0 -1.5rem;
+      border-radius: 50%;
+      background: rgb(32 137 169 / 0.92);
+      box-shadow: 0 6px 18px rgb(43 38 32 / 0.28);
+      pointer-events: none;
+    }
+
+    .coloquio-play svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-left: 0.15rem;
+      fill: #f1f0eb;
+    }
+
+    .coloquio-vivo-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.55rem 1.1rem;
+      background: #2089a9;
+      border-radius: 0.55rem;
+      color: #f1f0eb;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .coloquio-vivo-link:hover .coloquio-vivo-cta {
+      background: #1a738f;
+    }
+
+    .hero-lateral {
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+    }
+
+    .descarga-pdf {
+      margin: 0;
+      padding: 1.05rem 1.15rem 1.15rem;
+      background: rgba(251, 247, 240, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .descarga-pdf p {
+      margin: 0;
+      color: #2b2620;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .descarga-pdf a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      margin-top: 0.85rem;
+      padding: 0.55rem 1.1rem;
+      background: #4b6c4a;
+      border-radius: 0.55rem;
+      color: #f1f0eb;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .descarga-pdf a:hover {
+      background: #3d553c;
+    }
+
+    .descarga-pdf a:focus-visible {
+      outline: var(--foco);
+      outline-offset: 3px;
+    }
+
+    .operaciones {
+      display: grid;
+      gap: 0.65rem;
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .operaciones li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.85rem 1rem;
+      background: rgba(251, 247, 240, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+    }
+
+    .operaciones span {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--terracotta);
+      font-size: 1.15rem;
+    }
+
+
+    .indice-guia {
+      margin: 1.5rem 0 0;
+      padding: 1.15rem 1.25rem 1.25rem;
+      background: rgba(251, 247, 240, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .indice-guia .indice-titulo {
+      margin-top: 0;
+      max-width: none;
+    }
+
+    .indice-guia > p {
+      margin: 0 0 0.85rem;
+      max-width: 42rem;
+    }
+
+    .indice-guia h3 {
+      margin: 1.15rem 0 0.45rem;
+      font-family: var(--font-text);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--earth);
+    }
+
+    .indice-guia h3:first-of-type {
+      margin-top: 0.35rem;
+    }
+
+    .indice-guia ul {
+      margin: 0;
+      padding: 0 0 0 1.15rem;
+      color: var(--ink);
+    }
+
+    .indice-guia li + li {
+      margin-top: 0.25rem;
+    }
+
+    .diagrama-codiseno {
+      margin: 1.25rem 0 0.35rem;
+      padding: 1rem 0.85rem 1.05rem;
+      background:
+        linear-gradient(180deg, rgb(241 240 235 / 0.55), rgb(241 240 235 / 0.2)),
+        rgba(251, 247, 240, 0.98);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+    }
+
+    .diagrama-codiseno > figcaption {
+      margin: 0 0 0.95rem;
+      text-align: center;
+    }
+
+    .diagrama-codiseno > figcaption h4 {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #3d2b1f;
+    }
+
+    .diagrama-codiseno > figcaption p {
+      margin: 0.35rem 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      color: #4b6c4a;
+    }
+
+    .diagrama-fases {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 860px) {
+      .diagrama-fases {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+      }
+    }
+
+    .diagrama-fase {
+      display: grid;
+      gap: 0.65rem;
+      padding: 0.85rem 0.8rem 0.95rem;
+      border-radius: 0.75rem;
+      border: 1px solid transparent;
+      min-height: 100%;
+    }
+
+    .diagrama-fase h5 {
+      margin: 0;
+      display: grid;
+      gap: 0.2rem;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #f1f0eb;
+    }
+
+    .diagrama-fase h5 span {
+      display: inline-block;
+      width: fit-content;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgb(241 240 235 / 0.18);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .fase-investiga {
+      background: #4b6c4a;
+      border-color: #3d553c;
+    }
+
+    .fase-logistica {
+      background: #8f5a3a;
+      border-color: #73472e;
+    }
+
+    .fase-comunicacion {
+      background: #2089a9;
+      border-color: #186f8a;
+    }
+
+    .diagrama-pasos {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .diagrama-pasos li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      padding: 0.55rem 0.6rem;
+      background: rgb(241 240 235 / 0.14);
+      border-radius: 0.55rem;
+      color: #f1f0eb;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    .diagrama-icono {
+      display: grid;
+      place-items: center;
+      width: 2.15rem;
+      height: 2.15rem;
+      border-radius: 0.45rem;
+      background: rgb(241 240 235 / 0.18);
+      flex-shrink: 0;
+    }
+
+    .diagrama-icono svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: none;
+      stroke: #f1f0eb;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .diagrama-pie {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 0.9rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed rgba(61, 43, 31, 0.22);
+    }
+
+    @media (min-width: 720px) {
+      .diagrama-pie {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+      }
+    }
+
+    .diagrama-ruta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3d2b1f;
+    }
+
+    .diagrama-ruta li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .diagrama-ruta li:not(:last-child)::after {
+      content: "→";
+      color: #4b6c4a;
+      font-weight: 700;
+    }
+
+    .diagrama-ruta strong {
+      display: inline-flex;
+      min-height: 2rem;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(75, 108, 74, 0.12);
+      border: 1px solid rgba(75, 108, 74, 0.28);
+    }
+
+    .diagrama-lema {
+      margin: 0;
+      max-width: 28ch;
+      padding: 0.7rem 0.85rem;
+      background: #3d2b1f;
+      border-radius: 0.55rem;
+      color: #f1f0eb;
+      font-family: var(--font-text);
+      font-size: 0.88rem;
+      line-height: 1.35;
+    }
+
+    .diagrama-animacion {
+      margin: 1.75rem 0 0;
+      padding: 1.15rem 1rem 1.2rem;
+      background: rgba(251, 247, 240, 0.96);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .diagrama-animacion > figcaption {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+
+    .diagrama-animacion > figcaption h3 {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #3d2b1f;
+    }
+
+    .diagrama-animacion > figcaption p {
+      margin: 0.4rem 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.92rem;
+      color: #4b6c4a;
+    }
+
+    .flujo-animacion {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    @media (min-width: 960px) {
+      .flujo-animacion {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) minmax(0, 1fr);
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+    }
+
+    .flujo-col {
+      display: grid;
+      gap: 0.65rem;
+      align-content: start;
+    }
+
+    .flujo-col > h4 {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #4b6c4a;
+    }
+
+    .flujo-principio {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.7rem;
+      align-items: start;
+      padding: 0.75rem 0.8rem;
+      background: #f1f0eb;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+    }
+
+    .flujo-principio .flujo-icono {
+      background: #4b6c4a;
+    }
+
+    .flujo-principio strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      color: #3d2b1f;
+    }
+
+    .flujo-principio p {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: #2b2620;
+    }
+
+    .flujo-icono {
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      background: #2089a9;
+    }
+
+    .flujo-icono svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: none;
+      stroke: #f1f0eb;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .flujo-mandala {
+      display: grid;
+      gap: 0.65rem;
+      padding: 0.9rem 0.85rem 1rem;
+      background:
+        radial-gradient(circle at 50% 42%, rgb(32 137 169 / 0.12), transparent 55%),
+        #3d2b1f;
+      border-radius: 0.9rem;
+      color: #f1f0eb;
+    }
+
+    .flujo-mandala > h4 {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font-text);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f1f0eb;
+    }
+
+    .flujo-mandala > p {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: rgba(241, 240, 235, 0.88);
+    }
+
+    .flujo-nucleo {
+      display: grid;
+      place-items: center;
+      width: 4.5rem;
+      height: 4.5rem;
+      margin: 0.15rem auto 0.25rem;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, #f1f0eb, #d8c7a4 45%, #8f5a3a 100%);
+      border: 3px solid rgba(241, 240, 235, 0.35);
+      box-shadow: 0 0 0 8px rgba(75, 108, 74, 0.22);
+    }
+
+    .flujo-nucleo span {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #3d2b1f;
+    }
+
+    .flujo-cosmos {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .flujo-cosmos article {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.55rem;
+      align-items: start;
+      padding: 0.55rem 0.65rem;
+      background: rgba(241, 240, 235, 0.1);
+      border-radius: 0.55rem;
+    }
+
+    .flujo-cosmos .flujo-icono {
+      background: rgba(241, 240, 235, 0.16);
+    }
+
+    .flujo-cosmos strong {
+      display: block;
+      font-family: var(--font-text);
+      font-size: 0.9rem;
+      color: #f1f0eb;
+    }
+
+    .flujo-cosmos p {
+      margin: 0.15rem 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: rgba(241, 240, 235, 0.88);
+    }
+
+    .flujo-glosa {
+      display: grid;
+      gap: 0.45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .flujo-glosa li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.55rem;
+      align-items: start;
+      padding: 0.5rem 0.6rem;
+      background: #f1f0eb;
+      border: 1px solid var(--line);
+      border-radius: 0.55rem;
+    }
+
+    .flujo-glosa .flujo-icono {
+      width: 1.9rem;
+      height: 1.9rem;
+      background: #2089a9;
+    }
+
+    .flujo-glosa .flujo-icono svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .flujo-glosa strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      color: #3d2b1f;
+    }
+
+    .flujo-glosa span {
+      display: block;
+      margin-top: 0.1rem;
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      line-height: 1.35;
+      color: #2b2620;
+    }
+
+    .flujo-conexion {
+      display: none;
+      align-self: center;
+      justify-self: center;
+      color: #4b6c4a;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    @media (min-width: 960px) {
+      .flujo-conexion {
+        display: grid;
+        place-items: center;
+      }
+
+      .flujo-animacion {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.1fr) auto minmax(0, 1fr);
+      }
+    }
+
+    .diagrama-acciones {
+      margin: 1rem 0 0.15rem;
+      padding: 0.95rem 0.85rem 1rem;
+      background: rgba(251, 247, 240, 0.96);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .diagrama-acciones > figcaption {
+      margin: 0 0 0.85rem;
+    }
+
+    .diagrama-acciones > figcaption h4 {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: #3d2b1f;
+    }
+
+    .diagrama-acciones > figcaption p {
+      margin: 0.3rem 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+      color: #4b6c4a;
+    }
+
+    .acciones-grid {
+      display: grid;
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: accion;
+    }
+
+    @media (min-width: 760px) {
+      .acciones-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 560px) and (max-width: 759px) {
+      .acciones-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .acciones-grid li {
+      position: relative;
+      display: grid;
+      gap: 0.65rem;
+      align-content: start;
+      min-height: 100%;
+      padding: 0.85rem 0.8rem 0.9rem 0.95rem;
+      background: #f7f6f2;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      border-left: 4px solid #4b6c4a;
+      counter-increment: accion;
+    }
+
+    .acciones-grid li::before {
+      content: counter(accion, decimal-leading-zero);
+      position: absolute;
+      top: 0.55rem;
+      right: 0.65rem;
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #8f5a3a;
+    }
+
+    .accion-icono {
+      display: grid;
+      place-items: center;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 0.55rem;
+      background: rgba(75, 108, 74, 0.12);
+      color: #4b6c4a;
+    }
+
+    .accion-icono svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .acciones-grid p {
+      margin: 0;
+      padding-right: 1.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.86rem;
+      line-height: 1.4;
+      color: #2b2620;
+    }
+
+    .diagrama-sembrar {
+      margin: 1.35rem 0 0.35rem;
+      padding: 1.05rem 0.95rem 1.15rem;
+      background: rgba(251, 247, 240, 0.96);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .diagrama-sembrar > figcaption {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+
+    .diagrama-sembrar > figcaption h3 {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      font-weight: 700;
+      color: #3d2b1f;
+    }
+
+    .diagrama-sembrar > figcaption p {
+      margin: 0.4rem auto 0;
+      max-width: 42rem;
+      font-family: var(--font-ui);
+      font-size: 0.92rem;
+      color: #4b6c4a;
+    }
+
+    .mapa-siembra {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .mapa-ejes {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    @media (min-width: 760px) {
+      .mapa-ejes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .mapa-ejes {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    .mapa-eje {
+      display: grid;
+      gap: 0.55rem;
+      align-content: start;
+      padding: 0.85rem 0.8rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--line);
+      background: #f7f6f2;
+    }
+
+    .mapa-eje .flujo-icono {
+      background: #4b6c4a;
+    }
+
+    .mapa-eje strong {
+      display: block;
+      font-family: var(--font-text);
+      font-size: 0.98rem;
+      color: #3d2b1f;
+    }
+
+    .mapa-eje p {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: #2b2620;
+    }
+
+    .mapa-fichas,
+    .mapa-rostros,
+    .mapa-metodo {
+      display: grid;
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (min-width: 720px) {
+      .mapa-fichas,
+      .mapa-rostros,
+      .mapa-metodo {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .mapa-fichas li,
+    .mapa-rostros li,
+    .mapa-metodo li {
+      display: grid;
+      gap: 0.45rem;
+      align-content: start;
+      padding: 0.8rem 0.75rem;
+      border-radius: 0.7rem;
+      background: #3d2b1f;
+      color: #f1f0eb;
+    }
+
+    .mapa-fichas .flujo-icono,
+    .mapa-rostros .flujo-icono,
+    .mapa-metodo .flujo-icono {
+      background: rgba(241, 240, 235, 0.14);
+    }
+
+    .mapa-fichas strong,
+    .mapa-rostros strong,
+    .mapa-metodo strong {
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+    }
+
+    .mapa-fichas p,
+    .mapa-rostros p,
+    .mapa-metodo p {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      line-height: 1.4;
+      color: rgba(241, 240, 235, 0.9);
+    }
+
+    .mapa-bloque-titulo {
+      margin: 0.25rem 0 0;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #4b6c4a;
+    }
+
+    .mapa-propósitos {
+      display: grid;
+      gap: 0.45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (min-width: 720px) {
+      .mapa-propósitos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .mapa-propósitos li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.55rem;
+      align-items: start;
+      padding: 0.65rem 0.75rem;
+      border-radius: 0.6rem;
+      background: rgba(75, 108, 74, 0.1);
+      border: 1px solid rgba(75, 108, 74, 0.22);
+      font-family: var(--font-ui);
+      font-size: 0.86rem;
+      line-height: 1.4;
+      color: #2b2620;
+    }
+
+    .mapa-propósitos span {
+      display: grid;
+      place-items: center;
+      width: 1.55rem;
+      height: 1.55rem;
+      border-radius: 999px;
+      background: #4b6c4a;
+      color: #f1f0eb;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .mapa-cierre {
+      margin: 0;
+      padding: 0.85rem 0.95rem;
+      border-radius: 0.7rem;
+      background: #2089a9;
+      color: #f1f0eb;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .mapa-cierre.es-tierra {
+      background: #8f5a3a;
+    }
+
+    .principios {
+      margin: 1.35rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .principios li {
+      padding: 0.95rem 1.1rem;
+      background: rgba(251, 247, 240, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .principios strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--earth);
+    }
+
+    .bloque-concepto {
+      margin-top: 1.75rem;
+    }
+
+    .bloque-concepto > h2 {
+      margin: 0 0 0.75rem;
+    }
+
+    .bloque-concepto .entradilla + .entradilla {
+      margin-top: 0.85rem;
+    }
+
+    .bloque-con-foto {
+      display: grid;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    @media (min-width: 860px) {
+      .bloque-con-foto {
+        grid-template-columns: minmax(0, 1.25fr) minmax(12rem, 0.75fr);
+        gap: 1.25rem;
+      }
+
+      .bloque-con-foto.es-imagen-antes {
+        grid-template-columns: minmax(12rem, 0.85fr) minmax(0, 1.15fr);
+      }
+    }
+
+    .bloque-con-foto-texto .entradilla {
+      margin-top: 0;
+    }
+
+    .bloque-con-foto-texto .entradilla + .entradilla {
+      margin-top: 0.85rem;
+    }
+
+    .bloque-con-foto-media {
+      margin: 0;
+      padding: 0.45rem;
+      background: var(--parchment-raised);
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .bloque-con-foto-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.45rem;
+    }
+
+    .bloque-con-foto.es-suelto {
+      margin-top: 0.85rem;
+      align-items: stretch;
+    }
+
+    .bloque-con-foto-media.es-sin-borde {
+      display: grid;
+      place-items: center;
+      align-self: stretch;
+      height: 100%;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .bloque-con-foto-media.es-sin-borde img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      filter: drop-shadow(5px 7px 8px rgb(61 43 31 / 0.28));
+    }
+
+    @media (max-width: 859px) {
+      .bloque-con-foto.es-suelto {
+        justify-items: center;
+      }
+
+      .bloque-con-foto-media.es-sin-borde {
+        width: min(100%, 16rem);
+        height: auto;
+      }
+
+      .bloque-con-foto-media.es-sin-borde img {
+        width: 100%;
+        height: auto;
+        max-height: 14rem;
+      }
+    }
+
+    .lineas-grid {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      .lineas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .linea-card {
+      margin: 0;
+      padding: 1rem 1.1rem;
+      background: rgba(251, 247, 240, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 0.9rem;
+      box-shadow: var(--shadow);
+    }
+
+    .linea-card h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1.05rem;
+    }
+
+    .linea-card p {
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .fondo-textura {
+      background-color: #6d655f;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: transparent;
+      color: #f1f0eb;
+      box-shadow: var(--shadow);
+    }
+
+    .fondo-textura :is(h3, p, .indice, span, summary, cite, em, strong, li) {
+      color: #f1f0eb;
+    }
+
+    .fondo-textura .indice,
+    .fondo-textura > span {
+      color: rgba(241, 240, 235, 0.88);
+    }
+
+    .operaciones li.fondo-cafe,
+    .tarjeta.fondo-cafe,
+    .etica-item.fondo-cafe,
+    .fuentes.fondo-cafe,
+    .linea-card.fondo-cafe,
+    .fondo-cafe {
+      background-color: #817770;
+      background-image:
+        linear-gradient(rgb(42 34 28 / 0.4), rgb(42 34 28 / 0.4)),
+        url("assets/cafe.png");
+    }
+
+    .operaciones li.fondo-verde,
+    .tarjeta.fondo-verde,
+    .etica-item.fondo-verde,
+    .fuentes.fondo-verde,
+    .linea-card.fondo-verde,
+    .fondo-verde {
+      background-color: #778d77;
+      background-image:
+        linear-gradient(rgb(28 40 28 / 0.4), rgb(28 40 28 / 0.4)),
+        url("assets/verde.png");
+    }
+
+    .operaciones li.fondo-turquesa,
+    .tarjeta.fondo-turquesa,
+    .etica-item.fondo-turquesa,
+    .fuentes.fondo-turquesa,
+    .linea-card.fondo-turquesa,
+    .fondo-turquesa {
+      background-color: #509cb2;
+      background-image:
+        linear-gradient(rgb(18 48 58 / 0.38), rgb(18 48 58 / 0.38)),
+        url("assets/turquesa.png");
+    }
+
+    .operaciones li.fondo-morado,
+    .tarjeta.fondo-morado,
+    .etica-item.fondo-morado,
+    .fuentes.fondo-morado,
+    .linea-card.fondo-morado,
+    .fondo-morado {
+      background-color: #9c98c2;
+      background-image:
+        linear-gradient(rgb(40 36 62 / 0.4), rgb(40 36 62 / 0.4)),
+        url("assets/morado.png");
+    }
+
+    .oikos-grid,
+    .glosario-grid,
+    .etica-grid {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.35rem;
+    }
+
+    .tarjeta,
+    .fase-panel,
+    .flip,
+    .etica-item {
+      background: rgba(251, 247, 240, 0.94);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .tarjeta,
+    .etica-item {
+      padding: 1.2rem 1.25rem 1.3rem 1.35rem;
+      border-radius: 1rem;
+    }
+
+    .tarjeta h3,
+    .etica-item h3 {
+      margin: 0.2rem 0 0.45rem;
+      font-size: 1.55rem;
+      color: #3d2b1f;
+      line-height: 1.25;
+    }
+
+    .tarjeta p,
+    .etica-item p {
+      line-height: 1.55;
+    }
+
+    .tarjeta p,
+    .etica-item p,
+    .fase-grupo p,
+    .ficha p {
+      margin: 0;
+    }
+
+    .estacion h2 {
+      margin: 0;
+      max-width: 18ch;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      color: var(--earth);
+    }
+
+    .lede {
+      max-width: 42rem;
+      margin: 0.9rem 0 0;
+    }
+
+    .mandala {
+      position: relative;
+      width: 100%;
+      margin-top: 1.6rem;
+    }
+
+    .aureola {
+      display: none;
+    }
+
+    .mandala-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+
+    .petal {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.45rem;
+      min-height: 10.5rem;
+      padding: 1rem;
+      text-align: left;
+      border: 1px solid transparent;
+      border-radius: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .petal-nasa { background: var(--wash-nasa); }
+    .petal-afro { background: var(--wash-afro); }
+    .petal-campesino { background: var(--wash-campesino); }
+    .petal-academia { background: var(--wash-academia); }
+
+    .petal:hover {
+      border-color: var(--terracotta);
+    }
+
+    .petal.is-active {
+      box-shadow: inset 0 0 0 3px var(--terracotta);
+    }
+
+    .petal-num {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--terracotta-deep);
+      font-size: 0.95rem;
+    }
+
+    .petal strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.28rem;
+      font-weight: 640;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .petal small {
+      display: block;
+      color: var(--ink-soft);
+      font-size: 0.875rem;
+      line-height: 1.35;
+    }
+
+    .glifo {
+      width: 1.85rem;
+      height: 1.85rem;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .petal:hover .glifo,
+    .petal:focus-visible .glifo,
+    .petal.is-active .glifo {
+      transform: translateY(-3px) scale(1.06);
+    }
+
+    .petal-nasa .glifo { color: var(--clay); }
+    .petal-afro .glifo { color: var(--terracotta); }
+    .petal-campesino .glifo { color: var(--olive); }
+    .petal-academia .glifo { color: var(--teal); }
+
+    .core {
+      display: none;
+    }
+
+    .ayuda {
+      margin: 0.85rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+    }
+
+    .fases-nav {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1.4rem;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      width: 100%;
+      min-height: 72px;
+      padding: 0.75rem 0.9rem;
+      text-align: left;
+      background: rgba(251, 247, 240, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+
+    .step[aria-selected="true"] {
+      background: var(--parchment-raised);
+      border-color: var(--terracotta);
+      box-shadow: inset 4px 0 0 var(--terracotta);
+    }
+
+    .step-num {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: var(--parchment-raised);
+      border: 1.5px solid var(--clay);
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--earth);
+    }
+
+    .step[aria-selected="true"] .step-num {
+      background: #3d2b1f;
+      border-color: #3d2b1f;
+      color: #f1f0eb;
+    }
+
+    .step-kicker {
+      display: block;
+      color: var(--ochre);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .step-name {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      line-height: 1.15;
+    }
+
+    .fase-panel {
+      margin-top: 0.85rem;
+      padding: 1.15rem 1.1rem 1.3rem;
+      border-radius: 1.15rem;
+    }
+
+    .fase-resumen {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: 1.35rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--earth);
+    }
+
+    .fase-grupo {
+      margin-top: 1.15rem;
+    }
+
+    .fase-grupo h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.2rem;
+      color: #3d2b1f;
+    }
+
+    .foto-mandala {
+      margin: 1rem 0 0;
+      padding: 0.45rem;
+      background: var(--parchment-raised);
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .foto-mandala img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.45rem;
+    }
+
+    .panel-semilla {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0 0;
+      padding: 1rem;
+      background:
+        radial-gradient(circle at 18% 35%, rgb(32 137 169 / 0.18), transparent 42%),
+        linear-gradient(145deg, #1a2428 0%, #121618 55%, #1c1712 100%);
+      border: 1px solid rgba(241, 240, 235, 0.12);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      color: #f1f0eb;
+    }
+
+    @media (min-width: 860px) {
+      .panel-semilla {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        gap: 1.25rem;
+        align-items: center;
+        padding: 1.15rem;
+      }
+    }
+
+    .panel-semilla-media {
+      margin: 0;
+    }
+
+    .panel-semilla-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.7rem;
+    }
+
+    .panel-semilla-media figcaption {
+      margin-top: 0.55rem;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: rgba(241, 240, 235, 0.72);
+    }
+
+    .panel-semilla-texto {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .panel-semilla-texto h3 {
+      margin: 0;
+      font-family: var(--font-text);
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #f1f0eb;
+    }
+
+    .panel-semilla-texto h3 em {
+      color: #d4af37;
+      font-style: normal;
+    }
+
+    .panel-semilla-texto p {
+      margin: 0;
+      font-family: var(--font-ui);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(241, 240, 235, 0.92);
+    }
+
+    .lista-verificacion {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lista-verificacion li {
+      display: grid;
+      grid-template-columns: 1.75rem 1fr;
+      gap: 0.7rem;
+      align-items: start;
+    }
+
+    .marca {
+      display: grid;
+      place-items: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-top: 0.12rem;
+      color: var(--olive);
+    }
+
+    .marca svg {
+      width: 1.55rem;
+      height: 1.55rem;
+    }
+
+    .glosario-grid {
+      margin-top: 1.35rem;
+    }
+
+    .flip {
+      min-height: 19.5rem;
+      border-radius: 1.15rem;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .flip-inner {
+      position: relative;
+      height: 100%;
+      min-height: 19.5rem;
+      transform-style: preserve-3d;
+      transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .flip.is-open .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .face {
+      position: absolute;
+      inset: 0;
+      border-radius: 1.15rem;
+      backface-visibility: hidden;
+      overflow: auto;
+    }
+
+    .face-front {
+      padding: 1.15rem 1.15rem 1.2rem;
+      background: rgba(251, 247, 240, 0.96);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .face-back {
+      transform: rotateY(180deg);
+      padding: 1.15rem 1.15rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      background: var(--olive);
+      color: #F6F1E6;
+      border: 1px solid #1C3022;
+      pointer-events: none;
+    }
+
+    .flip.is-open .face-back {
+      pointer-events: auto;
+    }
+
+    .origen {
+      margin: 0;
+      color: var(--ochre);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .face-front h3,
+    .face-back h3 {
+      margin: 0.35rem 0 0;
+      font-size: clamp(1.7rem, 3vw, 2.15rem);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .face-front h3 {
+      color: #4b6c4a;
+    }
+
+    .face-back h3 {
+      color: #F6F1E6;
+    }
+
+    .pista {
+      margin: 0.45rem 0 0;
+      color: var(--ink);
+    }
+
+    .accion {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 0.9rem;
+      color: var(--terracotta-deep);
+      font-weight: 700;
+    }
+
+    .tapa {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: inherit;
+    }
+
+    .tapa:focus-visible {
+      outline-offset: -3px;
+    }
+
+    .volver {
+      margin-top: auto;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.55rem 0.95rem;
+      background: transparent;
+      color: #F6F1E6;
+      border: 2px solid #F6F1E6;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .volver:hover,
+    .volver:focus-visible {
+      background: #F6F1E6;
+      color: var(--olive);
+    }
+
+    .face-back p {
+      margin: 0;
+    }
+
+    dialog {
+      width: min(42rem, 100%);
+      max-height: min(88dvh, 760px);
+      margin: auto auto 0;
+      padding: 0;
+      border: 0;
+      border-radius: 1.35rem 1.35rem 0 0;
+      background: var(--parchment-raised);
+      color: var(--ink);
+      box-shadow: 0 -24px 60px rgb(36 28 21 / 0.22);
+      overflow: auto;
+    }
+
+    dialog::backdrop {
+      background: rgba(36, 28, 21, 0.58);
+    }
+
+    dialog[open] {
+      animation: subir 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .asa {
+      width: 3rem;
+      height: 0.28rem;
+      margin: 0.7rem auto 0;
+      border-radius: 999px;
+      background: rgba(122, 70, 50, 0.35);
+    }
+
+    .barra-ficha {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0.8rem 0.55rem 1.15rem;
+      background: rgba(251, 247, 240, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .barra-ficha p {
+      margin: 0;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+
+    #ficha-cerrar {
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0.4rem 0.9rem;
+      background: #3d2b1f;
+      color: #f1f0eb;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    #ficha-cerrar:hover {
+      background: #4b6c4a;
+    }
+
+    .ficha {
+      padding: 1.15rem 1.2rem calc(1.4rem + env(safe-area-inset-bottom));
+    }
+
+    .ficha-kicker {
+      margin: 0;
+      color: var(--terracotta-deep);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .ficha h3 {
+      margin: 0.3rem 0 0;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      color: #3d2b1f;
+    }
+
+    .ficha-retrato {
+      margin: 1rem 0 0;
+      width: min(100%, 14rem);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: rgba(61, 43, 31, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .ficha-retrato img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ficha h4 {
+      margin: 1.15rem 0 0.35rem;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+
+    .cita {
+      margin: 1rem 0 0;
+      padding: 0.95rem 1rem 1rem;
+      background: rgba(32, 137, 169, 0.08);
+      border-left: 3px solid #2089a9;
+    }
+
+    .cita p {
+      font-family: var(--font-text);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+
+    .cita footer {
+      margin-top: 0.5rem;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+
+    .nota-referente {
+      margin-top: 0.85rem !important;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    .site-footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 2rem;
+      padding: 4rem 0 2.5rem;
+      scroll-margin-top: calc(var(--header) + 0.75rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      width: min(72rem, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .site-footer h2 {
+      margin: 0;
+      max-width: 16ch;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      color: var(--earth);
+    }
+
+    .fuentes {
+      margin-top: 1.4rem;
+      background: rgba(251, 247, 240, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+    }
+
+    .fuentes summary {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.95rem 1.6rem 0.95rem 2.25rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .fuentes ul {
+      margin: 0;
+      padding: 0.25rem 1.75rem 1.45rem 3.1rem;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .fuentes.fondo-textura ul {
+      color: rgba(241, 240, 235, 0.92);
+    }
+
+    .fuentes.fondo-textura cite {
+      color: #f1f0eb;
+    }
+
+    .fuentes li + li {
+      margin-top: 0.85rem;
+    }
+
+    .fuentes li p {
+      margin: 0;
+    }
+
+    .fuentes li p + p {
+      margin-top: 0.35rem;
+    }
+
+    .contacto {
+      margin-top: 1.4rem;
+      padding: 1.15rem 1.2rem 1.25rem;
+      background: rgba(251, 247, 240, 0.96);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contacto h3 {
+      margin: 0 0 0.85rem;
+      font-family: var(--font-text);
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      font-weight: 700;
+      color: #3d2b1f;
+    }
+
+    .contacto-lista {
+      display: grid;
+      gap: 0.85rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (min-width: 720px) {
+      .contacto-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+    }
+
+    .contacto-lista li {
+      display: grid;
+      gap: 0.35rem;
+      padding: 0.85rem 0.95rem;
+      background: #f1f0eb;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+    }
+
+    .contacto-lista strong {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #4b6c4a;
+    }
+
+    .contacto-lista a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      width: fit-content;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2089a9;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .contacto-lista a:hover {
+      color: #1a738f;
+    }
+
+    .contacto-lista a:focus-visible {
+      outline: var(--foco);
+      outline-offset: 3px;
+      border-radius: 0.25rem;
+    }
+
+    .pata {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .pata-leyenda {
+      margin: 0;
+      max-width: 36rem;
+      font-family: var(--font-ui);
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+      font-weight: 400;
+      line-height: 1.45;
+      color: #2b2620;
+    }
+
+    .pata-logos {
+      margin: 0;
+      justify-self: end;
+      width: 100%;
+      max-width: 22rem;
+    }
+
+    .pata-logos img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 720px) {
+      .pata {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+      }
+
+      .pata-logos {
+        justify-self: stretch;
+        max-width: none;
+      }
+    }
+
+    @keyframes subir {
+      from { transform: translateY(1.25rem); opacity: 0; }
+      to { transform: none; opacity: 1; }
+    }
+
+    @keyframes girar {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.035); }
+    }
+
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.72fr);
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      .operaciones {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .operaciones li {
+        grid-template-columns: 1fr;
+        align-content: start;
+        min-height: 100%;
+      }
+
+      .oikos-grid,
+      .etica-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .etica-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .mandala {
+        width: min(100%, 36rem);
+        margin-inline: auto;
+        aspect-ratio: 1;
+      }
+
+      .aureola {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .aureola-giro {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-origin: center;
+        animation: girar 90s linear infinite;
+      }
+
+      .orbit {
+        transform-origin: center;
+        animation: girar 90s linear infinite;
+      }
+
+      .mandala-grid {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        gap: 0.45rem;
+      }
+
+      .petal {
+        min-height: 0;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      .petal > span:last-child {
+        padding: 0.35rem 0.55rem;
+        border-radius: 0.55rem;
+        background: rgba(241, 240, 235, 0.88);
+      }
+
+      .petal-tl { border-radius: 100% 0 0 0; justify-content: flex-start; }
+      .petal-tr { border-radius: 0 100% 0 0; align-items: flex-end; text-align: right; }
+      .petal-bl { border-radius: 0 0 0 100%; justify-content: flex-end; }
+      .petal-br { border-radius: 0 0 100% 0; align-items: flex-end; justify-content: flex-end; text-align: right; }
+
+      .core {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        display: block;
+        width: 9.9rem;
+        height: 9.9rem;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        animation: latido 4.8s ease-in-out infinite;
+      }
+
+      .core img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .fases-nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .glosario-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      dialog {
+        margin: auto;
+        border-radius: 1.35rem;
+        max-height: min(82dvh, 720px);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .etica-grid.cuatro {
+        grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      .orbit,
+      .aureola-giro,
+      .core,
+      .flip-inner,
+      dialog[open] {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .flip.is-open .flip-inner { transform: none; }
+      .face-back { transform: none; }
+      .flip:not(.is-open) .face-back { visibility: hidden; }
+      .flip.is-open .face-front { visibility: hidden; }
+      .flip.is-open .face-back { visibility: visible; }
+    }
+
+    @media print {
+      .velo,
+      .site-header,
+      .saltar,
+      .aureola,
+      .tapa,
+      .volver,
+      #ficha-cerrar {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      [role="tabpanel"],
+      #repositorio-fichas {
+        display: block !important;
+      }
+
+      .face,
+      .face-back,
+      .face-front {
+        position: relative !important;
+        transform: none !important;
+        visibility: visible !important;
+        inset: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="velo" aria-hidden="true"></div>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-semilla" viewBox="0 0 24 24">
+      <path d="M12 3.5c2.8 2.4 4.2 5 4.2 8.2 0 4.2-2.6 7.3-6.2 8.3 1.2-2.2 1.5-4.2.8-6.2C9.6 11.2 7.4 9.4 4.5 8.6 6.4 5.6 9 3.9 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M12 20.5c.2-3.2 1.2-5.6 3.2-7.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M8 12.4 10.6 15 16.2 9.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-espiral" viewBox="0 0 24 24">
+      <path d="M12 19c-3.6 0-6.2-2.1-6.2-4.8S9.2 9.2 12 9.2s4.6 1.3 4.6 3.2-1.5 2.5-3.2 2.5-2.1-.7-2.1-1.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-ritmo" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="2.1" fill="currentColor"/>
+      <path d="M12 5.2a6.8 6.8 0 0 1 0 13.6M12 2.6a9.4 9.4 0 0 1 0 18.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-hoja" viewBox="0 0 24 24">
+      <path d="M5.5 16.5C10 15 15 10 19 4.5 14.5 12 10 17 5.5 18.5c0 0 .2-1.2 0-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M8 15.2c2.1-2.2 4.2-5 6.4-8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-puente" viewBox="0 0 24 24">
+      <path d="M4 16.5V9.5M20 16.5V9.5M4 12.5h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M8 12.5c0-2.3 1.8-4.2 4-4.2s4 1.9 4 4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header capa">
+    <div class="banner">
+      <div class="banner-inner">
+        <a class="banner-marca" href="#oikos" aria-label="El Arte de Sembrar: intercambios y saberes culturales, diálogos con-sentidos">
+          <img src="assets/cabezote.png" width="1119" height="303" alt="">
+        </a>
+        <img class="banner-sello" src="assets/Sello-PP.png" width="680" height="680" alt="Presupuesto Participativo Cultura">
+      </div>
+    </div>
+    <div class="header-nav">
+      <nav aria-label="Estaciones de la infografía">
+        <ul class="estaciones">
+          <li><a href="#oikos" data-nav>Apertura</a></li>
+          <li><a href="#marco" data-nav>Marco</a></li>
+          <li><a href="#glosario" data-nav>Glosario</a></li>
+          <li><a href="#fases" data-nav>Fases</a></li>
+          <li><a href="#territorio" data-nav>Territorio</a></li>
+          <li><a href="#mandala" data-nav>Mándala</a></li>
+          <li><a href="#etica" data-nav>Ética</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="capa" id="contenido" tabindex="-1">
+    <section class="estacion" id="oikos" aria-labelledby="titulo-oikos">
+      <div class="hero-grid">
+        <div>
+          <p class="indice">Apertura · Dispositivo vivo</p>
+          <h1 id="titulo-oikos" class="marca-lockup">
+            <span class="marca-kicker"><span>El</span><span>arte</span><span>de</span><span>sembrar</span></span>
+            <span class="marca-medio"><span>Intercambios</span><span>y</span><span>saberes</span><span>culturales</span></span>
+            <span class="marca-cierre"><span>Diálogos</span><span>con-sentidos</span></span>
+          </h1>
+          <p class="lugar">Finca El Yarumo, Vereda La Palma, San Cristóbal, Medellín · 20 de octubre de 2026</p>
+          <div class="premisa">
+            <p>Cultivar la vida es la forma más alta de hacer cultura.</p>
+          </div>
+          <h2 class="modelo-titulo">Modelo para la realización de coloquios interculturales situados en territorios vivos</h2>
+          <p class="entradilla">Esta guía metodológica es un dispositivo vivo, una cartografía performativa que sistematiza la experiencia del coloquio «El Arte de Sembrar» realizado en la Finca El Yarumo, Vereda La Palma, San Cristóbal, Medellín, el 20 de octubre de 2026. No es un manual rígido, sino un semillero de metodologías que puede germinar en otros territorios, con otros pueblos, otras semillas y otras memorias.</p>
+          <p class="entradilla">La guía responde a la premisa de que cultivar la vida es la forma más alta de hacer cultura, y que los eventos académicos pueden —y deben— salir del aula, del auditorio y del salón para encontrarse con el surco, el gesto, el canto y la palabra compartida.</p>
+        </div>
+        <div class="hero-lateral">
+          <aside class="coloquio-vivo" aria-label="Registro audiovisual del coloquio">
+            <p>El coloquio ya germinó en la Finca El Yarumo. Entra al registro completo: escucha las voces, camina el diálogo y siembra contigo lo que ocurrió ese día.</p>
+            <a class="coloquio-vivo-link" href="https://youtube.com/live/ZUUm2jo-XGA" target="_blank" rel="noopener noreferrer">
+              <figure class="coloquio-mini">
+                <img src="https://img.youtube.com/vi/ZUUm2jo-XGA/hqdefault.jpg" width="480" height="360" alt="Miniatura del coloquio El Arte de Sembrar en YouTube">
+                <span class="coloquio-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M8 5.5v13l11-6.5Z"></path></svg>
+                </span>
+              </figure>
+              <span class="coloquio-vivo-cta">Ver el coloquio en YouTube</span>
+            </a>
+          </aside>
+          <aside class="descarga-pdf" aria-label="Descarga de la guía en PDF">
+            <p>Lleva contigo la guía completa en formato carta: ideal para imprimir, compartir y sembrar el método en otros territorios.</p>
+            <a href="assets/guia-el-arte-de-sembrar.pdf" download="guia-el-arte-de-sembrar.pdf">Descargar guía en PDF</a>
+          </aside>
+        </div>
+      </div>
+
+      <h2 class="modelo-titulo">Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos»</h2>
+      <div class="indice-guia" id="indice">
+        <h2 class="modelo-titulo indice-titulo">Índice general de la guía</h2>
+        <p>A continuación, la lista completa de lo que debe llevar la guía metodológica:</p>
+        <h3>Parte I: Marco conceptual y ético</h3>
+        <ul>
+          <li>Fundamentación filosófica y política</li>
+          <li>Principios éticos del encuentro</li>
+          <li>Definiciones clave (glosario vivo)</li>
+          <li>Enfoque intercultural</li>
+          <li>La siembra como práctica artística y epistémica</li>
+        </ul>
+        <h3>Parte II: Fases metodológicas</h3>
+        <ul>
+          <li>Fase 1: Pre-evento (Gestión territorial y co-diseño)</li>
+          <li>Fase 2: Evento (Ejecución del coloquio)</li>
+          <li>Fase 3: Post-evento (Sistematización y circulación)</li>
+        </ul>
+
+        <figure class="diagrama-codiseno" aria-labelledby="titulo-diagrama-codiseno">
+          <figcaption>
+            <h4 id="titulo-diagrama-codiseno">Proceso de co-diseño y activación del mándala vivo</h4>
+            <p>Metodología integral: investigación, logística y comunicación</p>
+          </figcaption>
+          <div class="diagrama-fases">
+            <article class="diagrama-fase fase-investiga">
+              <h5><span>Fase 1</span> Investigación aplicada y co-diseño</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/><path d="M9 12h.01M12 12h.01M15 12h.01"/><path d="M8 21h8"/></svg>
+                  </span>
+                  <span>Entrevistas preliminares (semiestructuradas, con grabación autorizada).</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4.5 4.5"/><path d="M8.5 9.2c.6-1.2 1.5-1.8 2.5-1.8"/></svg>
+                  </span>
+                  <span>Identificación de especies botánicas, narrativas y símbolos a incluir en el mándala.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 14c-1.5 1-2.5 2.6-2.5 4.5h5"/><path d="M16 14c1.5 1 2.5 2.6 2.5 4.5h-5"/><path d="M12 4.5c1.8 2.2 2.7 4.1 2.7 6.2A2.7 2.7 0 0 1 12 13.4 2.7 2.7 0 0 1 9.3 10.7C9.3 8.6 10.2 6.7 12 4.5Z"/><path d="M12 13.4V19"/></svg>
+                  </span>
+                  <span>Co-diseño del mándala vivo con las sabedoras.</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="diagrama-fase fase-logistica">
+              <h5><span>Fase 2</span> Logística operativa y cuidados</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M6 19V10l6-5 6 5v9"/><path d="M10 19v-5h4v5"/></svg>
+                  </span>
+                  <span>Alquiler de toldos, sillas accesibles, señalización bilingüe/multilingüe.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3.5S6.5 10 6.5 14.2a5.5 5.5 0 0 0 11 0C17.5 10 12 3.5 12 3.5Z"/><path d="M10 14.5c.4 1.4 1.2 2 2 2"/></svg>
+                  </span>
+                  <span>Estación de hidratación permanente.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 15h11l3-4H8"/><path d="M7 15v2.5a1.5 1.5 0 1 0 3 0V15"/><path d="M14 15v2.5a1.5 1.5 0 1 0 3 0V15"/><path d="M4 15V9h3"/><path d="m17 8 2 2-2 2"/></svg>
+                  </span>
+                  <span>Rutas de transporte compartido desde puntos urbanos.</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="diagrama-fase fase-comunicacion">
+              <h5><span>Fase 3</span> Activación comunicativa</h5>
+              <ol class="diagrama-pasos">
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="2"/><circle cx="15" cy="7" r="1.5"/><circle cx="16.5" cy="12.5" r="2"/><path d="M5 18c1.5-3 4-4.5 7-4.5S17.5 15 19 18"/></svg>
+                  </span>
+                  <span>Lanzamiento de identidad visual.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 6h11M8 12h11M8 18h11"/><path d="m4.5 6 1 1 2-2"/><path d="m4.5 12 1 1 2-2"/><path d="M5 18h.01"/></svg>
+                  </span>
+                  <span>Formulario de inscripciones con preguntas de contexto.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="7" y="3.5" width="10" height="17" rx="2"/><path d="M10 6.5h4"/><circle cx="12" cy="17.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+                  </span>
+                  <span>Difusión en redes comunitarias, WhatsApp, emisoras locales, escuelas.</span>
+                </li>
+                <li>
+                  <span class="diagrama-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 20V10l4-3 4 3v10"/><path d="M10 20v-5h4v5"/><path d="M12 3.5c.9 1.1 1.4 2 1.4 3.1A1.4 1.4 0 0 1 12 8a1.4 1.4 0 0 1-1.4-1.4c0-1.1.5-2 1.4-3.1Z"/></svg>
+                  </span>
+                  <span>Alianzas con universidades, colectivos agroecológicos, bibliotecas.</span>
+                </li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="diagrama-pie">
+            <ol class="diagrama-ruta" aria-label="Ruta del proceso">
+              <li><strong>Diagnóstico</strong></li>
+              <li><strong>Preparación</strong></li>
+              <li><strong>Expansión</strong></li>
+            </ol>
+            <p class="diagrama-lema">Hacia la sanación y el tejido comunitario a través de la naturaleza</p>
+          </div>
+        </figure>
+
+        <h3>Parte III: Herramientas y protocolos</h3>
+        <ul>
+          <li>Protocolos de cuidado y bienestar</li>
+          <li>Protocolos de consentimiento y compensación justa</li>
+          <li>Metodología del diálogo de saberes</li>
+          <li>Metodología del mándala vivo como cartografía performativa</li>
+          <li>Mediaciones pedagógicas para poblaciones específicas</li>
+          <li>Estrategias de comunicación comunitaria</li>
+        </ul>
+        <h3>Parte IV: Recursos didácticos y formatos</h3>
+        <ul>
+          <li>Recursos didácticos para el encuentro</li>
+          <li>Formatos y fichas técnicas</li>
+          <li>Instrumentos de evaluación y seguimiento</li>
+        </ul>
+        <h3>Parte V: Memoria y replicabilidad</h3>
+        <ul>
+          <li>Estrategias de circulación de memorias</li>
+          <li>Indicadores de alcance</li>
+          <li>Guía de adaptación territorial</li>
+          <li>Anexos</li>
+          <li>Referencias bibliográficas</li>
+          <li>Filmografía y material audiovisual</li>
+          <li>Glosario ampliado</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="estacion" id="marco" aria-labelledby="titulo-marco">
+      <p class="indice">Parte I · Marco conceptual y ético</p>
+      <h2 id="titulo-marco">1. Fundamentación filosófica y política</h2>
+      <p class="lede">La siembra como acto epistémico:</p>
+      <p class="entradilla">El evento no es una conferencia ni un seminario tradicional. Es un coloquio situado donde la siembra opera como:</p>
+      <ol class="operaciones" aria-label="La siembra opera como">
+        <li class="fondo-textura fondo-cafe"><span>01</span> Archivo vivo de resistencia biocultural</li>
+        <li class="fondo-textura fondo-verde"><span>02</span> Canal de enunciación cultural</li>
+        <li class="fondo-textura fondo-turquesa"><span>03</span> Dispositivo de memoria</li>
+        <li class="fondo-textura fondo-morado"><span>04</span> Práctica artística (<em>Land Art</em> / Arte Tierra)</li>
+        <li class="fondo-textura fondo-cafe"><span>05</span> Gesto pedagógico intercultural</li>
+      </ol>
+
+      <h2 class="modelo-titulo">Principios inspiradores</h2>
+      <ul class="principios">
+        <li><strong>Stefano Mancuso — <cite>La nación de las plantas</cite></strong> Inteligencia distribuida, cooperación subterránea, cuidado como forma superior de inteligencia.</li>
+        <li><strong>Henry David Thoreau — Caminar</strong> Caminar como peregrinación hacia lo sagrado, perder la cabeza para encontrarla en los bosques.</li>
+        <li><strong>Paulo Freire — Animación sociocultural</strong> Animación sociocultural como acto político de dar aliento de vida.</li>
+        <li><strong>Cosmovisiones andinas, mesoamericanas y amazónicas</strong> <em>Uywaña</em> (crianza mutua), Milpa (polisistema simbiótico), Chagra (espacio de sanación).</li>
+      </ul>
+    </section>
+
+    <section class="estacion" id="glosario" aria-labelledby="titulo-glosario">
+      <p class="indice">Parte I · Definiciones clave</p>
+      <h2 id="titulo-glosario">Glosario vivo de saberes</h2>
+      <p class="lede">Definiciones clave (glosario vivo). Abre cada ficha. Escape o «Volver» la cierra.</p>
+      <div class="glosario-grid">
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Latín · <em>animare</em></p>
+              <h3 id="g-animacion">Animación sociocultural</h3>
+              <p class="pista">Dar aliento de vida.</p>
+              <span class="accion" id="accion-animacion">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-animacion" aria-labelledby="g-animacion accion-animacion"></button>
+            </div>
+            <div class="face face-back" id="def-animacion" aria-hidden="true">
+              <h3 tabindex="-1">Animación sociocultural</h3>
+              <p>Acto político y poético de dar aliento de vida (del latín <em>animare</em>).</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Peregrinación</p>
+              <h3 id="g-caminante">Caminante</h3>
+              <p class="pista">Hacia lo sagrado del territorio.</p>
+              <span class="accion" id="accion-caminante">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-caminante" aria-labelledby="g-caminante accion-caminante"></button>
+            </div>
+            <div class="face face-back" id="def-caminante" aria-hidden="true">
+              <h3 tabindex="-1">Caminante</h3>
+              <p>Aquel que peregrina hacia lo sagrado del territorio.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Amazónico</p>
+              <h3 id="g-chagra">Chagra</h3>
+              <p class="pista">Claros dinámicos.</p>
+              <span class="accion" id="accion-chagra">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-chagra" aria-labelledby="g-chagra accion-chagra"></button>
+            </div>
+            <div class="face face-back" id="def-chagra" aria-hidden="true">
+              <h3 tabindex="-1">Chagra</h3>
+              <p>Espacio de claros dinámicos donde las mujeres guardan la agrobiodiversidad.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Método</p>
+              <h3 id="g-dialogo">Diálogo de saberes</h3>
+              <p class="pista">Conversación horizontal.</p>
+              <span class="accion" id="accion-dialogo">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-dialogo" aria-labelledby="g-dialogo accion-dialogo"></button>
+            </div>
+            <div class="face face-back" id="def-dialogo" aria-hidden="true">
+              <h3 tabindex="-1">Diálogo de saberes</h3>
+              <p>Conversación horizontal entre epistemologías distintas sin jerarquías.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Escritura</p>
+              <h3 id="g-grafias">Grafías del territorio</h3>
+              <p class="pista">Surcos, simetrías, trazados.</p>
+              <span class="accion" id="accion-grafias">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-grafias" aria-labelledby="g-grafias accion-grafias"></button>
+            </div>
+            <div class="face face-back" id="def-grafias" aria-hidden="true">
+              <h3 tabindex="-1">Grafías del territorio</h3>
+              <p>Escrituras de la tierra (surcos, simetrías, trazados).</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Dispositivo</p>
+              <h3 id="g-mandala">Mándala vivo</h3>
+              <p class="pista">Cartografía performativa de 3 × 4 m.</p>
+              <span class="accion" id="accion-mandala">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-mandala" aria-labelledby="g-mandala accion-mandala"></button>
+            </div>
+            <div class="face face-back" id="def-mandala" aria-hidden="true">
+              <h3 tabindex="-1">Mándala vivo</h3>
+              <p>Cartografía performativa de 3 × 4 m construida colectivamente con tierras de colores y material vegetal.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Resistencia</p>
+              <h3 id="g-memoria">Memoria biocultural</h3>
+              <p class="pista">Saberes en semillas, gestos y cantos.</p>
+              <span class="accion" id="accion-memoria">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-memoria" aria-labelledby="g-memoria accion-memoria"></button>
+            </div>
+            <div class="face face-back" id="def-memoria" aria-hidden="true">
+              <h3 tabindex="-1">Memoria biocultural</h3>
+              <p>Saberes que viven en semillas, gestos y cantos.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Mesoamericano</p>
+              <h3 id="g-milpa">Milpa</h3>
+              <p class="pista">Maíz, frijol, calabaza, quelites.</p>
+              <span class="accion" id="accion-milpa">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-milpa" aria-labelledby="g-milpa accion-milpa"></button>
+            </div>
+            <div class="face face-back" id="def-milpa" aria-hidden="true">
+              <h3 tabindex="-1">Milpa</h3>
+              <p>Polisistema simbiótico maíz-frijol-calabaza-quelites.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Montaña</p>
+              <h3 id="g-paisaje">Paisaje cultural</h3>
+              <p class="pista">Territorio leído como obra colectiva.</p>
+              <span class="accion" id="accion-paisaje">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-paisaje" aria-labelledby="g-paisaje accion-paisaje"></button>
+            </div>
+            <div class="face face-back" id="def-paisaje" aria-hidden="true">
+              <h3 tabindex="-1">Paisaje cultural</h3>
+              <p>Territorio leído como obra colectiva.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Método</p>
+              <h3 id="g-puente">Puente metodológico</h3>
+              <p class="pista">Conecta multiversos.</p>
+              <span class="accion" id="accion-puente">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-puente" aria-labelledby="g-puente accion-puente"></button>
+            </div>
+            <div class="face face-back" id="def-puente" aria-hidden="true">
+              <h3 tabindex="-1">Puente metodológico</h3>
+              <p>Metáfora que conecta multiversos sin devorarlos.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+        <article class="flip">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <p class="origen">Andino</p>
+              <h3 id="g-uywana">Uywaña</h3>
+              <p class="pista">Crianza mutua.</p>
+              <span class="accion" id="accion-uywana">Abrir ficha</span>
+              <button type="button" class="tapa" aria-expanded="false" aria-controls="def-uywana" aria-labelledby="g-uywana accion-uywana"></button>
+            </div>
+            <div class="face face-back" id="def-uywana" aria-hidden="true">
+              <h3 tabindex="-1">Uywaña</h3>
+              <p>Crianza mutua entre semilla y comunidad.</p>
+              <button type="button" class="volver" data-flip-close>Volver a la portada</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <figure class="diagrama-animacion" aria-labelledby="titulo-diagrama-animacion">
+        <figcaption>
+          <h3 id="titulo-diagrama-animacion">Animación sociocultural y cosmovisiones vivas</h3>
+          <p>Inteligencia distribuida, diálogo de saberes y crianza mutua</p>
+        </figcaption>
+
+        <div class="flujo-animacion">
+          <div class="flujo-col">
+            <h4>Principios inspiradores</h4>
+            <article class="flujo-principio">
+              <span class="flujo-icono" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M8 14c-2-2-3-4-3-6a3 3 0 0 1 6 0"/><path d="M16 14c2-2 3-4 3-6a3 3 0 0 0-6 0"/><path d="M7 20h10"/></svg>
+              </span>
+              <div>
+                <strong>Stefano Mancuso — <cite>La nación de las plantas</cite></strong>
+                <p>Inteligencia distribuida, cooperación subterránea, cuidado como forma superior de inteligencia.</p>
+              </div>
+            </article>
+            <article class="flujo-principio">
+              <span class="flujo-icono" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 18c2-3 4-5 8-5s6 2 8 5"/><path d="M8 10c1-3 2.5-5 4-6 1.5 1 3 3 4 6"/><path d="M12 13v5"/></svg>
+              </span>
+              <div>
+                <strong>Henry David Thoreau — Caminar</strong>
+                <p>Caminar como peregrinación hacia lo sagrado, perder la cabeza para encontrarla en los bosques.</p>
+              </div>
+            </article>
+            <article class="flujo-principio">
+              <span class="flujo-icono" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.2"/><circle cx="7" cy="14" r="2"/><circle cx="17" cy="14" r="2"/><path d="M12 10.2c-1.5 1.3-3.3 2.4-5 3"/><path d="M12 10.2c1.5 1.3 3.3 2.4 5 3"/><path d="M9 16.2c1 .8 2 1.3 3 1.3s2-.5 3-1.3"/></svg>
+              </span>
+              <div>
+                <strong>Paulo Freire — Animación sociocultural</strong>
+                <p>Animación sociocultural como acto político de dar aliento de vida.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="flujo-conexion" aria-hidden="true">→</div>
+
+          <div class="flujo-mandala">
+            <h4>Mándala vivo</h4>
+            <div class="flujo-nucleo" aria-hidden="true"><span>Semilla</span></div>
+            <p>Cartografía performativa donde convergen multiversos sin que uno devore a los otros.</p>
+            <div class="flujo-cosmos">
+              <article>
+                <span class="flujo-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 16c-1.2.8-2 2.1-2 3.5h4"/><path d="M16 16c1.2.8 2 2.1 2 3.5h-4"/><path d="M12 4.5c1.6 2 2.4 3.7 2.4 5.6A2.4 2.4 0 0 1 12 12.5 2.4 2.4 0 0 1 9.6 10.1C9.6 8.2 10.4 6.5 12 4.5Z"/></svg>
+                </span>
+                <div>
+                  <strong>Uywaña (andino)</strong>
+                  <p>Crianza mutua entre semilla y comunidad.</p>
+                </div>
+              </article>
+              <article>
+                <span class="flujo-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 19V9l5-4 5 4v10"/><path d="M10 19v-4h4v4"/><path d="M9 12h.01M12 11h.01M15 12h.01"/></svg>
+                </span>
+                <div>
+                  <strong>Milpa (mesoamericano)</strong>
+                  <p>Polisistema simbiótico maíz-frijol-calabaza-quelites.</p>
+                </div>
+              </article>
+              <article>
+                <span class="flujo-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 17c2-1 4-1.5 8-1.5s6 .5 8 1.5"/><path d="M6 14c1.5-3 3.5-5 6-6 2.5 1 4.5 3 6 6"/><path d="M12 8V4.5"/></svg>
+                </span>
+                <div>
+                  <strong>Chagra (amazónico)</strong>
+                  <p>Espacio de sanación y claros dinámicos de agrobiodiversidad.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="flujo-conexion" aria-hidden="true">→</div>
+
+          <div class="flujo-col">
+            <h4>Síntesis del glosario vivo</h4>
+            <ul class="flujo-glosa">
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19c-2.5-2.2-3.8-4.4-3.8-7A3.8 3.8 0 0 1 12 8.2 3.8 3.8 0 0 1 15.8 12c0 2.6-1.3 4.8-3.8 7Z"/></svg></span>
+                <div><strong>Animación sociocultural</strong><span>Acto político y poético de dar aliento de vida.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 8h14M5 12h10M5 16h12"/></svg></span>
+                <div><strong>Diálogo de saberes</strong><span>Conversación horizontal entre epistemologías distintas sin jerarquías.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 5v2M12 17v2M5 12h2M17 12h2M7.2 7.2l1.4 1.4M15.4 15.4l1.4 1.4M7.2 16.8l1.4-1.4M15.4 8.6l1.4-1.4"/></svg></span>
+                <div><strong>Mándala vivo</strong><span>Cartografía performativa construida colectivamente con tierras de colores y material vegetal.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16c2-4 5-7 8-9 3 2 6 5 8 9"/><path d="M6 18h12"/></svg></span>
+                <div><strong>Grafías del territorio</strong><span>Escrituras de la tierra (surcos, simetrías, trazados).</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17c2-1.5 4-2.5 7-2.5S17 15.5 19 17"/><path d="M8 12c1-2.5 2.5-4 4-5 1.5 1 3 2.5 4 5"/></svg></span>
+                <div><strong>Memoria biocultural</strong><span>Saberes que viven en semillas, gestos y cantos.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14h16"/><path d="M7 14c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5"/></svg></span>
+                <div><strong>Puente metodológico</strong><span>Metáfora que conecta multiversos sin devorarlos.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 17c3-4 6-6 7-7 1 1 4 3 7 7"/><path d="M8 10h.01M12 8h.01M16 10h.01"/></svg></span>
+                <div><strong>Paisaje cultural</strong><span>Territorio leído como obra colectiva.</span></div>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 19c1.5-3 3-5 4-7 1 2 2.5 4 4 7"/><path d="M12 5v4"/><path d="M10 19h4"/></svg></span>
+                <div><strong>Caminante</strong><span>Aquel que peregrina hacia lo sagrado del territorio.</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+
+    <section class="estacion" id="fases" aria-labelledby="titulo-fases">
+      <p class="indice">Parte II · Fases metodológicas</p>
+      <h2 id="titulo-fases">Fases metodológicas</h2>
+      <p class="lede">Fase 1: Pre-evento (Gestión territorial y co-diseño). Fase 2: Evento (Ejecución del coloquio). Fase 3: Post-evento (Sistematización y circulación).</p>
+      <p class="ayuda">Elige una fase. Con el teclado, las flechas cambian de etapa.</p>
+      <div class="fases-nav" role="tablist" aria-label="Fases metodológicas" aria-orientation="horizontal">
+        <button type="button" class="step" id="tab-pre" role="tab" aria-selected="true" aria-controls="panel-pre" tabindex="0">
+          <span class="step-num">01</span>
+          <span>
+            <span class="step-kicker">8 a 12 semanas</span>
+            <span class="step-name">Pre-evento</span>
+          </span>
+        </button>
+        <button type="button" class="step" id="tab-evento" role="tab" aria-selected="false" aria-controls="panel-evento" tabindex="-1">
+          <span class="step-num">02</span>
+          <span>
+            <span class="step-kicker">Ejecución del coloquio</span>
+            <span class="step-name">Evento</span>
+          </span>
+        </button>
+        <button type="button" class="step" id="tab-post" role="tab" aria-selected="false" aria-controls="panel-post" tabindex="-1">
+          <span class="step-num">03</span>
+          <span>
+            <span class="step-kicker">Sistematización y circulación</span>
+            <span class="step-name">Post-evento</span>
+          </span>
+        </button>
+      </div>
+
+      <div class="fase-panel" id="panel-pre" role="tabpanel" aria-labelledby="tab-pre">
+        <p class="fase-resumen">Gestión territorial y co-diseño. Acciones estratégicas para tejer confianza antes del encuentro.</p>
+        <div class="fase-grupo">
+          <h3>Gestión territorial y acuerdos comunitarios</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Visita de reconocimiento al espacio (finca, maloca, escuela, casa cultural).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Firma de carta de autorización de uso de suelo con la familia o comunidad anfitriona.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Reunión con JAL, junta de acción comunal, cabildos o consejos comunitarios.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Identificación de guardianes territoriales del saber.</span></li>
+          </ul>
+
+          <figure class="diagrama-acciones" aria-labelledby="titulo-acciones-territoriales">
+            <figcaption>
+              <h4 id="titulo-acciones-territoriales">Acciones estratégicas</h4>
+              <p>A. Gestión territorial y acuerdos comunitarios</p>
+            </figcaption>
+            <ol class="acciones-grid">
+              <li>
+                <span class="accion-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 19h14"/><path d="M7 19V11l5-4 5 4v8"/><path d="M10 19v-4h4v4"/><path d="M12 4.5 13.2 7H16l-2.2 1.7.8 2.6L12 9.8l-2.6 1.5.8-2.6L8 7h2.8Z"/></svg>
+                </span>
+                <p>Visita de reconocimiento al espacio (finca, maloca, escuela, casa cultural).</p>
+              </li>
+              <li>
+                <span class="accion-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 4.5h8l2 2V19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1Z"/><path d="M9 10h6M9 13h6M9 16h4"/><circle cx="16.5" cy="16.5" r="2.2"/><path d="m15.7 16.5.6.6 1.2-1.3"/></svg>
+                </span>
+                <p>Firma de carta de autorización de uso de suelo con la familia o comunidad anfitriona.</p>
+              </li>
+              <li>
+                <span class="accion-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="1.8"/><circle cx="7.2" cy="12.5" r="1.6"/><circle cx="16.8" cy="12.5" r="1.6"/><circle cx="8.5" cy="17.5" r="1.5"/><circle cx="15.5" cy="17.5" r="1.5"/><path d="M12 10c-1.4 1.2-3 2-4.5 2.4"/><path d="M12 10c1.4 1.2 3 2 4.5 2.4"/><path d="M8.5 14.2c1 .8 2.2 1.4 3.5 1.4s2.5-.6 3.5-1.4"/></svg>
+                </span>
+                <p>Reunión con JAL, junta de acción comunal, cabildos o consejos comunitarios.</p>
+              </li>
+              <li>
+                <span class="accion-icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3.5c1.8 2.3 2.7 4.3 2.7 6.5A2.7 2.7 0 0 1 12 12.7 2.7 2.7 0 0 1 9.3 10C9.3 7.8 10.2 5.8 12 3.5Z"/><path d="M7 20c1.2-2.4 2.8-3.8 5-3.8s3.8 1.4 5 3.8"/><path d="M12 12.7V16"/><path d="M9 20h6"/></svg>
+                </span>
+                <p>Identificación de guardianes territoriales del saber.</p>
+              </li>
+            </ol>
+          </figure>
+        </div>
+        <div class="fase-grupo">
+          <h3>Convocatoria y formalización de invitados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Mapeo de sabedoras/es por línea cultural (indígena, campesina, afro, académica, juvenil).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Recomendación: mínimo 5 mujeres sabedoras + 4 ponentes académicos/artistas + 1 moderador intercultural.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Envío de invitaciones oficiales con lenguaje claro y accesible.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Investigación aplicada y co-diseño</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Entrevistas preliminares (semiestructuradas, con grabación autorizada).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Identificación de especies botánicas, narrativas y símbolos a incluir en el mándala.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Co-diseño del mándala vivo con las sabedoras.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Logística operativa y cuidados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Alquiler de toldos, sillas accesibles, señalización bilingüe/multilingüe.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Estación de hidratación permanente.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Rutas de transporte compartido desde puntos urbanos.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Activación comunicativa</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Lanzamiento de identidad visual.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Formulario de inscripciones con preguntas de contexto.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Difusión en redes comunitarias, WhatsApp, emisoras locales, escuelas.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Alianzas con universidades, colectivos agroecológicos, bibliotecas.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Estrategias clave</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Mapeo de saberes previos: identificar qué se siembra, qué se come, qué se canta en el territorio.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Avanzadas etnográficas: 2 o 3 visitas previas para tejer confianza.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Círculos de palabra preparatorios: reuniones pequeñas con sabedoras para validar agenda.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fase-panel" id="panel-evento" role="tabpanel" aria-labelledby="tab-evento" hidden>
+        <p class="fase-resumen">Contextualización territorial, siembra viva y diálogo de saberes.</p>
+        <div class="fase-grupo">
+          <h3>Contextualización territorial</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Presentar la contextualización territorial al inicio del evento: se convierte en la brújula que orientará las ponencias, los debates y las posteriores conclusiones.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Definir con claridad los actores y los roles: funciones, temporalidad y el desarrollo de la agenda.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Todos los actores deben conocer con antelación la agenda y los horarios en los que participarán en las actividades.</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Siembra viva y diálogo</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Entregar una semilla o una fruta, verdura para intencionar los sentidos y la memoria.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Activar la escucha con sonidos de tambores y ocarinas.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Sembrar el mándala con las mujeres invitadas y el público asistente.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Abrir un espacio con los participantes teniendo como estrategia didáctica las palabras: CULTIVAR, TEJER, CUIDAR.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fase-panel" id="panel-post" role="tabpanel" aria-labelledby="tab-post" hidden>
+        <p class="fase-resumen">Productos esperados, cuidado del mándala y circulación de memorias.</p>
+        <div class="fase-grupo">
+          <h3>Productos esperados</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Afiche oficial (digital e impreso biodegradable).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Teaser audiovisual (1 min).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Cápsulas de saberes (3 piezas de 30 seg).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Relatoría ilustrada (PDF interactivo).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Video documental corto (5-7 min).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Guía de réplica metodológica (este documento).</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Repositorio digital abierto (audios, textos, fotos).</span></li>
+          </ul>
+        </div>
+        <div class="fase-grupo">
+          <h3>Cuidado y seguimiento del mándala</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Monitoreo mensual del crecimiento.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Riego comunitario coordinado con la familia anfitriona.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Registro fotográfico evolutivo (mensual durante 6 meses).</span></li>
+          </ul>
+          <figure class="foto-mandala">
+            <img src="assets/fotomandala.png" width="722" height="404" alt="Registro fotográfico del mándala vivo en proceso de crecimiento.">
+          </figure>
+        </div>
+        <div class="fase-grupo">
+          <h3>Circulación de memorias</h3>
+          <ul class="lista-verificacion">
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Presentación en escuelas rurales del corregimiento.</span></li>
+            <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Encuentro con redes agroecológicas departamentales.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="estacion" id="territorio" aria-labelledby="titulo-territorio">
+      <p class="indice">Introducción · Territorio situado</p>
+      <h2 id="titulo-territorio">Introducción: El Territorio como Cuerpo, Palabra y Semilla</h2>
+      <p class="entradilla">No es solo un grano, ni un simple dato estadístico, ni una metáfora vacía. La semilla es un archivo vivo, un documento antropológico material que contiene la historia de nuestras manos, nuestros climas y nuestras luchas más profundas. En la vereda La Palma, en el corregimiento de San Cristóbal (Medellín), el territorio no puede ser entendido como un recurso explotable, un mapa abstracto o un escenario pasivo para el desarrollo rural y urbano. El territorio es, ante todo, un <em>Oikos</em>: la casa común donde se entrelazan inseparablemente la ecología, la economía doméstica, el cuidado mutuo y la arquitectura del paisaje y todas las intervenciones que sobre este realizan, hombres y mujeres en sus prácticas de siembra, de pastoreo, de pintar con sus flores y plantas el territorio. Este documento, titulado Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos» no busca establecer una sola ruta para el desarrollo de eventos o encuentros de este tipo, su objetivo, busca establecer una serie de acciones y gestiones de tipo cultural para identificar que elementos de contexto, sirven, que actores vienen haciendo visible su trabajo y liderazgo y los que quizás precisen mostrar lo que hacen.</p>
+      <p class="entradilla">Sembrar no es solo colocar una semilla en la tierra. Sembrar es, ante todo, un verbo total que atraviesa el cuerpo, la palabra, el tejido, la organización, la memoria y el paisaje. El acto de sembrar se despliega en múltiples dimensiones: se siembra maíz y uchuva, sí, pero también se siembra cultura, se siembran tejidos comunitarios, se siembran organizaciones como Mujeres Siempre Vivas, se siembran caminos entre lo urbano y lo rural, se siembra memoria biocultural en los cuerpos de las mujeres Nasa, afrodescendientes y campesinas, se siembran diálogos interculturales, se siembran multiversos que conviven sin perderse.</p>
+      <p class="entradilla">«El Arte de Sembrar», no reduce la siembra a una técnica agrícola. La entiende como una práctica artística, epistémica, política y poética que atraviesa todas las dimensiones de la vida comunitaria. La siembra es un archivo vivo que guarda rituales, gestos, cantos, recetas, organizaciones, luchas y esperanzas. Es un canal de enunciación cultural que permite a los pueblos nombrarse, reconocerse y defenderse frente a la homogeneización del mundo.</p>
+
+      <aside class="panel-semilla" aria-labelledby="titulo-panel-semilla">
+        <figure class="panel-semilla-media">
+          <img src="assets/semilla.jpeg" width="2752" height="1536" alt="Ilustración de una semilla germinando sobre un territorio cartografiado, con raíces y hojas bajo un halo orbital.">
+          <figcaption>Imagen generada por inteligencia artificial.</figcaption>
+        </figure>
+        <div class="panel-semilla-texto">
+          <h3 id="titulo-panel-semilla">Introducción: El Territorio como Cuerpo, Palabra y <em>Semilla</em></h3>
+          <p>No es solo un grano, ni un simple dato estadístico, ni una metáfora vacía. La semilla es un archivo vivo, un documento antropológico material que contiene la historia de nuestras manos, nuestros climas y nuestras luchas más profundas.</p>
+          <p>En la vereda La Palma, en el corregimiento de San Cristóbal (Medellín), el territorio no puede ser entendido como un recurso explotable, un mapa abstracto o un escenario pasivo para el desarrollo rural y urbano.</p>
+          <p>El territorio es, ante todo, un <em>Oikos</em>: la casa común donde se entrelazan inseparablemente la ecología, la economía doméstica, el cuidado mutuo y la arquitectura del paisaje y todas las intervenciones que sobre este realizaron, hombres y mujeres en sus prácticas de siembra, de pastoreo, de pintar con sus flores y plantas el territorio.</p>
+          <p>Este documento, titulado Elementos metodológicos para el Desarrollo del Evento «El Arte de Sembrar: Intercambios de Saberes. Diálogos con-sentidos» no busca establecer una sola ruta para el desarrollo de eventos o encuentros de este tipo, su objetivo, busca establecer una serie de acciones y gestiones de tipo cultural para identificar que elementos de contexto, sirven, que actores vienen haciendo visible su trabajo y liderazgo y los que quizás precisan mostrar lo que hacen.</p>
+        </div>
+      </aside>
+
+      <p class="entradilla">Frente a un modelo civilizatorio que ha separado el cuerpo de la tierra, la academia del territorio, la cultura de la agricultura y la memoria del presente, este coloquio propone volver a tejer los hilos. Proponemos un marco interdisciplinario donde el cuerpo —primer territorio de la siembra—, el sabor —forma de conocimiento—, el caminar —método etnográfico—, el tejido —práctica organizativa— y la memoria —archivo vivo— se entrelazan en una sola trama. A través de las lentes de David Le Breton, quien ha explorado la materialidad del cuerpo y los sentidos, de Henry David Thoreau, quien elevó el caminar a peregrinación hacia lo sagrado, de Stefano Mancuso, quien reveló la inteligencia vegetal de las plantas, y de Iván Illich, quien soñó una sociedad desescolarizada, este documento articula los saberes ancestrales de Nicxa Tatiana Estupiñán, la gobernanza ambiental de Iván Mauricio Aristizábal, la pedagogía agroecológica de Nelly Bedoya, Jhon Ríos y Enerieth Hernández, el cuerpo en movimiento de Juan Fernando Vahos, y la gestión cultural de Juan Fernando Sánchez Vásquez.</p>
+      <p class="entradilla">Sembrar cultura es cultivar vida. Sembrar con el apoyo de las organizaciones es tejer comunidad. Sembrar caminos es abrir senderos de pervivencia. Sembrar memoria es defender los multiversos. Este documento es un mapa para habitar ese acto total, donde cada concepto, cada línea metodológica y cada ficha interactiva es una semilla que germina en el territorio. Dentro de los propósitos también esta evidenciar, con rigor y poesía, la lucha tangible de quienes siembran, caminan y habitan.</p>
+      <p class="entradilla">A través de las lentes de pensadores como David Le Breton, quien ha explorado la materialidad del cuerpo y los sentidos, y Henry David Thoreau, quien elevó el caminar a peregrinación hacia lo sagrado, y de la sabiduría ancestral de quienes habitan estas montañas —las mujeres Nasa, afrodescendientes y campesinas de San Cristóbal—, este documento busca ofrecer un lenguaje sencillo pero profundo. Es un recurso diseñado para el coloquio que se realizó en la Finca El Yarumo, vereda La Palma donde actores y lideresas como Nelly Bedoya y el colectivo Mujeres Siempre Vivas, articulando a actores como Nicxa Tatiana Estupiñán, Iván Mauricio Aristizábal, Juan Fernando Vahos, Eneriet Hernández y Estefanía Velásquez entre otros que en los intermedios de cada intervención, apoyaron la reescritura como sustrato, como tierra fértil de la cultura entendida como cultivo, tejido vivo y defensa de los multiversos.</p>
+
+      <div class="bloque-concepto">
+        <h2>La siembra como práctica artística, epistémica y cultural</h2>
+        <p class="entradilla">En este estimulo, la siembra va más allá de su función agrícola para convertirse en un acto de creación estética, producción de conocimiento y cultivo de cultura: quien siembra diseña, anticipa, simboliza, narra y escribe sobre la tierra viva, pero también sobre el cuerpo, la organización, la memoria y el tejido comunitario. Este concepto sostiene el objetivo general del evento, porque reconocer la siembra como arte y saber legítimo habilita un diálogo intercultural con la academia en igualdad de condiciones y también abre el horizonte epistémico del coloquio.</p>
+
+        <figure class="diagrama-sembrar" aria-labelledby="titulo-mapa-siembra">
+          <figcaption>
+            <h3 id="titulo-mapa-siembra">Sembrar cultura es cultivar vida</h3>
+            <p>Un mapa para habitar el acto total, donde cada concepto, cada línea metodológica y cada ficha interactiva es una semilla que germina en el territorio.</p>
+          </figcaption>
+
+          <div class="mapa-siembra">
+            <div class="mapa-ejes">
+              <article class="mapa-eje">
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M8 14c-2-2-3-4-3-6a3 3 0 0 1 6 0"/><path d="M16 14c2-2 3-4 3-6a3 3 0 0 0-6 0"/><path d="M7 20h10"/></svg></span>
+                <div>
+                  <strong>Sembrar cultura</strong>
+                  <p>Cultivar vida: la cultura como raíz que nutre la identidad y da frutos de diversidad.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="12" cy="16" r="2"/><path d="M9 8h6M8.5 9.8 11 14.2M15.5 9.8 13 14.2"/></svg></span>
+                <div>
+                  <strong>Tejer comunidad</strong>
+                  <p>Sembrar con el apoyo de las organizaciones es tejer lazos solidarios que fortalecen el territorio.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17c3-2 5-6 5-9 0-2 1.5-3.5 3-3.5S15 6 15 8c0 3 2 7 5 9"/><path d="M9 14h.01M12 12h.01M15 14h.01"/></svg></span>
+                <div>
+                  <strong>Abrir senderos</strong>
+                  <p>Sembrar caminos es abrir senderos de pervivencia entre lo urbano y lo rural.</p>
+                </div>
+              </article>
+              <article class="mapa-eje">
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="8"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg></span>
+                <div>
+                  <strong>Defender multiversos</strong>
+                  <p>Sembrar memoria es proteger narrativas plurales: pasado, presente, futuro y ancestral.</p>
+                </div>
+              </article>
+            </div>
+
+            <p class="mapa-bloque-titulo">Fichas interactivas</p>
+            <ul class="mapa-fichas">
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h8v4H8z"/><path d="M10 11v8M14 11v8"/><path d="M9 19h6"/></svg></span>
+                <strong>Ficha 01 · Saberes ancestrales</strong>
+                <p>Transmisión oral y prácticas agrícolas tradicionales.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12c0-2 1.5-3.5 3.2-3.5S14.5 10 14.5 12"/><path d="M9.5 13.5c.8.8 1.6 1.2 2.5 1.2s1.7-.4 2.5-1.2"/><path d="M7 17c1.2-1.5 2.8-2.3 5-2.3s3.8.8 5 2.3"/></svg></span>
+                <strong>Ficha 02 · Tejido social</strong>
+                <p>Cooperación y trabajo colectivo en la cosecha y la organización.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4.5c1.6 2 2.4 3.8 2.4 5.8A2.4 2.4 0 0 1 12 12.7 2.4 2.4 0 0 1 9.6 10.3C9.6 8.3 10.4 6.5 12 4.5Z"/><path d="M8 19c1.2-2.2 2.7-3.4 4-3.4s2.8 1.2 4 3.4"/><path d="M12 12.7V16"/></svg></span>
+                <strong>Ficha 03 · Memoria viva</strong>
+                <p>Archivos comunitarios y narrativas orales preservadas.</p>
+              </li>
+            </ul>
+
+            <p class="mapa-bloque-titulo">Rostros del territorio</p>
+            <ul class="mapa-rostros">
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19c-2.4-2.1-3.6-4.3-3.6-6.8A3.6 3.6 0 0 1 12 8.6a3.6 3.6 0 0 1 3.6 3.6c0 2.5-1.2 4.7-3.6 6.8Z"/></svg></span>
+                <strong>Guardián de las semillas</strong>
+                <p>Quien cuida la agrobiodiversidad y la transmite.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16c3-2 5-5 6-8 1 3 3 6 6 8"/><path d="M7 16h10"/></svg></span>
+                <strong>Tejedora de caminos</strong>
+                <p>Quien abre senderos entre mundos y organizaciones.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M6.5 19c1.2-2.8 3-4.2 5.5-4.2S16.3 16.2 17.5 19"/></svg></span>
+                <strong>Voz de la memoria</strong>
+                <p>Quien nombra, canta y defiende los multiversos.</p>
+              </li>
+            </ul>
+            <p class="mapa-cierre es-tierra">Evidenciar, con rigor y poesía, la lucha tangible de quienes siembran, caminan y habitan.</p>
+
+            <p class="mapa-bloque-titulo">Línea metodológica</p>
+            <ul class="mapa-metodo">
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 8v4l2.5 2.5"/><path d="M12 5v1.5M12 17.5V19M5 12h1.5M17.5 12H19"/></svg></span>
+                <strong>Ruta</strong>
+                <p>Diagnóstico participativo.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5"/><path d="m15 15 4 4"/></svg></span>
+                <strong>Herramienta</strong>
+                <p>Observación etnográfica.</p>
+              </li>
+              <li>
+                <span class="flujo-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19V9"/><path d="M9 12c-1.5-1.5-2.2-3-2.2-4.5A2.2 2.2 0 0 1 12 7.5"/><path d="M15 12c1.5-1.5 2.2-3 2.2-4.5A2.2 2.2 0 0 0 12 7.5"/></svg></span>
+                <strong>Resultado</strong>
+                <p>Acción transformadora.</p>
+              </li>
+            </ul>
+
+            <p class="mapa-bloque-titulo">Propósitos del mapa</p>
+            <ol class="mapa-propósitos">
+              <li><span>01</span><p>Mapear el acto total de siembra y habitabilidad.</p></li>
+              <li><span>02</span><p>Visibilizar la lucha y la poesía del territorio.</p></li>
+              <li><span>03</span><p>Activar fichas interactivas para la acción local.</p></li>
+              <li><span>04</span><p>Defender los multiversos de la memoria colectiva.</p></li>
+            </ol>
+
+            <p class="mapa-cierre">El territorio germinado: cada línea, cada ficha, cada rastro, es una semilla que germina en el territorio.</p>
+          </div>
+        </figure>
+
+        <p class="entradilla">La siembra es un archivo vivo que guarda rituales, gestos y memorias, y funciona como canal de enunciación cultural para fortalecer diálogos pluriétnicos y rurales. San Cristóbal, con su vocación campesina y agrícola, es un escenario posible para este reconocimiento. Pero también es un escenario para sembrar cultura: cuando las mujeres del colectivo Mujeres Siempre Vivas tejen sus redes de economía solidaria, están sembrando organización. Cuando Nicxa Tatiana Estupiñán abre caminos en la escuela Dxij Phade para la primera infancia Nasa en la ciudad, está sembrando pervivencia cultural. Cuando Juan Fernando Vahos activa los cuerpos con el ritmo «Chumbalaca» y «Alma africana», está sembrando memoria afrodescendiente en el presente.</p>
+        <figure class="foto-mandala">
+          <img src="assets/participantes.png" width="750" height="422" alt="Participantes del coloquio El Arte de Sembrar: intercambios de saberes y diálogos con-sentidos.">
+        </figure>
+        <p class="entradilla">Desde la perspectiva de David Le Breton en <cite>Antropología del cuerpo y modernidad</cite>, el cuerpo del campesino, del indígena, del afrodescendiente que siembra no es una máquina biológica aislada, sino una realidad social y material profundamente inscrita en el territorio. Cuando las manos de Nelly Bedoya tocan la tierra, están leyendo un texto vivo que la academia formal rara vez reconoce. La siembra, entonces, se convierte en una epistemología encarnada: el saber no está en los libros, está en los callos, en la postura del cuerpo al agacharse, en el ritmo de la pala, en el tejido de las redes comunitarias.</p>
+        <p class="entradilla">Este concepto sirve para abrir es una manera de aprestamiento para conccentar la atención de todos los asistentes, se sugiere entregar una semilla o una fruta, verdura para intencionar los sentidos y la memoria.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Arte Tierra / Land Art: El territorio como lienzo vivo</h2>
+        <div class="bloque-con-foto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">El arte tierra, o land art, es una corriente artística que usa el suelo, los materiales vegetales y minerales y el paisaje como lienzo y obra, convirtiendo el territorio en escena estética viva y política. En el evento, el mándala vivo de 3x4 metros es su pieza central: no es decoración, es una obra performativa, cartografía viva y siembra colectiva hecha con materiales propios del territorio. Su montaje busca dialogar con la tierra, al estilo de los artistas plásticos de Primiti Colors, quienes en una de sus exposiciones proponen el color sin teoría como parte de un laboratorio de creación.</p>
+            <p class="entradilla">El mándala vivo propone un trabajo colectivo donde la creación y siembra se convierten en un gesto y acto estético autónomo y legítimo. Pero este arte tierra no solo siembra plantas: siembra símbolos, siembra memorias, siembra encuentros. Cada brazo del mándala representa un multiverso: el mundo Nasa, el mundo afrodescendiente, el mundo campesino, el mundo académico. Cada tierra es una grafía territorial, una escritura del paisaje que la comunidad reconoce como propia.</p>
+            <p class="entradilla">En lo metodológico, la consulta con los actores frente a las semillas, el símbolo, debe aparecer de manera vinculante, el paso a paso del montaje y el registro fotográfico evolutivo que muestre la obra viva creciendo. Esta propuesta se alinea con lo que Thoreau describe en <cite>Caminar</cite>: el caminante no busca llegar a un destino, sino sumergirse en el paisaje, observar los detalles, seguir los rastros de la naturaleza. El land art en El Yarumo es esa inmersión hecha materia: el cuerpo del artista, del campesino, del indígena, del afrodescendiente se funden con la tierra, y el resultado no es un objeto para ser contemplado desde afuera, sino un territorio para ser habitado, sembrado y defendido.</p>
+          </div>
+          <figure class="bloque-con-foto-media">
+            <img src="assets/landart.png" width="322" height="481" alt="Land art del mándala vivo: obra performativa de tierras de color y material vegetal en el territorio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Agroecología como base, suelo y tejido organizativo</h2>
+        <p class="entradilla">La agroecología es una ciencia, una práctica y un movimiento que integra ecología, agricultura y justicia social; aquí es el suelo literal y el suelo conceptual que recoge a los actores invitados y la serie de conceptos y preguntas orientadoras de todo el evento. La finca del Yarumo es un sistema agroecológico vivo que sostendrá el coloquio y la fuerza de los diálogos de saberes. Sin la agroecología no habría marco ético, ni marco productivo, ni un territorio de aprendizaje para el diálogo de saberes. Aporta además los conceptos clave del evento: dignidad del trabajo campesino, soberanía alimentaria y defensa de la biodiversidad local.</p>
+        <figure class="foto-mandala">
+          <img src="assets/manos.png" width="764" height="537" alt="Manos que siembran y cuidan el territorio agroecológico.">
+        </figure>
+        <p class="entradilla">Pero la agroecología también es un tejido organizativo. El colectivo Mujeres Siempre Vivas, del cual hace parte Nelly Bedoya, es una organización que nació de la necesidad de defender el territorio frente a los agroquímicos en los años 90. Sembrar agroecología es sembrar organización, es tejer redes de economía solidaria, es construir mercados campesinos que dignifiquen el trabajo rural. La Corporación «Una Planta a la Vez», con su proyecto agroecológico Martha Guerra, es otro ejemplo de cómo la siembra se convierte en organización juvenil que territorializa la agroecología en San Cristóbal.</p>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Desde la perspectiva de Le Breton en <cite>El sabor del mundo</cite>, el sabor de una uchuva cosechada en El Yarumo no puede ser replicado en un laboratorio. Ese sabor contiene la información del suelo, de las lluvias de montaña, del cuidado libre de pesticidas y del tiempo de maduración respetado. Al comer esta uchuva, el cuerpo no solo se nutre; está «probando» el territorio, estableciendo un vínculo material directo con el paisaje y con el agricultor que la cultivó. La agroecología, entonces, es una soberanía sensorial y organizativa: defender los sabores nativos es defender la economía local, la dignidad del trabajo y los tejidos comunitarios que los sostienen.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="assets/uchuva.png" width="323" height="224" alt="Uchuva cosechada en El Yarumo, ilustración con fondo transparente.">
+          </figure>
+        </div>
+        <p class="entradilla">En lo metodológico se sugiere tener dentro de las actividades una cromatografía que revele la salud del territorio y de las organizaciones que lo habita. Imágenes que permitan al público ver la interacción de diferentes pueblos y paisajes de sus paisajes y siembras.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Diálogo de saberes e interculturalidad: sembrar encuentros sin jerarquías</h2>
+        <p class="entradilla">El diálogo de saberes es aquí el marco en el que saberes ancestrales, campesinos, indígenas, afrodescendientes y académicos conversan sin jerarquías epistémicas: nadie lo sabe todo, nadie lo ignora todo. Esta línea define el formato de coloquio-conversatorio, la moderación intercultural, los turnos flexibles y las preguntas sembradas desde el público, garantizando que la palabra circule como semilla en una siembra comunitaria. La interculturalidad no es un tema sino una condición del encuentro: pluriétnica de invitados, de públicos y de estéticas que se tejerán en el mándala vivo de la finca.</p>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Pero el diálogo de saberes también es sembrar encuentros, sembrar puentes, sembrar caminos entre mundos que usualmente no se hablan. Como se evidenció en la ejecución del evento, la animación comunitaria operó como un puente simbólico que une los multiversos que conviven sin devorarse: el mundo Nasa representado por Nicxa Tatiana, la memoria afrodescendiente y corporal de Juan Fernando Vahos, la sabiduría campesina y agroecológica de Nelly Bedoya y Jhon Ríos, y la academia de Iván Mauricio. El puente es la condición de posibilidad para que la <em>nasayuwe</em>, el canto afro, la palabra campesina y el texto académico transiten en horizontalidad.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="assets/rostros.png" width="2440" height="1728" alt="Rostros de los participantes del coloquio en diálogo de saberes.">
+          </figure>
+        </div>
+        <p class="entradilla">Este enfoque se alinea con lo que Iván Illich plantea en <cite>La sociedad desescolarizada</cite>: «la mayor parte del aprendizaje no es la consecuencia de una instrucción. Es más bien el resultado de una participación no estorbada en un entorno significativo». Sacar el saber del aula y llevarlo al territorio no es una carencia de rigor, sino la materialización de una «trama de aprendizaje convivencial». La comunidad se moviliza como protagonista de su propio desarrollo cognitivo y cultural, rompiendo el monopolio de la enseñanza formal y reafirmando que el territorio mismo es el dispositivo pedagógico más potente.</p>
+        <p class="entradilla">En lo metodológico se proponen esta serie de enlaces que nos permiten reconocer esa mixtura étnica, esos paisajes culturales, esos rostros y cantos que celebran la siembra, el surco, la chagra.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Paisaje cultural: sembrar territorios, sembrar caminos</h2>
+        <p class="entradilla">El paisaje cultural es el territorio leído como obra colectiva: surcos, colores, trazados y ritmos de la palabra y del gesto agrícola inscritos en la montaña durante generaciones. San Cristóbal, y sus veredas, no son escenarios pasivo: es actor, espacio educativo y lugar productivo de la agroecología que acoge el coloquio. En él convergen memorias de la siembra, el agua y las semillas nativas en el contexto urbano-rural de la Comuna 60.</p>
+        <p class="entradilla">Pero el paisaje cultural también es sembrar caminos, sembrar rutas de transporte compartido desde puntos urbanos, sembrar senderos que conectan las 7 veredas del corregimiento: El Llano, Travesías, La Loma, Pajarito, La Palma, El Patio y San José de la Montaña. Caminar las laderas de San Cristóbal, desde el Parque Biblioteca Fernando Botero hasta las veredas de La Palma o Pajarito, es un método etnográfico y arquitectónico de primer orden. Como Thoreau afirma, el caminante se convierte en un cartógrafo sensible, mapeando el <em>Oikos</em> con los pies.</p>
+        <p class="entradilla">Le Breton, en <cite>Elogio del caminar</cite>, complementa esta visión al destacar cómo la marcha permite al individuo reapropiarse de su cuerpo y de su tiempo frente a las exigencias alienantes de la modernidad. Caminar es un acto de resistencia rítmica. En el contexto de nuestros talleres con jóvenes y comunidades rurales, proponer una «caminata etnográfica» es una herramienta pedagógica poderosa. No se trata de caminar para hacer ejercicio, sino de caminar para observar, preguntar y sentir. Al caminar juntos, se rompen las jerarquías. El sociólogo, el arquitecto, el campesino, el estudiante, en el adulto mayor, el niño comparte diferentes ritmos, y miradas diversas sobre el paisaje que los junta en la construcción colectiva del mándala.</p>
+        <p class="entradilla">En lo metodológico se sugiere tener un mapa del territorio para mostrar y que los participantes se identifiquen y ubiquen en él.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Memoria biocultural y resistencia: sembrar el pasado en el presente</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">La memoria biocultural no vive solo en relatos: también vive en semillas, plantas, gestos, recetas, cantos y rituales que pasan de mano en mano y de cuerpo en cuerpo. Resistir es seguir sembrando, seguir danzando, trazando y tejiendo con cada una de las formas propias de nombrar, sembrar y cultivar la vida. Este concepto conecta a mujeres campesinas, indígenas y afrodescendientes, con sus ritos y sus maternidades.</p>
+            <p class="entradilla">Pero la memoria biocultural también es sembrar organizaciones que defienden la pervivencia cultural. La escuela Dxij Phade («abriendo caminos» en <em>nasayuwe</em>), coordinada por Nicxa Tatiana Estupiñán en el barrio Mirador de Tocaima en Bogotá, es un ejemplo de cómo la memoria se siembra en contextos urbanos donde los niños indígenas no tienen acceso a su territorio de origen. Sembrar memoria es sembrar casas de pensamiento intercultural, es sembrar juntas de acción comunal que acogen pueblos indígenas, afros, campesinos, víctimas del conflicto armado y firmantes de paz.</p>
+            <p class="entradilla">Desde la cosmovisión Nasa, la semilla es un miembro de la familia que requiere afecto, conversación y agradecimiento. La agrobiodiversidad no responde a la lógica de la productividad uniforme, sino a la gestión del riesgo ecológico y a la conservación de un diálogo afectivo entre la comunidad humana (<em>Runa</em>) y el mundo sagrado (<em>Sallqa</em> y <em>Pacha</em>). La resistencia biocultural es, entonces, una maternidad expandida: el útero espiral donde se gesta la pervivencia cultural frente al querer homogenizar todo.</p>
+            <p class="entradilla">Se propone de manera metodológica una espiritual que a su vez identifique la figura del útero como elemento simbólico de la fuerza de la memoria y la siembra.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="assets/mazorca.png" width="148" height="400" alt="Mazorca como símbolo de memoria biocultural, siembra y pervivencia.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Grafías del territorio: sembrar escrituras en el paisaje</h2>
+        <p class="entradilla">Las grafías del territorio son las escrituras de la tierra: surcos, simetrías, colores y trazados que funcionan como texto legible y estética viva inscrita en el paisaje cultural. Son el ritmo de la palabra y del gesto agrícola; son la huella que la siembra deja en la montaña, en la vereda, en el camino, en la chagra y que la lectura comunitaria de las comunidades y pueblos reconoce como propia.</p>
+        <p class="entradilla">Pero las grafías del territorio también son sembrar escrituras organizativas, sembrar trazados de redes comunitarias, sembrar simetrías entre lo urbano y lo rural. El mándala vivo es una grafía performativa: cada surco es una línea, cada brazo es una página, cada semilla es una letra. La siembra es una escritura intercultural donde cada actor deja su huella.</p>
+        <p class="entradilla">Como afirma la cosmovisión andina, la tierra no se concibe como un objeto inerte o suelo agrícola, sino como <em>Pachamama</em>, una entidad viva dotada de sensibilidad, memoria y voluntad. Las semillas nativas son tratadas como miembros de la familia, y los surcos que las acogen son caricias al territorio, no heridas. En la Amazonía, la chagra es un espacio de claros dinámicos en el bosque donde las mujeres son las depositarias y creadoras principales de la agrobiodiversidad. Ellas no solo cultivan, sino que dialogan con los espíritus guardianes de las plantas.</p>
+        <p class="entradilla">Sembrar como escrituras en el paisaje, alimenta las preguntas del público e invita metodológicamente a ver el video sobre las semillas y su importancia para los pueblos y saberes.</p>
+      </div>
+    </section>
+
+    <section class="estacion" id="mandala" aria-labelledby="titulo-mandala">
+      <p class="indice">Cartografía performativa</p>
+      <h2 id="titulo-mandala">Él mándala vivo como cartografía performativa: sembrar mapas que actúan</h2>
+      <p class="lede">El mándala vivo es un mapa que no representa el territorio: lo actúa, lo siembra y lo hace crecer; por eso lo llamamos cartografía performativa y dispositivo vivo. Es el dispositivo metodológico central que cierra el conversatorio: lo que revelan las entrevistas previas, especies, símbolos y grafías, se siembra allí por manos de las mujeres invitadas y del público asistente. Su tamaño de 3 × 4 metros, su figura circular de semillas y plantas, representan un trenzado, una escritura intercultural donde cada actor se involucra en la construcción colectiva.</p>
+      <p class="lede">Cada brazo del mándala representa un multiverso: el mundo Nasa, el mundo afrodescendiente, el mundo campesino, el mundo académico. Su montaje busca dialogar con la tierra, al estilo de los artistas plásticos de Primiti Colors, quienes proponen el color sin teoría como parte de un laboratorio de creación.</p>
+      <p class="entradilla">Metodológicamente se requiere un conversatorio previo con los actores invitados para de manera conjuntas identificar las formas, las plantas y sus beneficios. En lo logístico, se debe dejar trazado con 4 días de anterioridad, dejando además los insumos necesarios y las plantas, para que la intención pedagógica de la siembra, alcance su realización y los participantes puedan dialogar y conversar sobre lo que significa, sembrar juntos.</p>
+      <p class="ayuda" id="mandala-ayuda">Activa un cuadrante con el cursor, el dedo o el teclado. Cada mundo abre su ficha.</p>
+
+      <div class="mandala">
+        <div class="aureola" aria-hidden="true">
+          <img class="aureola-giro" src="assets/Mandala.png" width="1211" height="1207" alt="">
+        </div>
+        <div class="mandala-grid" role="group" aria-describedby="mandala-ayuda" aria-label="Cuatro mundos del mándala vivo">
+          <button type="button" class="petal petal-nasa petal-tl" data-ficha="ficha-nasa" aria-haspopup="dialog" aria-controls="ficha" aria-expanded="false">
+            <span class="petal-num">01</span>
+            <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-espiral"></use></svg>
+            <span>
+              <strong>Pueblo Nasa</strong>
+              <small>Nicxa Tatiana Estupiñán</small>
+            </span>
+          </button>
+          <button type="button" class="petal petal-afro petal-tr" data-ficha="ficha-afro" aria-haspopup="dialog" aria-controls="ficha" aria-expanded="false">
+            <span class="petal-num">02</span>
+            <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-ritmo"></use></svg>
+            <span>
+              <strong>Memoria afro</strong>
+              <small>Juan Fernando Vahos</small>
+            </span>
+          </button>
+          <button type="button" class="petal petal-campesino petal-bl" data-ficha="ficha-campesino" aria-haspopup="dialog" aria-controls="ficha" aria-expanded="false">
+            <span class="petal-num">03</span>
+            <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-hoja"></use></svg>
+            <span>
+              <strong>Saber campesino</strong>
+              <small>Nelly Bedoya · Mujeres Siempre Vivas</small>
+            </span>
+          </button>
+          <button type="button" class="petal petal-academia petal-br" data-ficha="ficha-academia" aria-haspopup="dialog" aria-controls="ficha" aria-expanded="false">
+            <span class="petal-num">04</span>
+            <svg class="glifo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-puente"></use></svg>
+            <span>
+              <strong>Academia</strong>
+              <small>Iván Mauricio Aristizábal</small>
+            </span>
+          </button>
+        </div>
+        <div class="core" aria-hidden="true">
+          <img src="assets/Mujersola.png" width="671" height="850" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="estacion" id="ruta" aria-labelledby="titulo-ruta">
+      <p class="indice">Cultura · Cuerpo · Ruta operativa</p>
+      <h2 id="titulo-ruta">Cultura, co-creación, multiversos y elementos de ruta</h2>
+
+      <div class="bloque-concepto">
+        <h2>Cultura como cultivo, tejido y cuidado: sembrar en todas las dimensiones</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Cultura como cultivo: cultivar cultura es cultivar vida; la etimología une ambas palabras y la propuesta las vuelve método: lo que se siembra se cuida; lo que se cuida se cultiva. Cultura como tejido: tejer comunidad es tejer biodiversidad; el borde trenzado del mándala y la escuela Dxij Phade muestran que la cultura se teje entre generaciones y pueblos. Cultura como cuidado: la ética del cuidado del colectivo Mujeres Siempre Vivas sostiene todo el evento.</p>
+            <p class="entradilla">Pero cultura como cultivo, tejido y cuidado también es sembrar organizaciones, sembrar caminos, sembrar memoria, sembrar diálogos. Cuando el colectivo Life energía en movimiento, dirigido por Juan Fernando Vahos, activa los cuerpos con el ritmo afro-latino, está cultivando memoria corporal. Cuando las mujeres del colectivo Mujeres Siempre Vivas tejen sus redes de economía solidaria, están tejiendo organización. Cuando Nelly Bedoya cuida el suelo de su finca, está cuidando el territorio y la comunidad que lo habita.</p>
+            <p class="entradilla">Desde la perspectiva de Stefano Mancuso en <cite>La nación de las plantas</cite>, «las plantas no son objetos inertes ni meros decorados del paisaje; son la nación más antigua, poderosa y sabia del planeta. Ellas inventaron la vida en la tierra, tejen redes subterráneas de cooperación inquebrantable y nos enseñan que la verdadera inteligencia no es la conquista, sino el cuidado». La ética del cuidado es, entonces, la forma más alta de inteligencia vegetal y humana.</p>
+            <p class="entradilla">En lo metodológico se sugiere abrir un espacio con los participantes teniendo como estrategia didáctica las palabras: CULTIVAR, TEJER, CUIDAR.</p>
+          </div>
+          <figure class="bloque-con-foto-media es-sin-borde">
+            <img src="assets/campesinos.png" width="366" height="366" alt="Campesinos en el cultivo, tejido y cuidado del territorio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Co-creación horizontal: sembrar autorías colectivas</h2>
+        <p class="entradilla">La co-creación horizontal es la producción conjunta entre academia, comunidad y gestores culturales: el mándala no lo diseña una sola persona, se hace con todos, se traza con lo que revelan entrevistas y talleres. La relatoría en vivo, la moderación intercultural y los acuerdos comunitarios muestran que todo el evento se teje entre muchas manos diversas y que su autoría es colectiva, circular y compartida.</p>
+        <p class="entradilla">Pero la co-creación horizontal también es sembrar organizaciones colectivas, sembrar tejidos sin jerarquías, sembrar caminos compartidos, sembrar memorias plurales. Este principio se alinea con la pedagogía de la Madre Tierra: las preguntas de investigación se tratan como «semillas» y el cuerpo, el ritmo y la palabra se convierten en herramientas legítimas de producción de conocimiento. La co-creación horizontal es también la condición de posibilidad para que la <em>nasayuwe</em>, el canto afro, la palabra campesina y el texto académico transiten en horizontalidad, bajo la premisa de que «nadie lo sabe todo, nadie lo ignora todo».</p>
+        <p class="entradilla">En la ejecución del evento, la co-creación horizontal se evidenció en la conformación del equipo: una educadora Nasa, un sociólogo experto en desarrollo rural, un técnico agroecológico, una líder campesina local, un director creativo afrodescendiente y un gestor cultural con raíces en la comuna 60. Esta convergencia garantiza que el evento no sea una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+        <p class="entradilla">Se propone la imagen de unas manos tejiendo al fondo una montaña en movimiento.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Multiversos y pluriétnicidad: sembrar mundos que conviven</h2>
+        <div class="bloque-con-foto es-suelto">
+          <div class="bloque-con-foto-texto">
+            <p class="entradilla">Los multiversos son la convivencia de muchos mundos: Nasa, afro, campesino, académico, urbano y rural, sin que uno devore a los otros; la propuesta del coloquio los defiende como condición epistémica, estética y política. La pluriétnicidad define la composición de invitados y públicos: mujeres indígenas, campesinas y afrodescendientes; académicos; técnicos; gestores; estudiantes; productores y toda la comunidad general de San Cristóbal. Cada mundo trae su lengua, su ritmo y su estética propias: <em>nasayuwe</em>, canto afro, palabra campesina y texto académico; el coloquio los acoge a todos sin forzar una traducción única o uniforme.</p>
+            <p class="entradilla">Pero los multiversos también son sembrar organizaciones plurales, sembrar tejidos interculturales, sembrar caminos que conectan mundos, sembrar memorias diversas. En la cosmovisión andina, la tierra es <em>Pachamama</em>, una entidad viva dotada de sensibilidad, memoria y voluntad. Los multiversos son las múltiples formas en que esta entidad se manifiesta y es nombrada. No hay una sola manera de habitar el territorio; hay tantas como pueblos lo han hecho a lo largo de la historia.</p>
+            <p class="entradilla">En la ejecución del evento, los multiversos se evidenciaron en la participación de habitantes de 7 veredas del corregimiento, en la convergencia de organizaciones como Aethernum Green, Mujeres Siempre Vivas, Una Planta a la Vez, I Motion, Productores de Acab, grupos de adultos mayores, jóvenes, estudiantes de la Universidad Nacional y gestores culturales del Parque Biblioteca Fernando Botero. Esta diversidad pluriétnica y pluriterritorial es la condición de posibilidad para que el coloquio sea un verdadero diálogo de saberes.</p>
+          </div>
+          <figure class="bloque-con-foto-media">
+            <img src="assets/manos2.jpeg" width="1792" height="2400" alt="Manos en la construcción colectiva de los multiversos del coloquio.">
+          </figure>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>El cuerpo como primer territorio de la siembra: sembrar en la carne</h2>
+        <p class="entradilla">La experiencia sensible y creativa que, desde la raíz negra y afro, reconoce el cuerpo como nuestro territorio primero: un espacio de memoria, percepción, expresión y transformación, cuyo cultivo es fundamental para ampliar nuestra consciencia y nuestra manera de habitar. A través del ritmo, el canto, las onomatopeyas y la percusión corporal, se explora la relación entre cuerpo, memoria y tierra, tomando como referente las tradiciones musicales africanas en las que el ritmo acompaña las labores agrícolas y fortalece los vínculos comunitarios. Inspirados en ritmos como el <em>Kassa</em> y el <em>Konkoba</em>, que propician un encuentro entre el movimiento, la escucha y la creación colectiva, donde cada gesto pueda convertirse en una forma de recordar, comunicar y sembrar. Entendemos el gesto plástico como una acción creadora que transforma nuestra relación con el cuerpo y el entorno. Sembrar es, entonces, mucho más que depositar una semilla en la tierra: será cultivar la atención, reconocer nuestras raíces, despertar la memoria y establecer relaciones conscientes con los otros y con la naturaleza.</p>
+        <p class="entradilla">El cuerpo como primer territorio invita a comprender que, así como la tierra requiere cuidado para germinar, el cuerpo necesita ser cultivado mediante el movimiento, la sensibilidad, el encuentro y la expresión. De esta manera, el ritmo se convierte en un lenguaje compartido y la siembra en un acto simbólico y colectivo que nos permite reconocer la vida como una creación permanente. Sembrar un gesto, cultivar el cuerpo, despertar la memoria y transformar nuestra manera de habitar la tierra.</p>
+        <p class="entradilla">Se propone metodológicamente activar la escucha con sonidos de tambores y ocarinas.</p>
+      </div>
+
+      <div class="bloque-concepto" id="lineas">
+        <h2>Líneas metodológicas que se proponen en el arte de sembrar</h2>
+        <p class="entradilla">A continuación, presentamos 5 líneas de trabajo que posibilitan unas rutas para entender y comprender el trabajo del coloquio en sus diferentes conceptos y estrategias y elementos didácticos.</p>
+        <div class="lineas-grid">
+          <article class="linea-card fondo-textura fondo-cafe">
+            <h3>Línea 1: Investigación-Acción Participativa (IAP)</h3>
+            <p>La IAP es la metodología que garantiza que el conocimiento no se extraiga del territorio, sino que se co-construya con él. Incluye entrevistas previas con las mujeres sabedoras, co-diseño del mándala con los actores territoriales, construcción colectiva de preguntas y respuestas durante el coloquio, y sistematización participativa de los saberes emergentes. Esta línea asegura que el evento no sea una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-verde">
+            <h3>Línea 2: Diálogo intercultural y pluriétnico</h3>
+            <p>El encuentro entre conocimientos indígena Nasa, afrodescendiente, campesino y académico se realiza bajo una moderación intercultural con turnos flexibles, reconocimiento de protocolos propios de cada pueblo y traducción entre lenguajes técnicos, ancestrales y artísticos. Esta línea garantiza que la palabra circule como semilla en una siembra comunitaria, sin jerarquías epistémicas.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-turquesa">
+            <h3>Línea 3: Creación colectiva y Land Art</h3>
+            <p>El diseño participativo del mándala de 3x4 metros, la siembra performativa como acto artístico simultáneo al diálogo, el uso de tierras de colores y material vegetal (estética Primiti Colors) y el registro etnográfico del proceso creativo en tiempo real componen esta línea. El land art aquí no es una intervención sobre el paisaje, sino una conversación con él.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-morado">
+            <h3>Línea 4: Registro y sistematización</h3>
+            <p>El documental corto etnográfico (5-7 minutos), metodología, las cápsulas audiovisuales de saberes y el repositorio digital abierto como archivo vivo garantizan que el conocimiento producido no se quede encerrado en la vereda, sino que circule como semilla en otros territorios.</p>
+          </article>
+          <article class="linea-card fondo-textura fondo-cafe">
+            <h3>Línea 5: Pedagogía territorial y agroecológica</h3>
+            <p>El recorrido sensorial por la finca, la lectura colectiva del paisaje y los trazados de cultivo, el intercambio simbólico de semillas y la guía de réplica metodológica para otros territorios componen esta línea. La pedagogía aquí no es unidireccional: la academia aprende del territorio (sobre los ciclos lunares, la siembra en espiral, el cuidado del agua y la memoria del cuerpo), y el territorio se ve reflejado y dignificado en los marcos conceptuales que la academia aporta para defender sus prácticas.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Elementos a trabajar para establecer en la ruta y contexto para los actores y el desarrollo del coloquio</h2>
+        <h3 class="modelo-titulo">Línea. Estímulo a la realización de eventos académicos</h3>
+        <p class="entradilla">Promover la realización de eventos académicos de arte y cultura mediante el otorgamiento de estímulos a los habitantes de las comunas y corregimientos de Medellín, con los recursos priorizados por la comunidad en el marco del Programa de Planeación del Desarrollo Local y Presupuesto Participativo.</p>
+        <h3 class="modelo-titulo">Descripción del estímulo</h3>
+        <p class="entradilla">Los encuentros académicos constituyen espacios fundamentales para la construcción de conocimiento, el fortalecimiento del pensamiento crítico y la circulación de investigaciones y experiencias en el campo cultural o artístico. A través de foros, seminarios, simposios, coloquios, congresos, encuentros investigativos o jornadas académicas, se propicia el diálogo entre expertos, artistas, investigadores, gestores y comunidad. Este estímulo está orientado a la realización de un evento académico que promueva el encuentro, la reflexión crítica y el intercambio de saberes en torno a las artes, la cultura, el patrimonio, la gestión cultural o procesos investigativos. El estímulo pretende fomentar la producción y socialización de pensamiento crítico y la Visibilización de procesos culturales que aporten al desarrollo cultural de Medellín. Asimismo, se busca que el evento tenga un impacto real en la comunidad, promoviendo la participación, la apropiación social del conocimiento y la proyección de nuevas iniciativas culturales y académicas.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Contextualización territorial</h2>
+        <p class="entradilla">Antes de disponerse a la realización de un coloquio, resulta absolutamente imperativo que los actores, líderes y profesionales invitados comprendan a profundidad el contexto territorial donde van a interactuar. Esta contextualización territorial no es un mero trámite, sino el cimiento sobre el cual se construirá todo el diálogo. Conocer las dinámicas sociales, las tensiones históricas, las riquezas culturales y las necesidades específicas de la comunidad permite a los participantes evitar suposiciones erróneas y enfoques descontextualizados que podrían resultar irrelevantes o incluso ofensivos. Por lo tanto, este proceso de inmersión y análisis previo debe materializarse como la introducción formal al coloquio con los asistentes. Al presentar esta contextualización al inicio del evento, se establece un lenguaje común, se legitima la voz de la comunidad y se alinea a todos los participantes hacia una misma frecuencia de respeto y empatía. Los asistentes, al recibir esta información estructurada, comprenden que el espacio que ocupan está cargado de significados que exigen una escucha activa y una participación responsable. Así, la contextualización territorial trasciende la función de un simple prólogo; se convierte en la brújula que orientará las ponencias, los debates y las posteriores conclusiones. Sin este anclaje geográfico y social, el coloquio correría el riesgo de convertirse en un ejercicio académico aislado, ciego ante las realidades que pretende transformar o comprender. En definitiva, asumir el territorio como el punto de partida garantiza que las intervenciones de los líderes y profesionales no sean discursos vacíos, sino respuestas pertinentes, situadas y genuinamente comprometidas con el entorno que los acoge, transformando el encuentro en una verdadera oportunidad de construcción colectiva y transformación social significativa para todos los sectores involucrados en esta importante y necesaria jornada de reflexión compartida que busca generar un impacto real y duradero en la vida cotidiana de las personas.</p>
+      </div>
+
+      <div class="bloque-concepto">
+        <h2>Actores y roles</h2>
+        <p class="entradilla">Es muy importante desde el principio definir muy bien los actores y los roles. Con esto se logra identificar que elementos y estrategias se deben seguir para que en el momento de la puesta en marcha del evento académico todos y todas estén enterados de las funciones, temporalidad y el desarrollo de la agenda.</p>
+        <h3 class="modelo-titulo">Objetivos operativos por fase</h3>
+        <p class="entradilla">Definir con claridad los objetivos de la fase de avanzada, las entrevistas, los recursos a priorizar y la locación, debe estar en la primera fase. Esto garantiza varias cosas.</p>
+        <ul class="lista-verificacion">
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Identificar en la locación, disponibilidad de energía, señal para el streming, cobertura de internet.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Servicios básicos sanitarios para no tener inconvenientes en la disponibilidad.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Capacidad de carga de la finca, salón o locación elegida.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Rutas y frecuencias de transporte y costos asociados a estas.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Identificación de temas de salud en los participantes inscritos. Se debe dejar claro en el formulario de inscripción.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Preferencias en la alimentación.</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Protocolo de visita según el ecosistema y las posibilidades vulnerabilidades asociadas a este, frio, insectos, fauna, flora, Nivel de dificultad en caso tal que sea necesario caminar.</span></li>
+        </ul>
+        <h3 class="modelo-titulo">Secuencia metodológica paso a paso. Agenda del coloquio</h3>
+        <p class="entradilla">Todos los actores deben conocer con antelación, la agenda y los horarios en los que participarán en las actividades, esto garantiza cumplimiento en los horarios.</p>
+        <h3 class="modelo-titulo">Recursos materiales</h3>
+        <p class="entradilla">Es importante identificar cuáles serán los insumos, materiales de cada uno de los actores para buscar que la presentación y la línea en la que participan en el coloquio, cuenta con las ayudas audiovisuales, de papelería, entre otros equipos necesarios en las estrategias didácticas de cada actor.</p>
+        <h3 class="modelo-titulo">Productos esperados</h3>
+        <p class="entradilla">Dentro de los productos esperados, debe quedar muy claro para los actores, que se desea de cada uno. Esto con el fin de recoger:</p>
+        <ul class="lista-verificacion">
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Registros audiovisuales</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Memorias</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Evaluaciones</span></li>
+          <li><span class="marca" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"></use></svg></span><span>Entrevistas</span></li>
+        </ul>
+        <p class="entradilla">Este elemento es fundamental, para aprovechar los escenarios de encuentros con los actores, dado algunos pueden estar moviéndose por asuntos laborales en otros lugares y la información se puede dilatar al punto de retardar los procesos de sistematización de la información y con esto las entregas de informes.</p>
+        <h3 class="modelo-titulo">Indicadores de logro</h3>
+        <p class="entradilla">Tener presentes los indicadores y los resultados esperados, permite diseñar estrategias e instrumentos que permitan medir las percepciones e identificar mejoras y acciones de transformación necesarias en todas las metodologías.</p>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer capa" id="etica">
+    <div class="footer-inner">
+      <p class="indice">Protocolos · Memoria y referencias</p>
+      <h2>Protocolos éticos</h2>
+      <p class="lede">Consentimientos informados, compensación justa por saber, acuerdos de uso de imagen y voz, respeto a protocolos indígenas, campesinos y afrodescendientes.</p>
+      <div class="etica-grid">
+        <article class="etica-item fondo-textura fondo-verde">
+          <h3>Consentimientos informados</h3>
+          <p>Acuerdos de uso de imagen y voz. Respeto a protocolos indígenas, campesinos y afrodescendientes.</p>
+        </article>
+        <article class="etica-item fondo-textura fondo-cafe">
+          <h3>Compensación justa por saber</h3>
+          <p>El evento no es una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+        </article>
+        <article class="etica-item fondo-textura fondo-morado">
+          <h3>Co-creación horizontal</h3>
+          <p>Producción conjunta entre academia, comunidad y gestores culturales: el mándala no lo diseña una sola persona, se hace con todos, se traza con lo que revelan entrevistas y talleres. La relatoría en vivo, la moderación intercultural y los acuerdos comunitarios muestran que todo el evento se teje entre muchas manos diversas y que su autoría es colectiva, circular y compartida.</p>
+        </article>
+      </div>
+
+      <details class="fuentes fondo-textura fondo-turquesa">
+        <summary>Bibliografía comentada y referencias conceptuales</summary>
+        <ul>
+          <li>
+            <p>Le Breton, David. (2002). <cite>Antropología del cuerpo y modernidad</cite>. Buenos Aires: Nueva Visión.</p>
+            <p>Texto esencial para desmontar la idea del cuerpo como una máquina biológica aislada. Permite entender cómo las estructuras sociales, económicas y tecnológicas se inscriben materialmente en la carne. En el contexto de San Cristóbal, es una herramienta clave para analizar cómo la exposición a agroquímicos y la precariedad laboral afectan el cuerpo del campesino, y cómo la agroecología actúa como una práctica de recuperación de la integridad corporal y la soberanía sobre el propio territorio.</p>
+          </li>
+          <li>
+            <p>Le Breton, David. (2007). <cite>El sabor del mundo: Una antropología de los sentidos</cite>. Buenos Aires: Nueva Visión.</p>
+            <p>Esta obra desplaza el análisis desde lo puramente visual o racional hacia lo sensorial. Le Breton argumenta que el gusto es una forma de conocimiento y de relación con el mundo. Para nuestros talleres, este libro fundamenta la importancia de rescatar los sabores nativos (como la uchuva y el maíz) no solo como nutrientes, sino como actos de resistencia cultural contra la homogeneización y el empobrecimiento sensorial que impone la industria alimentaria global.</p>
+          </li>
+          <li>
+            <p>Le Breton, David. (2012). <cite>Elogio del caminar</cite>. Madrid: Siruela.</p>
+            <p>Un texto que reivindica la marcha como una práctica de libertad, de reapropiación del tiempo y de conexión con el entorno. En nuestra metodología, el «caminar» se convierte en una herramienta etnográfica y pedagógica. Este libro aporta el marco teórico para justificar las caminatas de reconocimiento territorial como un acto válido y necesario de investigación comunitaria y de construcción de ciudadanía, alejándose de la lógica de la eficiencia y el transporte utilitario.</p>
+          </li>
+          <li>
+            <p>Thoreau, Henry David. (2016). <cite>Caminar</cite>. Madrid: Errata Naturae.</p>
+            <p>El clásico ensayo de Thoreau complementa la visión de Le Breton desde una perspectiva más poética y filosófica. Su idea de que caminar es una forma de peregrinación hacia la «tierra santa» local resuena profundamente con la necesidad de revalorizar el paisaje rural de Medellín. Thoreau nos enseña a mirar el territorio con asombro y atención plena, una actitud indispensable para fomentar el cuidado ambiental y la justicia ecológica en las nuevas generaciones.</p>
+          </li>
+          <li>
+            <p>Mancuso, Stefano. (2019). <cite>La nación de las plantas</cite>. Madrid: Galaxia Gutenberg.</p>
+            <p>Texto fundamental para comprender la inteligencia vegetal y las redes subterráneas de cooperación que sostienen la vida en el planeta. Mancuso nos enseña que la verdadera inteligencia no es la conquista, sino el cuidado. En el contexto del evento, este libro aporta el marco conceptual para entender la siembra como un diálogo con una nación sabia y antigua, y para cuestionar los modelos agroindustriales que tratan a las plantas como meros recursos.</p>
+          </li>
+          <li>
+            <p>Illich, Iván. (1973). <cite>La sociedad desescolarizada</cite>. Barcelona: Barral Editores.</p>
+            <p>Obra clásica que cuestiona el monopolio de la enseñanza formal y propone «tramas de aprendizaje convivenciales». En el contexto del evento, este libro valida la metodología de sacar el saber del aula y llevarlo al territorio, demostrando que la comunidad se moviliza como protagonista de su propio desarrollo cognitivo y cultural.</p>
+          </li>
+          <li>
+            <p>Referencia institucional: Alcaldía de Medellín. (2026). Convocatoria de Fomento y Estímulos para el Arte y la Cultura. PP Cultura 2026. Línea: Estímulo a la realización de eventos académicos.</p>
+            <p>Documento marco que da origen al evento y que establece los parámetros de ejecución, sistematización y evaluación. Proporciona el contexto institucional y los compromisos éticos que el evento asume frente a la ciudad y el corregimiento de San Cristóbal.</p>
+          </li>
+        </ul>
+      </details>
+
+      <aside class="contacto" aria-labelledby="titulo-contacto">
+        <h3 id="titulo-contacto">Contáctanos</h3>
+        <ul class="contacto-lista">
+          <li>
+            <strong>CasaCanto</strong>
+            <a href="mailto:juancasacanto12@gmail.com">juancasacanto12@gmail.com</a>
+            <a href="https://www.instagram.com/arte_savia/" target="_blank" rel="noopener noreferrer">Instagram @arte_savia</a>
+          </li>
+          <li>
+            <strong>I Motion</strong>
+            <a href="mailto:imotioncorporacion@gmail.com">imotioncorporacion@gmail.com</a>
+            <a href="https://www.instagram.com/imotioncorporacion/" target="_blank" rel="noopener noreferrer">Instagram @imotioncorporacion</a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="pata">
+        <p class="pata-leyenda">Proyecto beneficiado con recursos del programa de Planeación del Desarrollo Local y Presupuesto Participativo de Cultura.</p>
+        <figure class="pata-logos">
+          <img src="assets/logos.png" width="451" height="200" alt="Organiza: CasaCanto. Apoya: Alcaldía de Medellín, Distrito de Ciencia, Tecnología e Innovación.">
+        </figure>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="ficha" aria-modal="true" aria-labelledby="titulo-nasa">
+    <div class="asa" aria-hidden="true"></div>
+    <div class="barra-ficha">
+      <p>Ficha del mándala vivo</p>
+      <button type="button" id="ficha-cerrar">Cerrar</button>
+    </div>
+    <div id="ficha-cuerpo"></div>
+  </dialog>
+
+  <div class="capa" id="repositorio-fichas" hidden>
+    <article class="ficha" id="ficha-nasa" data-titulo-id="titulo-nasa">
+      <p class="ficha-kicker">Cuadrante 01 · Mundo Nasa</p>
+      <h3 id="titulo-nasa">Pueblo Nasa</h3>
+      <figure class="ficha-retrato">
+        <img src="assets/Nicxa.png" width="1080" height="1080" alt="Retrato de Nicxa Tatiana Estupiñán">
+      </figure>
+      <h4>Rol</h4>
+      <p>Cuando Nicxa Tatiana Estupiñán abre caminos en la escuela <em>Dxij Phade</em> para la primera infancia Nasa en la ciudad, está sembrando pervivencia cultural. La escuela <em>Dxij Phade</em> («abriendo caminos» en <em>nasayuwe</em>), coordinada por Nicxa Tatiana Estupiñán en el barrio Mirador de Tocaima en Bogotá, es un ejemplo de cómo la memoria se siembra en contextos urbanos donde los niños indígenas no tienen acceso a su territorio de origen.</p>
+      <h4>Concepto</h4>
+      <p>Desde la cosmovisión Nasa, la semilla es un miembro de la familia que requiere afecto, conversación y agradecimiento. La agrobiodiversidad no responde a la lógica de la productividad uniforme, sino a la gestión del riesgo ecológico y a la conservación de un diálogo afectivo entre la comunidad humana (<em>Runa</em>) y el mundo sagrado (<em>Sallqa</em> y <em>Pacha</em>). La resistencia biocultural es, entonces, una maternidad expandida: el útero espiral donde se gesta la pervivencia cultural frente al querer homogenizar todo.</p>
+      <h4>En el mándala</h4>
+      <p>Cada brazo del mándala representa un multiverso: el mundo Nasa, el mundo afrodescendiente, el mundo campesino, el mundo académico. Este brazo guarda la <em>nasayuwe</em>, la semilla y la resistencia biocultural.</p>
+      <blockquote class="cita">
+        <p>«Las plantas no son objetos inertes ni meros decorados del paisaje; son la nación más antigua, poderosa y sabia del planeta. Ellas inventaron la vida en la tierra, tejen redes subterráneas de cooperación inquebrantable y nos enseñan que la verdadera inteligencia no es la conquista, sino el cuidado.»</p>
+        <footer>Stefano Mancuso, <cite>La nación de las plantas</cite>.</footer>
+      </blockquote>
+    </article>
+
+    <article class="ficha" id="ficha-afro" data-titulo-id="titulo-afro">
+      <p class="ficha-kicker">Cuadrante 02 · Mundo afrodescendiente</p>
+      <h3 id="titulo-afro">Memoria afrodescendiente</h3>
+      <figure class="ficha-retrato">
+        <img src="assets/Vahos.png" width="1080" height="1080" alt="Retrato de Juan Fernando Vahos">
+      </figure>
+      <h4>Rol</h4>
+      <p>Cuando Juan Fernando Vahos activa los cuerpos con el ritmo «Chumbalaca» y «Alma africana», está sembrando memoria afrodescendiente en el presente. Cuando el colectivo Life energía en movimiento, dirigido por Juan Fernando Vahos, activa los cuerpos con el ritmo afro-latino, está cultivando memoria corporal.</p>
+      <h4>Concepto</h4>
+      <p>La experiencia sensible y creativa que, desde la raíz negra y afro, reconoce el cuerpo como nuestro territorio primero: un espacio de memoria, percepción, expresión y transformación, cuyo cultivo es fundamental para ampliar nuestra consciencia y nuestra manera de habitar. A través del ritmo, el canto, las onomatopeyas y la percusión corporal, se explora la relación entre cuerpo, memoria y tierra, tomando como referente las tradiciones musicales africanas en las que el ritmo acompaña las labores agrícolas y fortalece los vínculos comunitarios. Inspirados en ritmos como el <em>Kassa</em> y el <em>Konkoba</em>, que propician un encuentro entre el movimiento, la escucha y la creación colectiva, donde cada gesto pueda convertirse en una forma de recordar, comunicar y sembrar. Entendemos el gesto plástico como una acción creadora que transforma nuestra relación con el cuerpo y el entorno. Sembrar es, entonces, mucho más que depositar una semilla en la tierra: será cultivar la atención, reconocer nuestras raíces, despertar la memoria y establecer relaciones conscientes con los otros y con la naturaleza.</p>
+      <h4>En el mándala</h4>
+      <p>El cuerpo como primer territorio invita a comprender que, así como la tierra requiere cuidado para germinar, el cuerpo necesita ser cultivado mediante el movimiento, la sensibilidad, el encuentro y la expresión. De esta manera, el ritmo se convierte en un lenguaje compartido y la siembra en un acto simbólico y colectivo que nos permite reconocer la vida como una creación permanente. Sembrar un gesto, cultivar el cuerpo, despertar la memoria y transformar nuestra manera de habitar la tierra.</p>
+      <p class="nota-referente">Se propone metodológicamente activar la escucha con sonidos de tambores y ocarinas.</p>
+    </article>
+
+    <article class="ficha" id="ficha-campesino" data-titulo-id="titulo-campesino">
+      <p class="ficha-kicker">Cuadrante 03 · Mundo campesino</p>
+      <h3 id="titulo-campesino">Saber campesino y agroecología</h3>
+      <figure class="ficha-retrato">
+        <img src="assets/Nelly.png" width="1080" height="1080" alt="Retrato de Nelly Bedoya">
+      </figure>
+      <h4>Rol</h4>
+      <p>El colectivo Mujeres Siempre Vivas, del cual hace parte Nelly Bedoya, es una organización que nació de la necesidad de defender el territorio frente a los agroquímicos en los años 90. Sembrar agroecología es sembrar organización, es tejer redes de economía solidaria, es construir mercados campesinos que dignifiquen el trabajo rural. Cuando Nelly Bedoya cuida el suelo de su finca, está cuidando el territorio y la comunidad que lo habita. Junto a ella, la pedagogía agroecológica de Jhon Ríos y Enerieth Hernández.</p>
+      <h4>Concepto</h4>
+      <p>La agroecología es una ciencia, una práctica y un movimiento que integra ecología, agricultura y justicia social; aquí es el suelo literal y el suelo conceptual que recoge a los actores invitados y la serie de conceptos y preguntas orientadoras de todo el evento. La finca del Yarumo es un sistema agroecológico vivo que sostendrá el coloquio y la fuerza de los diálogos de saberes. Sin la agroecología no habría marco ético, ni marco productivo, ni un territorio de aprendizaje para el diálogo de saberes. Aporta además los conceptos clave del evento: dignidad del trabajo campesino, soberanía alimentaria y defensa de la biodiversidad local.</p>
+      <h4>En el mándala</h4>
+      <p>Desde la perspectiva de Le Breton en <cite>El sabor del mundo</cite>, el sabor de una uchuva cosechada en El Yarumo no puede ser replicado en un laboratorio. Ese sabor contiene la información del suelo, de las lluvias de montaña, del cuidado libre de pesticidas y del tiempo de maduración respetado. Al comer esta uchuva, el cuerpo no solo se nutre; está «probando» el territorio, estableciendo un vínculo material directo con el paisaje y con el agricultor que la cultivó. La agroecología, entonces, es una soberanía sensorial y organizativa: defender los sabores nativos es defender la economía local, la dignidad del trabajo y los tejidos comunitarios que los sostienen.</p>
+      <blockquote class="cita">
+        <p>«Las plantas no son objetos inertes ni meros decorados del paisaje; son la nación más antigua, poderosa y sabia del planeta.»</p>
+        <footer>Stefano Mancuso, <cite>La nación de las plantas</cite>.</footer>
+      </blockquote>
+    </article>
+
+    <article class="ficha" id="ficha-academia" data-titulo-id="titulo-academia">
+      <p class="ficha-kicker">Cuadrante 04 · Mundo académico</p>
+      <h3 id="titulo-academia">Academia y gobernanza</h3>
+      <figure class="ficha-retrato">
+        <img src="assets/Mauricio.png" width="1080" height="1080" alt="Retrato de Iván Mauricio Aristizábal">
+      </figure>
+      <h4>Rol</h4>
+      <p>La gobernanza ambiental de Iván Mauricio Aristizábal. En la ejecución del evento, la animación comunitaria operó como un puente simbólico que une los multiversos que conviven sin devorarse: el mundo Nasa representado por Nicxa Tatiana, la memoria afrodescendiente y corporal de Juan Fernando Vahos, la sabiduría campesina y agroecológica de Nelly Bedoya y Jhon Ríos, y la academia de Iván Mauricio.</p>
+      <h4>Concepto</h4>
+      <p>La IAP es la metodología que garantiza que el conocimiento no se extraiga del territorio, sino que se co-construya con él. Incluye entrevistas previas con las mujeres sabedoras, co-diseño del mándala con los actores territoriales, construcción colectiva de preguntas y respuestas durante el coloquio, y sistematización participativa de los saberes emergentes. Esta línea asegura que el evento no sea una extracción de conocimiento, sino un encuentro ético con compensación justa, consentimiento informado y una verdadera co-creación que respeta la diversidad pluriétnica del territorio.</p>
+      <h4>En el mándala</h4>
+      <p>El puente es la condición de posibilidad para que la <em>nasayuwe</em>, el canto afro, la palabra campesina y el texto académico transiten en horizontalidad, bajo la premisa de que «nadie lo sabe todo, nadie lo ignora todo».</p>
+      <blockquote class="cita">
+        <p>«La mayor parte del aprendizaje no es la consecuencia de una instrucción. Es más bien el resultado de una participación no estorbada en un entorno significativo.»</p>
+        <footer>Iván Illich, <cite>La sociedad desescolarizada</cite>.</footer>
+      </blockquote>
+      <p class="nota-referente">Sacar el saber del aula y llevarlo al territorio no es una carencia de rigor, sino la materialización de una «trama de aprendizaje convivencial».</p>
+    </article>
+  </div>
+
+  <noscript>
+    <style>
+      #repositorio-fichas,
+      [role="tabpanel"] {
+        display: block !important;
+      }
+      .tapa,
+      .volver {
+        display: none !important;
+      }
+      .face,
+      .face-back,
+      .face-front {
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+        visibility: visible !important;
+        backface-visibility: visible !important;
+        pointer-events: auto !important;
+      }
+      .face-back {
+        margin-top: 0.6rem;
+      }
+    </style>
+  </noscript>
+
+  <script>
+    /**
+     * Infografía interactiva de la guía metodológica.
+     * El diálogo nativo encierra el foco. Las fichas viven en el HTML
+     * y solo se mueven al panel cuando alguien abre un cuadrante.
+     */
+
+    /**
+     * @typedef {HTMLButtonElement} BotonFicha
+     */
+
+    const dialogo = document.getElementById("ficha")
+    const cuerpoFicha = document.getElementById("ficha-cuerpo")
+    const repositorio = document.getElementById("repositorio-fichas")
+    const botonCerrar = document.getElementById("ficha-cerrar")
+    const tablist = document.querySelector("[role='tablist']")
+
+    /** @type {HTMLElement | null} */
+    let fichaAbierta = null
+
+    /** @type {HTMLButtonElement | null} */
+    let disparadorActivo = null
+
+    /**
+     * Marca qué cuadrante está abierto.
+     * @param {HTMLButtonElement | null} activo
+     * @returns {void}
+     */
+    const marcarPetalos = (activo) => {
+      document.querySelectorAll("[data-ficha]").forEach((boton) => {
+        const encendido = boton === activo
+        boton.setAttribute("aria-expanded", encendido ? "true" : "false")
+        boton.classList.toggle("is-active", encendido)
+      })
+    }
+
+    /**
+     * Devuelve la ficha al repositorio oculto.
+     * @returns {void}
+     */
+    const devolverFicha = () => {
+      if (!fichaAbierta || !repositorio) return
+      repositorio.append(fichaAbierta)
+      fichaAbierta = null
+    }
+
+    /**
+     * Abre el panel inferior con la ficha del cuadrante.
+     * @param {HTMLButtonElement} boton
+     * @returns {void}
+     */
+    const handleAbrirFicha = (boton) => {
+      if (!dialogo || !cuerpoFicha) return
+      const id = boton.getAttribute("data-ficha")
+      if (!id) return
+      const ficha = document.getElementById(id)
+      if (!ficha) return
+      if (fichaAbierta && fichaAbierta !== ficha) devolverFicha()
+      fichaAbierta = ficha
+      cuerpoFicha.replaceChildren(ficha)
+      marcarPetalos(boton)
+      disparadorActivo = boton
+      const tituloId = ficha.getAttribute("data-titulo-id")
+      if (tituloId) dialogo.setAttribute("aria-labelledby", tituloId)
+      if (!dialogo.open) dialogo.showModal()
+      document.body.classList.add("hay-dialogo")
+      const titulo = tituloId ? document.getElementById(tituloId) : null
+      if (titulo) {
+        titulo.setAttribute("tabindex", "-1")
+        titulo.focus()
+        return
+      }
+      if (botonCerrar) botonCerrar.focus()
+    }
+
+    /**
+     * Cierra el panel. El evento close devuelve el foco.
+     * @returns {void}
+     */
+    const handleCerrarFicha = () => {
+      if (!dialogo || !dialogo.open) return
+      dialogo.close()
+    }
+
+    /**
+     * Sincroniza pétalos, foco y repositorio al cerrar el diálogo.
+     * @returns {void}
+     */
+    const handleDialogoCerrado = () => {
+      document.body.classList.remove("hay-dialogo")
+      devolverFicha()
+      marcarPetalos(null)
+      if (!disparadorActivo) return
+      const volver = disparadorActivo
+      disparadorActivo = null
+      volver.focus()
+    }
+
+    /**
+     * Cierra si el clic cae en el fondo del diálogo.
+     * @param {MouseEvent} evento
+     * @returns {void}
+     */
+    const handleClickDialogo = (evento) => {
+      if (evento.target !== dialogo) return
+      handleCerrarFicha()
+    }
+
+    /**
+     * Selecciona una fase del stepper.
+     * @param {number} indice
+     * @param {boolean} moverFoco
+     * @returns {void}
+     */
+    const seleccionarFase = (indice, moverFoco) => {
+      const pestanas = [...document.querySelectorAll("[role='tab']")]
+      const paneles = [...document.querySelectorAll("[role='tabpanel']")]
+      pestanas.forEach((pestana, i) => {
+        const activa = i === indice
+        pestana.setAttribute("aria-selected", activa ? "true" : "false")
+        pestana.tabIndex = activa ? 0 : -1
+        if (paneles[i]) paneles[i].hidden = !activa
+      })
+      if (moverFoco && pestanas[indice]) pestanas[indice].focus()
+    }
+
+    /**
+     * Mueve la fase con las flechas del teclado.
+     * @param {KeyboardEvent} evento
+     * @param {number} indice
+     * @param {number} total
+     * @returns {void}
+     */
+    const handleKeydownFase = (evento, indice, total) => {
+      const siguiente = evento.key === "ArrowRight" || evento.key === "ArrowDown"
+      const anterior = evento.key === "ArrowLeft" || evento.key === "ArrowUp"
+      const inicio = evento.key === "Home"
+      const fin = evento.key === "End"
+      if (!siguiente && !anterior && !inicio && !fin) return
+      evento.preventDefault()
+      if (inicio) {
+        seleccionarFase(0, true)
+        return
+      }
+      if (fin) {
+        seleccionarFase(total - 1, true)
+        return
+      }
+      const delta = siguiente ? 1 : -1
+      const nuevo = (indice + delta + total) % total
+      seleccionarFase(nuevo, true)
+    }
+
+    /**
+     * Voltea una ficha del glosario o la devuelve a la portada.
+     * @param {HTMLElement} carta
+     * @param {boolean} abrir
+     * @returns {void}
+     */
+    const handleVoltear = (carta, abrir) => {
+      const frente = carta.querySelector(".face-front")
+      const dorso = carta.querySelector(".face-back")
+      const boton = carta.querySelector(".tapa")
+      if (!frente || !dorso || !boton) return
+      const titulo = dorso.querySelector("h3")
+      if (abrir) {
+        carta.classList.add("is-open")
+        boton.setAttribute("aria-expanded", "true")
+        dorso.inert = false
+        dorso.setAttribute("aria-hidden", "false")
+        if (titulo) titulo.focus()
+        frente.setAttribute("aria-hidden", "true")
+        frente.inert = true
+        return
+      }
+      carta.classList.remove("is-open")
+      frente.inert = false
+      frente.removeAttribute("aria-hidden")
+      boton.setAttribute("aria-expanded", "false")
+      boton.focus()
+      dorso.setAttribute("aria-hidden", "true")
+      dorso.inert = true
+    }
+
+    /**
+     * Cierra la ficha del glosario que tiene el foco, con Escape.
+     * @param {KeyboardEvent} evento
+     * @param {HTMLElement} carta
+     * @returns {void}
+     */
+    const handleEscapeGlosario = (evento, carta) => {
+      if (evento.key !== "Escape") return
+      if (!carta.classList.contains("is-open")) return
+      evento.preventDefault()
+      evento.stopPropagation()
+      handleVoltear(carta, false)
+    }
+
+    /**
+     * Resalta la estación visible en la navegación.
+     * @returns {void}
+     */
+    const iniciarNavegacion = () => {
+      const enlaces = [...document.querySelectorAll("[data-nav]")]
+      const secciones = enlaces
+        .map((enlace) => document.querySelector(enlace.getAttribute("href") || ""))
+        .filter((seccion) => seccion instanceof HTMLElement)
+      if (!secciones.length) return
+      const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+          if (!entrada.isIntersecting) return
+          enlaces.forEach((enlace) => {
+            const activo = enlace.getAttribute("href") === `#${entrada.target.id}`
+            if (activo) enlace.setAttribute("aria-current", "true")
+            else enlace.removeAttribute("aria-current")
+          })
+        })
+      }, { rootMargin: "-45% 0px -48% 0px", threshold: 0.01 })
+      secciones.forEach((seccion) => observador.observe(seccion))
+    }
+
+    /**
+     * Ajusta la orientación anunciada del stepper según el ancho.
+     * @returns {void}
+     */
+    const iniciarOrientacion = () => {
+      if (!tablist) return
+      const consulta = window.matchMedia("(min-width: 768px)")
+      const aplicar = () => {
+        tablist.setAttribute("aria-orientation", consulta.matches ? "horizontal" : "vertical")
+      }
+      aplicar()
+      consulta.addEventListener("change", aplicar)
+    }
+
+    /**
+     * Iguala el alto del sello PP al alto del cabezote.
+     * @returns {void}
+     */
+    const alinearSelloBanner = () => {
+      const marca = document.querySelector(".banner-marca img")
+      const sello = document.querySelector(".banner-sello")
+      if (!marca || !sello) return
+      const alto = marca.getBoundingClientRect().height
+      if (alto > 0) sello.style.setProperty("--sello-alto", `${alto}px`)
+    }
+
+    /**
+     * Mantiene el sello alineado al cabezote al cargar y al redimensionar.
+     * @returns {void}
+     */
+    const iniciarBanner = () => {
+      const marca = document.querySelector(".banner-marca img")
+      if (!marca) return
+      const aplicar = () => alinearSelloBanner()
+      if (marca.complete) aplicar()
+      else marca.addEventListener("load", aplicar)
+      window.addEventListener("resize", aplicar)
+      if ("ResizeObserver" in window) new ResizeObserver(aplicar).observe(marca)
+    }
+
+    /**
+     * Conecta pétalos, fases, glosario y diálogo.
+     * @returns {void}
+     */
+    const iniciar = () => {
+      iniciarBanner()
+      document.querySelectorAll("[data-ficha]").forEach((boton) => {
+        boton.addEventListener("click", () => {
+          if (boton instanceof HTMLButtonElement) handleAbrirFicha(boton)
+        })
+      })
+      if (botonCerrar) botonCerrar.addEventListener("click", handleCerrarFicha)
+      if (dialogo) {
+        dialogo.addEventListener("close", handleDialogoCerrado)
+        dialogo.addEventListener("click", handleClickDialogo)
+      }
+
+      const pestanas = [...document.querySelectorAll("[role='tab']")]
+      pestanas.forEach((pestana, indice) => {
+        pestana.addEventListener("click", () => {
+          seleccionarFase(indice, false)
+        })
+        pestana.addEventListener("keydown", (evento) => {
+          handleKeydownFase(evento, indice, pestanas.length)
+        })
+      })
+
+      document.querySelectorAll(".flip").forEach((carta) => {
+        if (!(carta instanceof HTMLElement)) return
+        const dorso = carta.querySelector(".face-back")
+        const boton = carta.querySelector(".tapa")
+        const volver = carta.querySelector("[data-flip-close]")
+        if (dorso) dorso.inert = true
+        if (boton) {
+          boton.addEventListener("click", () => {
+            handleVoltear(carta, true)
+          })
+        }
+        if (volver) {
+          volver.addEventListener("click", () => {
+            handleVoltear(carta, false)
+          })
+        }
+        carta.addEventListener("keydown", (evento) => {
+          handleEscapeGlosario(evento, carta)
+        })
+      })
+
+      iniciarNavegacion()
+      iniciarOrientacion()
+    }
+
+    iniciar()
+  </script>
+</body>
+</html>
